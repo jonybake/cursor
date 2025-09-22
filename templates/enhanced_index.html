@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETH增强版分析系统 - 最准确交易量数据 × 未来5天K线预测</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stats-card h3 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stats-card p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .forecast-card {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .forecast-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .btn-refresh {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-refresh:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #7f8c8d;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .forecast-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .forecast-day {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 5px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .forecast-day:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .forecast-day.forecast {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+        }
+        
+        .forecast-price {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .forecast-change {
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .forecast-change.positive {
+            color: #28a745;
+        }
+        
+        .forecast-change.negative {
+            color: #dc3545;
+        }
+        
+        .confidence-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        
+        .confidence-high {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .confidence-medium {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .confidence-low {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .technical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .indicator-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .indicator-value {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .indicator-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .trend-up {
+            color: #28a745;
+        }
+        
+        .trend-down {
+            color: #dc3545;
+        }
+        
+        .trend-neutral {
+            color: #ffc107;
+        }
+        
+        .exchange-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .exchange-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .exchange-volume {
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        .accuracy-badge {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .prediction-badge {
+            background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> ETH增强版分析系统</h1>
+            <p>最准确的交易量数据 × 未来5天K线预测</p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-refresh" onclick="refreshData()">
+                    <i class="fas fa-sync-alt"></i> 刷新数据
+                </button>
+                <span class="accuracy-badge">
+                    <i class="fas fa-check-circle"></i> 增强精度
+                </span>
+                <span class="prediction-badge">
+                    <i class="fas fa-crystal-ball"></i> 5天预测
+                </span>
+            </div>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>正在加载最准确的ETH数据和未来5天预测...</p>
+        </div>
+        
+        <div id="content" style="display: none;">
+            <!-- 概览统计 -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="current-price">$0</h3>
+                        <p>当前价格</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="price-change">+0%</h3>
+                        <p>24小时涨跌</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="daily-volume">0B</h3>
+                        <p>日交易量</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="forecast-card">
+                        <h3 id="forecast-price">$0</h3>
+                        <p>5天后预测价格</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 未来5天预测时间线 -->
+            <div class="chart-container">
+                <h3 class="chart-title"><i class="fas fa-crystal-ball"></i> 未来5天K线预测时间线</h3>
+                <div class="forecast-timeline" id="forecastTimeline">
+                    <!-- 预测时间线将在这里动态生成 -->
+                </div>
+            </div>
+            
+            <!-- 图表区域 -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-candlestick"></i> ETH价格K线图（历史+预测）</h3>
+                        <canvas id="klineChart" height="400"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-bar"></i> 交易量分析</h3>
+                        <canvas id="volumeChart" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-building"></i> 交易所准确分布</h3>
+                        <div id="exchangeChart" style="height: 400px;"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-cogs"></i> 技术指标（历史+预测）</h3>
+                        <div class="technical-grid" id="technicalIndicators">
+                            <!-- 技术指标将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 预测分析 -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-area"></i> 预测分析摘要</h3>
+                        <div id="forecastAnalysis">
+                            <!-- 预测分析将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-pie"></i> 预测置信度分布</h3>
+                        <canvas id="confidenceChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 交易所排名 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-trophy"></i> 交易所准确排名</h3>
+                        <div id="exchangeRankings">
+                            <!-- 交易所排名将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let klineChart, volumeChart, exchangeChart, confidenceChart;
+        let currentData = null;
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            loadEnhancedData();
+        });
+        
+        // 加载增强版数据
+        async function loadEnhancedData() {
+            try {
+                const response = await fetch('/api/summary_enhanced');
+                const summary = await response.json();
+                
+                if (summary.error) {
+                    throw new Error(summary.error);
+                }
+                
+                updateEnhancedSummary(summary);
+                await loadEnhancedCharts();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('loading').innerHTML = 
+                    '<div class="alert alert-danger">数据加载失败: ' + error.message + '</div>';
+            }
+        }
+        
+        // 更新增强版概览统计
+        function updateEnhancedSummary(summary) {
+            document.getElementById('current-price').textContent = 
+                '$' + summary.current_price.close.toLocaleString();
+            
+            const changeElement = document.getElementById('price-change');
+            const change = summary.current_price.change_percent;
+            changeElement.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+            changeElement.className = change >= 0 ? 'trend-up' : 'trend-down';
+            
+            document.getElementById('daily-volume').textContent = 
+                summary.current_price.volume.toFixed(1) + 'B';
+            
+            document.getElementById('forecast-price').textContent = 
+                '$' + summary.forecast_price.close.toLocaleString();
+        }
+        
+        // 加载增强版图表
+        async function loadEnhancedCharts() {
+            await loadEnhancedKlineChart();
+            await loadEnhancedVolumeChart();
+            await loadEnhancedExchangeChart();
+            await loadForecastTimeline();
+            await loadTechnicalIndicators();
+            await loadForecastAnalysis();
+            await loadConfidenceChart();
+            await loadExchangeRankings();
+        }
+        
+        // 加载增强版K线图
+        async function loadEnhancedKlineChart() {
+            const response = await fetch('/api/technical_indicators');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const ctx = document.getElementById('klineChart').getContext('2d');
+            
+            if (klineChart) {
+                klineChart.destroy();
+            }
+            
+            // 分离历史数据和预测数据
+            const historicalData = data.filter(d => d.type === 'historical');
+            const forecastData = data.filter(d => d.type === 'forecast');
+            
+            klineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [...historicalData.map(d => d.date), ...forecastData.map(d => d.date)],
+                    datasets: [{
+                        label: 'ETH价格 (历史)',
+                        data: [...historicalData.map(d => d.close), ...new Array(forecastData.length).fill(null)],
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        tension: 0.4,
+                        fill: false
+                    }, {
+                        label: 'ETH价格 (预测)',
+                        data: [...new Array(historicalData.length).fill(null), ...forecastData.map(d => d.close)],
+                        borderColor: '#28a745',
+                        backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                        borderDash: [5, 5],
+                        tension: 0.4,
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: {
+                                display: true,
+                                text: '价格 (USD)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '日期'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 加载增强版交易量图
+        async function loadEnhancedVolumeChart() {
+            const response = await fetch('/api/volume_analysis');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const ctx = document.getElementById('volumeChart').getContext('2d');
+            
+            if (volumeChart) {
+                volumeChart.destroy();
+            }
+            
+            volumeChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.volume_data.map(d => d.date),
+                    datasets: [{
+                        label: '准确交易量 (十亿美元)',
+                        data: data.volume_data.map(d => d.total_volume),
+                        backgroundColor: 'rgba(102, 126, 234, 0.6)',
+                        borderColor: '#667eea',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '交易量 (十亿美元)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 加载增强版交易所分布图
+        async function loadEnhancedExchangeChart() {
+            const response = await fetch('/api/exchanges');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            // 计算各交易所总交易量
+            const exchangeTotals = {};
+            data.forEach(day => {
+                day.exchanges.forEach(exchange => {
+                    if (!exchangeTotals[exchange.id]) {
+                        exchangeTotals[exchange.id] = {
+                            name: exchange.name,
+                            totalVolume: 0,
+                            avgLiquidity: 0,
+                            count: 0
+                        };
+                    }
+                    exchangeTotals[exchange.id].totalVolume += exchange.volume;
+                    exchangeTotals[exchange.id].avgLiquidity += exchange.liquidity_score;
+                    exchangeTotals[exchange.id].count += 1;
+                });
+            });
+            
+            // 计算平均流动性
+            Object.keys(exchangeTotals).forEach(id => {
+                exchangeTotals[id].avgLiquidity /= exchangeTotals[id].count;
+            });
+            
+            const exchangeData = Object.values(exchangeTotals).sort((a, b) => b.totalVolume - a.totalVolume);
+            
+            const chart = echarts.init(document.getElementById('exchangeChart'));
+            const option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)<br/>平均流动性: {e}'
+                },
+                series: [{
+                    name: '交易所准确交易量',
+                    type: 'pie',
+                    radius: '60%',
+                    data: exchangeData.map(ex => ({
+                        value: ex.totalVolume,
+                        name: ex.name,
+                        itemStyle: {
+                            color: ex.avgLiquidity > 0.8 ? '#28a745' : ex.avgLiquidity > 0.6 ? '#ffc107' : '#dc3545'
+                        }
+                    })),
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
+            
+            chart.setOption(option);
+        }
+        
+        // 加载预测时间线
+        async function loadForecastTimeline() {
+            const response = await fetch('/api/forecast_analysis');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const timelineContainer = document.getElementById('forecastTimeline');
+            const forecastData = data.forecast_data;
+            
+            timelineContainer.innerHTML = forecastData.map((day, index) => {
+                const confidenceClass = day.confidence > 0.8 ? 'confidence-high' : 
+                                      day.confidence > 0.6 ? 'confidence-medium' : 'confidence-low';
+                const changeClass = day.change_percent >= 0 ? 'positive' : 'negative';
+                
+                return `
+                    <div class="forecast-day forecast">
+                        <div class="fw-bold">第${index + 1}天</div>
+                        <div class="text-muted small">${day.date}</div>
+                        <div class="forecast-price">$${day.close.toLocaleString()}</div>
+                        <div class="forecast-change ${changeClass}">
+                            ${day.change_percent >= 0 ? '+' : ''}${day.change_percent.toFixed(2)}%
+                        </div>
+                        <div class="small text-muted">交易量: ${day.volume.toFixed(1)}B</div>
+                        <div class="confidence-badge ${confidenceClass}">
+                            置信度: ${(day.confidence * 100).toFixed(0)}%
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // 加载技术指标
+        async function loadTechnicalIndicators() {
+            const response = await fetch('/api/technical_indicators');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const forecastData = data.filter(d => d.type === 'forecast');
+            const latest = forecastData[forecastData.length - 1];
+            const indicatorsContainer = document.getElementById('technicalIndicators');
+            
+            const indicators = [
+                { label: 'RSI', value: latest.rsi, unit: '' },
+                { label: 'MACD', value: latest.macd, unit: '' },
+                { label: '5日均线', value: latest.sma_5, unit: '$' },
+                { label: '10日均线', value: latest.sma_10, unit: '$' },
+                { label: '布林上轨', value: latest.bollinger_upper, unit: '$' },
+                { label: '布林下轨', value: latest.bollinger_lower, unit: '$' }
+            ];
+            
+            indicatorsContainer.innerHTML = indicators.map(indicator => `
+                <div class="indicator-card">
+                    <div class="indicator-value">
+                        ${indicator.value ? indicator.unit + indicator.value.toFixed(2) : 'N/A'}
+                    </div>
+                    <div class="indicator-label">${indicator.label}</div>
+                </div>
+            `).join('');
+        }
+        
+        // 加载预测分析
+        async function loadForecastAnalysis() {
+            const response = await fetch('/api/summary_enhanced');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const container = document.getElementById('forecastAnalysis');
+            const forecast = data.forecast_summary;
+            
+            container.innerHTML = `
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5><i class="fas fa-chart-line"></i> 预测总涨幅</h5>
+                        <p class="fs-4 ${forecast.total_change >= 0 ? 'text-success' : 'text-danger'}">
+                            ${forecast.total_change >= 0 ? '+' : ''}${forecast.total_change.toFixed(2)}%
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5><i class="fas fa-shield-alt"></i> 平均置信度</h5>
+                        <p class="fs-4 text-primary">${(forecast.avg_confidence * 100).toFixed(1)}%</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h5><i class="fas fa-arrow-up"></i> 预测最高价</h5>
+                        <p class="fs-5 text-success">$${forecast.price_range.max.toLocaleString()}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5><i class="fas fa-arrow-down"></i> 预测最低价</h5>
+                        <p class="fs-5 text-danger">$${forecast.price_range.min.toLocaleString()}</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h5><i class="fas fa-chart-bar"></i> 平均日交易量</h5>
+                        <p class="fs-5 text-info">${forecast.avg_volume.toFixed(1)} 十亿美元</p>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // 加载置信度图表
+        async function loadConfidenceChart() {
+            const response = await fetch('/api/forecast_analysis');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const ctx = document.getElementById('confidenceChart').getContext('2d');
+            
+            if (confidenceChart) {
+                confidenceChart.destroy();
+            }
+            
+            const forecastData = data.forecast_data;
+            
+            confidenceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: forecastData.map((d, i) => `第${i+1}天`),
+                    datasets: [{
+                        label: '预测置信度',
+                        data: forecastData.map(d => d.confidence * 100),
+                        backgroundColor: forecastData.map(d => 
+                            d.confidence > 0.8 ? '#28a745' : 
+                            d.confidence > 0.6 ? '#ffc107' : '#dc3545'
+                        ),
+                        borderColor: forecastData.map(d => 
+                            d.confidence > 0.8 ? '#155724' : 
+                            d.confidence > 0.6 ? '#856404' : '#721c24'
+                        ),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: '置信度 (%)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 加载交易所排名
+        async function loadExchangeRankings() {
+            const response = await fetch('/api/volume_analysis');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const rankings = data.exchange_rankings || [];
+            const rankingsContainer = document.getElementById('exchangeRankings');
+            
+            rankingsContainer.innerHTML = rankings.map(ranking => `
+                <div class="exchange-card">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <strong>#${ranking.rank}</strong>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exchange-name">${ranking.name}</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="exchange-volume">${ranking.total_volume} 十亿美元</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="exchange-volume">${ranking.market_share}%</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // 刷新数据
+        async function refreshData() {
+            const button = document.querySelector('.btn-refresh');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 刷新中...';
+            button.disabled = true;
+            
+            try {
+                const response = await fetch('/api/refresh_enhanced');
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    await loadEnhancedData();
+                } else {
+                    alert('刷新失败: ' + result.message);
+                }
+            } catch (error) {
+                alert('刷新失败: ' + error.message);
+            } finally {
+                button.innerHTML = originalText;
+                button.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

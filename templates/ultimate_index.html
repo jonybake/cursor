@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETH终极分析系统 - 最准确的交易量数据与最合理的K线</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stats-card h3 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stats-card p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .btn-refresh {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-refresh:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #7f8c8d;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .technical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .indicator-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .indicator-value {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .indicator-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .trend-up {
+            color: #28a745;
+        }
+        
+        .trend-down {
+            color: #dc3545;
+        }
+        
+        .trend-neutral {
+            color: #ffc107;
+        }
+        
+        .microstructure-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .regime-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .regime-trending {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .regime-consolidation {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .regime-high-volatility {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .accuracy-badge {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> ETH终极分析系统</h1>
+            <p>最准确的交易量数据 × 最合理的K线分析</p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-refresh" onclick="refreshData()">
+                    <i class="fas fa-sync-alt"></i> 刷新数据
+                </button>
+                <span class="accuracy-badge">
+                    <i class="fas fa-check-circle"></i> 终极精度
+                </span>
+            </div>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>正在加载最准确的ETH数据...</p>
+        </div>
+        
+        <div id="content" style="display: none;">
+            <!-- 概览统计 -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="current-price">$0</h3>
+                        <p>当前价格</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="price-change">+0%</h3>
+                        <p>24小时涨跌</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="daily-volume">0B</h3>
+                        <p>日交易量</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="market-regime">未知</h3>
+                        <p>市场状态</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 图表区域 -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-candlestick"></i> ETH最合理K线图</h3>
+                        <canvas id="klineChart" height="400"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-bar"></i> 准确交易量分析</h3>
+                        <canvas id="volumeChart" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-building"></i> 交易所准确分布</h3>
+                        <div id="exchangeChart" style="height: 400px;"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-cogs"></i> 高级技术指标</h3>
+                        <div class="technical-grid" id="technicalIndicators">
+                            <!-- 技术指标将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 市场微观结构分析 -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-microscope"></i> 市场微观结构</h3>
+                        <div id="microstructureIndicators">
+                            <!-- 微观结构指标将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-area"></i> 市场状态分析</h3>
+                        <div id="marketRegimeAnalysis">
+                            <!-- 市场状态分析将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 交易所排名 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-trophy"></i> 交易所准确排名</h3>
+                        <div id="exchangeRankings">
+                            <!-- 交易所排名将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let klineChart, volumeChart, exchangeChart;
+        let currentData = null;
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            loadUltimateData();
+        });
+        
+        // 加载终极数据
+        async function loadUltimateData() {
+            try {
+                const response = await fetch('/api/summary_ultimate');
+                const summary = await response.json();
+                
+                if (summary.error) {
+                    throw new Error(summary.error);
+                }
+                
+                updateUltimateSummary(summary);
+                await loadUltimateCharts();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('loading').innerHTML = 
+                    '<div class="alert alert-danger">数据加载失败: ' + error.message + '</div>';
+            }
+        }
+        
+        // 更新终极概览统计
+        function updateUltimateSummary(summary) {
+            document.getElementById('current-price').textContent = 
+                '$' + summary.latest_price.close.toLocaleString();
+            
+            const changeElement = document.getElementById('price-change');
+            const change = summary.latest_price.change_percent;
+            changeElement.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+            changeElement.className = change >= 0 ? 'trend-up' : 'trend-down';
+            
+            document.getElementById('daily-volume').textContent = 
+                summary.latest_price.volume.toFixed(1) + 'B';
+            
+            const regimeElement = document.getElementById('market-regime');
+            const regime = summary.market_regime.regime;
+            regimeElement.textContent = getRegimeText(regime);
+            regimeElement.className = getRegimeClass(regime);
+        }
+        
+        // 获取市场状态文本
+        function getRegimeText(regime) {
+            const regimeMap = {
+                'trending_high_volatility': '趋势高波动',
+                'high_volatility': '高波动',
+                'trending': '趋势',
+                'accumulation': '积累',
+                'distribution': '派发',
+                'consolidation': '整理'
+            };
+            return regimeMap[regime] || '未知';
+        }
+        
+        // 获取市场状态样式
+        function getRegimeClass(regime) {
+            const classMap = {
+                'trending_high_volatility': 'regime-high-volatility',
+                'high_volatility': 'regime-high-volatility',
+                'trending': 'regime-trending',
+                'accumulation': 'regime-trending',
+                'distribution': 'regime-high-volatility',
+                'consolidation': 'regime-consolidation'
+            };
+            return classMap[regime] || 'regime-consolidation';
+        }
+        
+        // 加载终极图表
+        async function loadUltimateCharts() {
+            await loadUltimateKlineChart();
+            await loadUltimateVolumeChart();
+            await loadUltimateExchangeChart();
+            await loadUltimateTechnicalIndicators();
+            await loadMicrostructureIndicators();
+            await loadMarketRegimeAnalysis();
+            await loadUltimateExchangeRankings();
+        }
+        
+        // 加载终极K线图
+        async function loadUltimateKlineChart() {
+            const response = await fetch('/api/kline_analysis');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const ctx = document.getElementById('klineChart').getContext('2d');
+            
+            if (klineChart) {
+                klineChart.destroy();
+            }
+            
+            klineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.kline_data.map(d => d.date),
+                    datasets: [{
+                        label: 'ETH最合理价格',
+                        data: data.kline_data.map(d => d.close),
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: {
+                                display: true,
+                                text: '价格 (USD)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '日期'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 加载终极交易量图
+        async function loadUltimateVolumeChart() {
+            const response = await fetch('/api/volume_analysis');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const ctx = document.getElementById('volumeChart').getContext('2d');
+            
+            if (volumeChart) {
+                volumeChart.destroy();
+            }
+            
+            volumeChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.volume_data.map(d => d.date),
+                    datasets: [{
+                        label: '准确交易量 (十亿美元)',
+                        data: data.volume_data.map(d => d.total_volume),
+                        backgroundColor: 'rgba(102, 126, 234, 0.6)',
+                        borderColor: '#667eea',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '交易量 (十亿美元)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 加载终极交易所分布图
+        async function loadUltimateExchangeChart() {
+            const response = await fetch('/api/exchanges');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            // 计算各交易所总交易量
+            const exchangeTotals = {};
+            data.forEach(day => {
+                day.exchanges.forEach(exchange => {
+                    if (!exchangeTotals[exchange.id]) {
+                        exchangeTotals[exchange.id] = {
+                            name: exchange.name,
+                            totalVolume: 0
+                        };
+                    }
+                    exchangeTotals[exchange.id].totalVolume += exchange.volume;
+                });
+            });
+            
+            const exchangeData = Object.values(exchangeTotals).sort((a, b) => b.totalVolume - a.totalVolume);
+            
+            const chart = echarts.init(document.getElementById('exchangeChart'));
+            const option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+                series: [{
+                    name: '交易所准确交易量',
+                    type: 'pie',
+                    radius: '60%',
+                    data: exchangeData.map(ex => ({
+                        value: ex.totalVolume,
+                        name: ex.name
+                    })),
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
+            
+            chart.setOption(option);
+        }
+        
+        // 加载终极技术指标
+        async function loadUltimateTechnicalIndicators() {
+            const response = await fetch('/api/technical_indicators');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const latest = data[data.length - 1];
+            const indicatorsContainer = document.getElementById('technicalIndicators');
+            
+            const indicators = [
+                { label: 'RSI', value: latest.rsi, unit: '' },
+                { label: 'MACD', value: latest.macd, unit: '' },
+                { label: '5日均线', value: latest.sma_5, unit: '$' },
+                { label: '10日均线', value: latest.sma_10, unit: '$' },
+                { label: '20日均线', value: latest.sma_20, unit: '$' },
+                { label: '12日EMA', value: latest.ema_12, unit: '$' },
+                { label: '26日EMA', value: latest.ema_26, unit: '$' },
+                { label: '布林上轨', value: latest.bollinger_upper, unit: '$' },
+                { label: '布林下轨', value: latest.bollinger_lower, unit: '$' },
+                { label: '随机指标K', value: latest.stochastic_k, unit: '' },
+                { label: '随机指标D', value: latest.stochastic_d, unit: '' },
+                { label: '威廉指标', value: latest.williams_r, unit: '' },
+                { label: 'CCI', value: latest.cci, unit: '' },
+                { label: 'ATR', value: latest.atr, unit: '$' }
+            ];
+            
+            indicatorsContainer.innerHTML = indicators.map(indicator => `
+                <div class="indicator-card">
+                    <div class="indicator-value">
+                        ${indicator.value ? indicator.unit + indicator.value.toFixed(2) : 'N/A'}
+                    </div>
+                    <div class="indicator-label">${indicator.label}</div>
+                </div>
+            `).join('');
+        }
+        
+        // 加载微观结构指标
+        async function loadMicrostructureIndicators() {
+            const response = await fetch('/api/microstructure');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const latest = data[data.length - 1];
+            const container = document.getElementById('microstructureIndicators');
+            
+            container.innerHTML = `
+                <div class="microstructure-card">
+                    <h5><i class="fas fa-chart-pie"></i> 交易所集中度</h5>
+                    <p><strong>HHI指数:</strong> ${latest.hhi.toFixed(4)}</p>
+                    <p><strong>集中度:</strong> <span class="badge ${latest.concentration === 'high' ? 'bg-danger' : latest.concentration === 'medium' ? 'bg-warning' : 'bg-success'}">${latest.concentration}</span></p>
+                </div>
+                <div class="microstructure-card">
+                    <h5><i class="fas fa-tachometer-alt"></i> 流动性指标</h5>
+                    <p><strong>流动性评分:</strong> ${latest.liquidity_score}</p>
+                    <p><strong>价格影响:</strong> ${(latest.price_impact * 100).toFixed(3)}%</p>
+                </div>
+                <div class="microstructure-card">
+                    <h5><i class="fas fa-cogs"></i> 市场效率</h5>
+                    <p><strong>效率等级:</strong> <span class="badge ${latest.market_efficiency === 'high' ? 'bg-success' : latest.market_efficiency === 'medium' ? 'bg-warning' : 'bg-danger'}">${latest.market_efficiency}</span></p>
+                </div>
+            `;
+        }
+        
+        // 加载市场状态分析
+        async function loadMarketRegimeAnalysis() {
+            const response = await fetch('/api/market_regime');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const container = document.getElementById('marketRegimeAnalysis');
+            const regime = data.market_regime;
+            const trend = data.trend_analysis;
+            const volume = data.volume_patterns;
+            const priceAction = data.price_action;
+            
+            container.innerHTML = `
+                <div class="microstructure-card">
+                    <h5><i class="fas fa-chart-line"></i> 市场状态</h5>
+                    <p><strong>当前状态:</strong> <span class="regime-badge ${getRegimeClass(regime.regime)}">${getRegimeText(regime.regime)}</span></p>
+                    <p><strong>波动率:</strong> ${regime.volatility}%</p>
+                    <p><strong>趋势强度:</strong> ${regime.trend_strength.toFixed(2)}%</p>
+                </div>
+                <div class="microstructure-card">
+                    <h5><i class="fas fa-trending-up"></i> 趋势分析</h5>
+                    <p><strong>方向:</strong> ${trend.direction}</p>
+                    <p><strong>强度:</strong> ${(trend.strength * 100).toFixed(2)}%</p>
+                    <p><strong>置信度:</strong> ${(trend.confidence * 100).toFixed(1)}%</p>
+                </div>
+                <div class="microstructure-card">
+                    <h5><i class="fas fa-chart-bar"></i> 交易量模式</h5>
+                    <p><strong>平均交易量:</strong> ${volume.avg_volume} 十亿美元</p>
+                    <p><strong>交易量趋势:</strong> ${volume.volume_trend.toFixed(2)}%</p>
+                    <p><strong>交易量状态:</strong> ${volume.volume_regime}</p>
+                </div>
+                <div class="microstructure-card">
+                    <h5><i class="fas fa-candlestick-chart"></i> 价格行为</h5>
+                    <p><strong>多头蜡烛:</strong> ${priceAction.green_candles}</p>
+                    <p><strong>空头蜡烛:</strong> ${priceAction.red_candles}</p>
+                    <p><strong>动量方向:</strong> ${priceAction.momentum}</p>
+                </div>
+            `;
+        }
+        
+        // 加载终极交易所排名
+        async function loadUltimateExchangeRankings() {
+            const response = await fetch('/api/volume_analysis');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const rankings = data.exchange_rankings || [];
+            const rankingsContainer = document.getElementById('exchangeRankings');
+            
+            rankingsContainer.innerHTML = rankings.map(ranking => `
+                <div class="microstructure-card">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <strong>#${ranking.rank}</strong>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="fw-bold">${ranking.name}</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-primary">${ranking.total_volume} 十亿美元</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-success">${ranking.market_share}%</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // 刷新数据
+        async function refreshData() {
+            const button = document.querySelector('.btn-refresh');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 刷新中...';
+            button.disabled = true;
+            
+            try {
+                const response = await fetch('/api/refresh_ultimate');
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    await loadUltimateData();
+                } else {
+                    alert('刷新失败: ' + result.message);
+                }
+            } catch (error) {
+                alert('刷新失败: ' + error.message);
+            } finally {
+                button.innerHTML = originalText;
+                button.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
