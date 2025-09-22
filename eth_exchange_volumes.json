@@ -1,0 +1,260 @@
+{
+  "summary": {
+    "total_volume_eth": 1550390.028737525,
+    "total_volume_usd": 4961248091.96008,
+    "total_exchanges": 8,
+    "last_updated": "2025-09-22T10:09:01.319550"
+  },
+  "exchanges": {
+    "Binance": {
+      "exchange_name": "Binance",
+      "total_volume_eth": 554279.63,
+      "total_volume_usd": 1773694808.56,
+      "market_share": 35.0,
+      "pairs": {
+        "ETH/USDT": {
+          "volume_eth": 237788.11,
+          "volume_usd": 760921940.41,
+          "price": 3192.8,
+          "trades_count": 15628,
+          "last_updated": "2025-09-22T10:09:01.318993"
+        },
+        "ETH/BTC": {
+          "volume_eth": 43440.16,
+          "volume_usd": 139008498.56,
+          "price": 3187.28,
+          "trades_count": 49540,
+          "last_updated": "2025-09-22T10:09:01.319013"
+        },
+        "ETH/BNB": {
+          "volume_eth": 34235.3,
+          "volume_usd": 109552946.33,
+          "price": 3186.78,
+          "trades_count": 28651,
+          "last_updated": "2025-09-22T10:09:01.319018"
+        },
+        "ETH/FDUSD": {
+          "volume_eth": 99641.41,
+          "volume_usd": 318852507.54,
+          "price": 3187.0,
+          "trades_count": 16247,
+          "last_updated": "2025-09-22T10:09:01.319021"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319024",
+      "api_status": "active",
+      "region": "Global"
+    },
+    "Coinbase": {
+      "exchange_name": "Coinbase Pro",
+      "total_volume_eth": 225481.98,
+      "total_volume_usd": 721542322.97,
+      "market_share": 15.0,
+      "pairs": {
+        "ETH/USD": {
+          "volume_eth": 40356.85,
+          "volume_usd": 129141930.3,
+          "price": 3190.36,
+          "trades_count": 43590,
+          "last_updated": "2025-09-22T10:09:01.319040"
+        },
+        "ETH/USDT": {
+          "volume_eth": 151631.44,
+          "volume_usd": 485220609.87,
+          "price": 3197.42,
+          "trades_count": 30439,
+          "last_updated": "2025-09-22T10:09:01.319043"
+        },
+        "ETH/BTC": {
+          "volume_eth": 23755.87,
+          "volume_usd": 76018770.43,
+          "price": 3209.9,
+          "trades_count": 1425,
+          "last_updated": "2025-09-22T10:09:01.319046"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319048",
+      "api_status": "active",
+      "region": "US"
+    },
+    "Kraken": {
+      "exchange_name": "Kraken",
+      "total_volume_eth": 132422.75,
+      "total_volume_usd": 423752811.59,
+      "market_share": 8.0,
+      "pairs": {
+        "ETH/USD": {
+          "volume_eth": 26345.36,
+          "volume_usd": 84305154.66,
+          "price": 3197.52,
+          "trades_count": 19210,
+          "last_updated": "2025-09-22T10:09:01.319063"
+        },
+        "ETH/USDT": {
+          "volume_eth": 63029.6,
+          "volume_usd": 201694735.94,
+          "price": 3214.63,
+          "trades_count": 23059,
+          "last_updated": "2025-09-22T10:09:01.319065"
+        },
+        "ETH/BTC": {
+          "volume_eth": 10081.69,
+          "volume_usd": 32261410.33,
+          "price": 3196.16,
+          "trades_count": 24526,
+          "last_updated": "2025-09-22T10:09:01.319067"
+        },
+        "ETH/USDC": {
+          "volume_eth": 40008.11,
+          "volume_usd": 128025960.11,
+          "price": 3203.32,
+          "trades_count": 3847,
+          "last_updated": "2025-09-22T10:09:01.319070"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319072",
+      "api_status": "active",
+      "region": "US"
+    },
+    "OKX": {
+      "exchange_name": "OKX",
+      "total_volume_eth": 196540.69,
+      "total_volume_usd": 628930203.65,
+      "market_share": 12.0,
+      "pairs": {
+        "ETH/USDT": {
+          "volume_eth": 120487.72,
+          "volume_usd": 385560700.93,
+          "price": 3215.14,
+          "trades_count": 25807,
+          "last_updated": "2025-09-22T10:09:01.319083"
+        },
+        "ETH/USD": {
+          "volume_eth": 36717.74,
+          "volume_usd": 117496759.33,
+          "price": 3193.38,
+          "trades_count": 42198,
+          "last_updated": "2025-09-22T10:09:01.319085"
+        },
+        "ETH/BTC": {
+          "volume_eth": 21051.71,
+          "volume_usd": 67365459.48,
+          "price": 3211.57,
+          "trades_count": 38837,
+          "last_updated": "2025-09-22T10:09:01.319087"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319089",
+      "api_status": "active",
+      "region": "Global"
+    },
+    "Huobi": {
+      "exchange_name": "Huobi Global",
+      "total_volume_eth": 105229.85,
+      "total_volume_usd": 336735527.46,
+      "market_share": 8.0,
+      "pairs": {
+        "ETH/USDT": {
+          "volume_eth": 46831.48,
+          "volume_usd": 149860729.84,
+          "price": 3205.16,
+          "trades_count": 19965,
+          "last_updated": "2025-09-22T10:09:01.319101"
+        },
+        "ETH/BTC": {
+          "volume_eth": 13586.57,
+          "volume_usd": 43477032.23,
+          "price": 3211.37,
+          "trades_count": 7619,
+          "last_updated": "2025-09-22T10:09:01.319103"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319105",
+      "api_status": "active",
+      "region": "Asia"
+    },
+    "KuCoin": {
+      "exchange_name": "KuCoin",
+      "total_volume_eth": 85684.54,
+      "total_volume_usd": 274190541.12,
+      "market_share": 6.0,
+      "pairs": {
+        "ETH/USDT": {
+          "volume_eth": 49973.6,
+          "volume_usd": 159915521.09,
+          "price": 3210.69,
+          "trades_count": 11659,
+          "last_updated": "2025-09-22T10:09:01.319115"
+        },
+        "ETH/BTC": {
+          "volume_eth": 7901.05,
+          "volume_usd": 25283345.06,
+          "price": 3190.7,
+          "trades_count": 18496,
+          "last_updated": "2025-09-22T10:09:01.319117"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319118",
+      "api_status": "active",
+      "region": "Asia"
+    },
+    "Bybit": {
+      "exchange_name": "Bybit",
+      "total_volume_eth": 162109.22,
+      "total_volume_usd": 518749500.18,
+      "market_share": 10.0,
+      "pairs": {
+        "ETH/USDT": {
+          "volume_eth": 107977.25,
+          "volume_usd": 345527193.62,
+          "price": 3186.28,
+          "trades_count": 42613,
+          "last_updated": "2025-09-22T10:09:01.319136"
+        },
+        "ETH/USD": {
+          "volume_eth": 32530.59,
+          "volume_usd": 104097875.76,
+          "price": 3207.33,
+          "trades_count": 11708,
+          "last_updated": "2025-09-22T10:09:01.319138"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319140",
+      "api_status": "active",
+      "region": "Global"
+    },
+    "Bitfinex": {
+      "exchange_name": "Bitfinex",
+      "total_volume_eth": 88641.37,
+      "total_volume_usd": 283652376.41,
+      "market_share": 6.0,
+      "pairs": {
+        "ETH/USD": {
+          "volume_eth": 19101.52,
+          "volume_usd": 61124867.26,
+          "price": 3213.61,
+          "trades_count": 46099,
+          "last_updated": "2025-09-22T10:09:01.319155"
+        },
+        "ETH/USDT": {
+          "volume_eth": 55002.14,
+          "volume_usd": 176006840.7,
+          "price": 3205.91,
+          "trades_count": 4665,
+          "last_updated": "2025-09-22T10:09:01.319158"
+        },
+        "ETH/BTC": {
+          "volume_eth": 7423.08,
+          "volume_usd": 23753868.14,
+          "price": 3185.03,
+          "trades_count": 21673,
+          "last_updated": "2025-09-22T10:09:01.319160"
+        }
+      },
+      "last_updated": "2025-09-22T10:09:01.319162",
+      "api_status": "active",
+      "region": "Global"
+    }
+  },
+  "analysis_timestamp": "2025-09-22T10:09:01.319551"
+}
