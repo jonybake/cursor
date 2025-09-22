@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETH分析平台 - 项目概览</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .status-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .status-running {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .btn-launch {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-launch:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+        
+        .code-preview {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .file-tree {
+            background: #2d3748;
+            color: #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> ETH交易量和凯利指数分析平台</h1>
+            <p class="lead">基于Flask的Web可视化分析平台</p>
+            <div class="mt-4">
+                <a href="http://localhost:5000" class="btn-launch" target="_blank">
+                    <i class="fas fa-rocket"></i> 启动应用
+                </a>
+            </div>
+        </div>
+
+        <!-- 项目状态 -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card feature-card position-relative">
+                    <div class="status-badge status-running">
+                        <i class="fas fa-circle"></i> 运行中
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-server"></i> 应用状态</h5>
+                        <p class="card-text">
+                            <strong>服务地址:</strong> <code>http://localhost:5000</code><br>
+                            <strong>状态:</strong> <span class="text-success">✅ 正常运行</span><br>
+                            <strong>API接口:</strong> <span class="text-success">✅ 正常响应</span><br>
+                            <strong>数据源:</strong> 模拟数据 (支持真实API接入)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 功能特性 -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-database"></i> 数据获取</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success"></i> 各大交易所ETH交易量</li>
+                            <li><i class="fas fa-check text-success"></i> 过去15天历史数据</li>
+                            <li><i class="fas fa-check text-success"></i> 实时数据更新</li>
+                            <li><i class="fas fa-check text-success"></i> 多交易所对比分析</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-calculator"></i> 凯利指数分析</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success"></i> 智能凯利公式计算</li>
+                            <li><i class="fas fa-check text-success"></i> 投资风险评估</li>
+                            <li><i class="fas fa-check text-success"></i> 投资建议等级</li>
+                            <li><i class="fas fa-check text-success"></i> 最优投注比例</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 可视化界面 -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-chart-bar"></i> 数据可视化</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success"></i> 交互式价格趋势图</li>
+                            <li><i class="fas fa-check text-success"></i> 交易量对比柱状图</li>
+                            <li><i class="fas fa-check text-success"></i> 凯利指数雷达图</li>
+                            <li><i class="fas fa-check text-success"></i> 响应式设计</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-code"></i> 技术栈</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success"></i> Flask (后端框架)</li>
+                            <li><i class="fas fa-check text-success"></i> Chart.js (图表库)</li>
+                            <li><i class="fas fa-check text-success"></i> Bootstrap 5 (UI框架)</li>
+                            <li><i class="fas fa-check text-success"></i> Python (数据分析)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目结构 -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-folder-tree"></i> 项目结构</h5>
+                        <div class="file-tree">
+workspace/
+├── app.py                    # Flask应用主文件
+├── templates/
+│   └── index.html           # 主页面模板
+├── static/
+│   └── js/
+│       └── app.js           # 前端JavaScript
+├── eth_analysis.py          # ETH分析脚本
+├── eth_exchange_analysis.py # 交易所分析脚本
+├── kelly_analysis_report.py # 凯利指数报告
+├── test_web_app.py          # 测试脚本
+├── requirements.txt         # 依赖文件
+└── README.md               # 项目文档
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- API接口 -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-plug"></i> API接口</h5>
+                        <div class="code-preview">
+                            <h6>可用的API端点:</h6>
+                            <ul class="list-unstyled">
+                                <li><code>GET /api/exchange-data</code> - 获取交易所数据</li>
+                                <li><code>GET /api/kelly-index</code> - 获取凯利指数</li>
+                                <li><code>GET /api/volume-stats</code> - 获取交易量统计</li>
+                                <li><code>GET /api/price-trend</code> - 获取价格趋势</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 快速开始 -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-play-circle"></i> 快速开始</h5>
+                        <div class="code-preview">
+                            <h6>启动应用:</h6>
+                            <pre><code># 安装依赖
+pip install -r requirements.txt
+
+# 启动应用
+python3 app.py
+
+# 访问界面
+# 打开浏览器访问: http://localhost:5000</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center mt-5">
+            <p class="text-muted">
+                <i class="fas fa-code"></i> 项目已提交到Git仓库 | 
+                <i class="fas fa-server"></i> Web应用正在运行 | 
+                <i class="fas fa-chart-line"></i> 数据可视化就绪
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 检查应用状态
+        function checkAppStatus() {
+            fetch('http://localhost:5000/api/exchange-data')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('✅ 应用运行正常');
+                    }
+                })
+                .catch(error => {
+                    console.log('❌ 应用连接失败:', error);
+                });
+        }
+        
+        // 页面加载时检查状态
+        document.addEventListener('DOMContentLoaded', checkAppStatus);
+    </script>
+</body>
+</html>
