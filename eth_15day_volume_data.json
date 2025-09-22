@@ -1,0 +1,5230 @@
+{
+  "analysis_period": "15_days",
+  "start_date": "2025-09-08",
+  "end_date": "2025-09-22",
+  "daily_data": {
+    "2025-09-08": {
+      "date": "2025-09-08",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 546959.72,
+          "total_volume_usd": 1750271106.42,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 265823.84,
+              "volume_usd": 849870802.72,
+              "price": 3197.12,
+              "trades_count": 15628
+            },
+            "ETH/USD": {
+              "volume_eth": 93619.29,
+              "volume_usd": 299343543.04,
+              "price": 3197.46,
+              "trades_count": 49540
+            },
+            "ETH/BTC": {
+              "volume_eth": 63276.23,
+              "volume_usd": 201982103.78,
+              "price": 3192.07,
+              "trades_count": 28651
+            },
+            "ETH/USDC": {
+              "volume_eth": 22226.07,
+              "volume_usd": 71065614.81,
+              "price": 3197.4,
+              "trades_count": 16247
+            },
+            "ETH/BNB": {
+              "volume_eth": 27406.57,
+              "volume_usd": 87534926.33,
+              "price": 3193.94,
+              "trades_count": 14031
+            }
+          },
+          "market_share": 36.46,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 236665.06,
+          "total_volume_usd": 757328189.11,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 153434.22,
+              "volume_usd": 490831432.42,
+              "price": 3198.97,
+              "trades_count": 30439
+            },
+            "ETH/USD": {
+              "volume_eth": 49023.1,
+              "volume_usd": 156970994.45,
+              "price": 3201.98,
+              "trades_count": 1425
+            },
+            "ETH/BTC": {
+              "volume_eth": 26116.53,
+              "volume_usd": 83402243.94,
+              "price": 3193.47,
+              "trades_count": 28696
+            },
+            "ETH/USDC": {
+              "volume_eth": 11077.11,
+              "volume_usd": 35422329.45,
+              "price": 3197.8,
+              "trades_count": 23059
+            },
+            "ETH/BNB": {
+              "volume_eth": 9950.39,
+              "volume_usd": 31825968.97,
+              "price": 3198.46,
+              "trades_count": 24526
+            }
+          },
+          "market_share": 15.78,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 202517.63,
+          "total_volume_usd": 648056431.81,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 126552.11,
+              "volume_usd": 405464243.25,
+              "price": 3203.93,
+              "trades_count": 48823
+            },
+            "ETH/USD": {
+              "volume_eth": 39846.15,
+              "volume_usd": 127412013.85,
+              "price": 3197.6,
+              "trades_count": 25807
+            },
+            "ETH/BTC": {
+              "volume_eth": 16839.75,
+              "volume_usd": 53820323.3,
+              "price": 3196.03,
+              "trades_count": 42198
+            },
+            "ETH/USDC": {
+              "volume_eth": 10605.93,
+              "volume_usd": 33963523.27,
+              "price": 3202.31,
+              "trades_count": 38837
+            },
+            "ETH/BNB": {
+              "volume_eth": 8879.54,
+              "volume_usd": 28365610.87,
+              "price": 3194.49,
+              "trades_count": 44336
+            }
+          },
+          "market_share": 13.5,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 133673.9,
+          "total_volume_usd": 427756468.93,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 73447.54,
+              "volume_usd": 234637073.18,
+              "price": 3194.62,
+              "trades_count": 16256
+            },
+            "ETH/USD": {
+              "volume_eth": 30653.92,
+              "volume_usd": 98069037.07,
+              "price": 3199.23,
+              "trades_count": 30714
+            },
+            "ETH/BTC": {
+              "volume_eth": 14092.89,
+              "volume_usd": 45060668.67,
+              "price": 3197.4,
+              "trades_count": 25260
+            },
+            "ETH/USDC": {
+              "volume_eth": 6296.76,
+              "volume_usd": 20156503.5,
+              "price": 3201.09,
+              "trades_count": 46994
+            },
+            "ETH/BNB": {
+              "volume_eth": 7851.08,
+              "volume_usd": 25138336.58,
+              "price": 3201.89,
+              "trades_count": 40920
+            }
+          },
+          "market_share": 8.91,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 123239.48,
+          "total_volume_usd": 394366332.53,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 74953.46,
+              "volume_usd": 239606238.38,
+              "price": 3196.73,
+              "trades_count": 31294
+            },
+            "ETH/USD": {
+              "volume_eth": 23459.43,
+              "volume_usd": 75143666.48,
+              "price": 3203.13,
+              "trades_count": 42943
+            },
+            "ETH/BTC": {
+              "volume_eth": 13251.51,
+              "volume_usd": 42333484.9,
+              "price": 3194.62,
+              "trades_count": 22252
+            },
+            "ETH/USDC": {
+              "volume_eth": 7007.03,
+              "volume_usd": 22434878.93,
+              "price": 3201.77,
+              "trades_count": 16010
+            },
+            "ETH/BNB": {
+              "volume_eth": 6955.15,
+              "volume_usd": 22283635.78,
+              "price": 3203.9,
+              "trades_count": 27290
+            }
+          },
+          "market_share": 8.22,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 111081.25,
+          "total_volume_usd": 355459998.84,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 58943.7,
+              "volume_usd": 188953996.38,
+              "price": 3205.67,
+              "trades_count": 48049
+            },
+            "ETH/USD": {
+              "volume_eth": 20569.38,
+              "volume_usd": 65842494.32,
+              "price": 3200.99,
+              "trades_count": 26928
+            },
+            "ETH/BTC": {
+              "volume_eth": 12817.37,
+              "volume_usd": 41050733.73,
+              "price": 3202.74,
+              "trades_count": 10363
+            },
+            "ETH/USDC": {
+              "volume_eth": 5031.71,
+              "volume_usd": 16093326.68,
+              "price": 3198.38,
+              "trades_count": 37789
+            },
+            "ETH/BNB": {
+              "volume_eth": 5640.66,
+              "volume_usd": 18067931.78,
+              "price": 3203.16,
+              "trades_count": 29077
+            }
+          },
+          "market_share": 7.41,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 100025.14,
+          "total_volume_usd": 320080437.33,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 57600.09,
+              "volume_usd": 184113339.62,
+              "price": 3196.41,
+              "trades_count": 10065
+            },
+            "ETH/USD": {
+              "volume_eth": 20081.26,
+              "volume_usd": 64207445.55,
+              "price": 3197.38,
+              "trades_count": 4087
+            },
+            "ETH/BTC": {
+              "volume_eth": 11447.29,
+              "volume_usd": 36555021.53,
+              "price": 3193.33,
+              "trades_count": 11484
+            },
+            "ETH/USDC": {
+              "volume_eth": 5585.56,
+              "volume_usd": 17871017.09,
+              "price": 3199.5,
+              "trades_count": 5163
+            },
+            "ETH/BNB": {
+              "volume_eth": 4770.73,
+              "volume_usd": 15272202.75,
+              "price": 3201.23,
+              "trades_count": 31674
+            }
+          },
+          "market_share": 6.67,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 90576.46,
+          "total_volume_usd": 289844684.91,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 64586.35,
+              "volume_usd": 206974564.75,
+              "price": 3204.62,
+              "trades_count": 1752
+            },
+            "ETH/USD": {
+              "volume_eth": 19421.65,
+              "volume_usd": 62101361.38,
+              "price": 3197.53,
+              "trades_count": 36190
+            },
+            "ETH/BTC": {
+              "volume_eth": 9966.59,
+              "volume_usd": 31944491.03,
+              "price": 3205.16,
+              "trades_count": 23293
+            },
+            "ETH/USDC": {
+              "volume_eth": 3825.14,
+              "volume_usd": 12238846.48,
+              "price": 3199.58,
+              "trades_count": 30735
+            },
+            "ETH/BNB": {
+              "volume_eth": 3628.94,
+              "volume_usd": 11622916.41,
+              "price": 3202.84,
+              "trades_count": 48164
+            }
+          },
+          "market_share": 6.04,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-09": {
+      "date": "2025-09-09",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 487733.78,
+          "total_volume_usd": 1560748081.58,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 292708.87,
+              "volume_usd": 935464408.39,
+              "price": 3195.89,
+              "trades_count": 7973
+            },
+            "ETH/USD": {
+              "volume_eth": 112003.91,
+              "volume_usd": 358268028.27,
+              "price": 3198.71,
+              "trades_count": 42874
+            },
+            "ETH/BTC": {
+              "volume_eth": 48922.88,
+              "volume_usd": 156270382.71,
+              "price": 3194.22,
+              "trades_count": 25504
+            },
+            "ETH/USDC": {
+              "volume_eth": 26947.4,
+              "volume_usd": 86238460.07,
+              "price": 3200.25,
+              "trades_count": 35757
+            },
+            "ETH/BNB": {
+              "volume_eth": 28468.96,
+              "volume_usd": 91136718.12,
+              "price": 3201.27,
+              "trades_count": 33021
+            }
+          },
+          "market_share": 32.52,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 199051.74,
+          "total_volume_usd": 636965581.08,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 139930.13,
+              "volume_usd": 448454731.4,
+              "price": 3204.85,
+              "trades_count": 21153
+            },
+            "ETH/USD": {
+              "volume_eth": 35661.35,
+              "volume_usd": 114057181.81,
+              "price": 3198.34,
+              "trades_count": 38182
+            },
+            "ETH/BTC": {
+              "volume_eth": 23463.82,
+              "volume_usd": 74897549.32,
+              "price": 3192.04,
+              "trades_count": 32849
+            },
+            "ETH/USDC": {
+              "volume_eth": 11210.69,
+              "volume_usd": 35908492.38,
+              "price": 3203.06,
+              "trades_count": 35911
+            },
+            "ETH/BNB": {
+              "volume_eth": 11010.88,
+              "volume_usd": 35182452.44,
+              "price": 3195.24,
+              "trades_count": 32148
+            }
+          },
+          "market_share": 13.27,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 208955.79,
+          "total_volume_usd": 668658542.22,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 108579.8,
+              "volume_usd": 347493814.29,
+              "price": 3200.35,
+              "trades_count": 40753
+            },
+            "ETH/USD": {
+              "volume_eth": 40506.3,
+              "volume_usd": 129545437.1,
+              "price": 3198.16,
+              "trades_count": 36343
+            },
+            "ETH/BTC": {
+              "volume_eth": 23029.15,
+              "volume_usd": 73777216.19,
+              "price": 3203.65,
+              "trades_count": 47723
+            },
+            "ETH/USDC": {
+              "volume_eth": 9660.93,
+              "volume_usd": 30945591.97,
+              "price": 3203.17,
+              "trades_count": 43590
+            },
+            "ETH/BNB": {
+              "volume_eth": 9918.8,
+              "volume_usd": 31790893.12,
+              "price": 3205.12,
+              "trades_count": 30588
+            }
+          },
+          "market_share": 13.93,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 127260.25,
+          "total_volume_usd": 407232805.61,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 67947.73,
+              "volume_usd": 217291915.17,
+              "price": 3197.93,
+              "trades_count": 39555
+            },
+            "ETH/USD": {
+              "volume_eth": 26001.02,
+              "volume_usd": 83217967.16,
+              "price": 3200.57,
+              "trades_count": 1471
+            },
+            "ETH/BTC": {
+              "volume_eth": 10542.2,
+              "volume_usd": 33761589.58,
+              "price": 3202.52,
+              "trades_count": 16003
+            },
+            "ETH/USDC": {
+              "volume_eth": 5261.96,
+              "volume_usd": 16822484.33,
+              "price": 3197.0,
+              "trades_count": 22654
+            },
+            "ETH/BNB": {
+              "volume_eth": 5270.76,
+              "volume_usd": 16848745.28,
+              "price": 3196.65,
+              "trades_count": 44842
+            }
+          },
+          "market_share": 8.48,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 119649.95,
+          "total_volume_usd": 382879833.53,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 72916.61,
+              "volume_usd": 233541613.82,
+              "price": 3202.86,
+              "trades_count": 38423
+            },
+            "ETH/USD": {
+              "volume_eth": 24659.49,
+              "volume_usd": 78869798.65,
+              "price": 3198.36,
+              "trades_count": 31996
+            },
+            "ETH/BTC": {
+              "volume_eth": 13436.67,
+              "volume_usd": 42917489.99,
+              "price": 3194.06,
+              "trades_count": 7352
+            },
+            "ETH/USDC": {
+              "volume_eth": 6362.94,
+              "volume_usd": 20355484.03,
+              "price": 3199.07,
+              "trades_count": 27941
+            },
+            "ETH/BNB": {
+              "volume_eth": 5903.59,
+              "volume_usd": 18908790.21,
+              "price": 3202.93,
+              "trades_count": 45129
+            }
+          },
+          "market_share": 7.98,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 125892.69,
+          "total_volume_usd": 402856610.4,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 79952.33,
+              "volume_usd": 255397776.73,
+              "price": 3194.38,
+              "trades_count": 48724
+            },
+            "ETH/USD": {
+              "volume_eth": 23560.09,
+              "volume_usd": 75446816.1,
+              "price": 3202.31,
+              "trades_count": 17295
+            },
+            "ETH/BTC": {
+              "volume_eth": 11036.21,
+              "volume_usd": 35323550.69,
+              "price": 3200.7,
+              "trades_count": 10186
+            },
+            "ETH/USDC": {
+              "volume_eth": 6097.94,
+              "volume_usd": 19504777.88,
+              "price": 3198.58,
+              "trades_count": 17371
+            },
+            "ETH/BNB": {
+              "volume_eth": 7237.54,
+              "volume_usd": 23120776.83,
+              "price": 3194.56,
+              "trades_count": 37066
+            }
+          },
+          "market_share": 8.39,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 79867.3,
+          "total_volume_usd": 255575359.84,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 50836.72,
+              "volume_usd": 162703903.53,
+              "price": 3200.52,
+              "trades_count": 1967
+            },
+            "ETH/USD": {
+              "volume_eth": 18970.06,
+              "volume_usd": 60755947.46,
+              "price": 3202.73,
+              "trades_count": 16491
+            },
+            "ETH/BTC": {
+              "volume_eth": 6920.7,
+              "volume_usd": 22144321.7,
+              "price": 3199.72,
+              "trades_count": 15008
+            },
+            "ETH/USDC": {
+              "volume_eth": 4575.84,
+              "volume_usd": 14654466.79,
+              "price": 3202.58,
+              "trades_count": 11789
+            },
+            "ETH/BNB": {
+              "volume_eth": 3800.04,
+              "volume_usd": 12183743.91,
+              "price": 3206.21,
+              "trades_count": 18380
+            }
+          },
+          "market_share": 5.32,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 98445.06,
+          "total_volume_usd": 315024185.14,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 65803.73,
+              "volume_usd": 210391063.52,
+              "price": 3197.25,
+              "trades_count": 46651
+            },
+            "ETH/USD": {
+              "volume_eth": 23290.66,
+              "volume_usd": 74603974.23,
+              "price": 3203.17,
+              "trades_count": 37422
+            },
+            "ETH/BTC": {
+              "volume_eth": 10481.92,
+              "volume_usd": 33539471.22,
+              "price": 3199.74,
+              "trades_count": 13445
+            },
+            "ETH/USDC": {
+              "volume_eth": 4521.99,
+              "volume_usd": 14483935.02,
+              "price": 3203.0,
+              "trades_count": 38957
+            },
+            "ETH/BNB": {
+              "volume_eth": 5386.4,
+              "volume_usd": 17206197.35,
+              "price": 3194.38,
+              "trades_count": 21552
+            }
+          },
+          "market_share": 6.56,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-10": {
+      "date": "2025-09-10",
+      "global_volume_eth": 2700000.0,
+      "global_volume_usd": 8640000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 1229184.53,
+          "total_volume_usd": 3933390503.37,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 762343.47,
+              "volume_usd": 2439526920.2,
+              "price": 3200.04,
+              "trades_count": 35807
+            },
+            "ETH/USD": {
+              "volume_eth": 212150.64,
+              "volume_usd": 679507661.34,
+              "price": 3202.95,
+              "trades_count": 6250
+            },
+            "ETH/BTC": {
+              "volume_eth": 140193.05,
+              "volume_usd": 447456333.66,
+              "price": 3191.72,
+              "trades_count": 5453
+            },
+            "ETH/USDC": {
+              "volume_eth": 65766.6,
+              "volume_usd": 210341658.73,
+              "price": 3198.31,
+              "trades_count": 8856
+            },
+            "ETH/BNB": {
+              "volume_eth": 72315.29,
+              "volume_usd": 231473419.48,
+              "price": 3200.89,
+              "trades_count": 38940
+            }
+          },
+          "market_share": 45.53,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.5
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 538443.44,
+          "total_volume_usd": 1723019008.77,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 338493.31,
+              "volume_usd": 1082828616.68,
+              "price": 3198.97,
+              "trades_count": 39251
+            },
+            "ETH/USD": {
+              "volume_eth": 110498.37,
+              "volume_usd": 353464918.8,
+              "price": 3198.82,
+              "trades_count": 18089
+            },
+            "ETH/BTC": {
+              "volume_eth": 47474.76,
+              "volume_usd": 152116282.17,
+              "price": 3204.15,
+              "trades_count": 16642
+            },
+            "ETH/USDC": {
+              "volume_eth": 24398.11,
+              "volume_usd": 78016299.86,
+              "price": 3197.64,
+              "trades_count": 43303
+            },
+            "ETH/BNB": {
+              "volume_eth": 24768.37,
+              "volume_usd": 79200495.49,
+              "price": 3197.65,
+              "trades_count": 5754
+            }
+          },
+          "market_share": 19.94,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.3
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 266766.55,
+          "total_volume_usd": 853652975.65,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 167817.03,
+              "volume_usd": 537149809.55,
+              "price": 3200.81,
+              "trades_count": 7552
+            },
+            "ETH/USD": {
+              "volume_eth": 44246.13,
+              "volume_usd": 141506387.12,
+              "price": 3198.16,
+              "trades_count": 18380
+            },
+            "ETH/BTC": {
+              "volume_eth": 22754.72,
+              "volume_usd": 72749149.23,
+              "price": 3197.1,
+              "trades_count": 5508
+            },
+            "ETH/USDC": {
+              "volume_eth": 15361.86,
+              "volume_usd": 49145124.64,
+              "price": 3199.16,
+              "trades_count": 11338
+            },
+            "ETH/BNB": {
+              "volume_eth": 13008.52,
+              "volume_usd": 41634466.5,
+              "price": 3200.55,
+              "trades_count": 20825
+            }
+          },
+          "market_share": 9.88,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 282061.2,
+          "total_volume_usd": 902595835.83,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 202219.81,
+              "volume_usd": 647501944.13,
+              "price": 3201.97,
+              "trades_count": 1512
+            },
+            "ETH/USD": {
+              "volume_eth": 60200.06,
+              "volume_usd": 192661214.65,
+              "price": 3200.35,
+              "trades_count": 44475
+            },
+            "ETH/BTC": {
+              "volume_eth": 23733.61,
+              "volume_usd": 76119843.55,
+              "price": 3207.26,
+              "trades_count": 18332
+            },
+            "ETH/USDC": {
+              "volume_eth": 11933.61,
+              "volume_usd": 38157529.52,
+              "price": 3197.49,
+              "trades_count": 37256
+            },
+            "ETH/BNB": {
+              "volume_eth": 12159.36,
+              "volume_usd": 38875998.73,
+              "price": 3197.21,
+              "trades_count": 14803
+            }
+          },
+          "market_share": 10.45,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 225400.85,
+          "total_volume_usd": 721282708.75,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 119206.25,
+              "volume_usd": 381664818.87,
+              "price": 3201.72,
+              "trades_count": 18300
+            },
+            "ETH/USD": {
+              "volume_eth": 45177.71,
+              "volume_usd": 144496698.42,
+              "price": 3198.41,
+              "trades_count": 4329
+            },
+            "ETH/BTC": {
+              "volume_eth": 18864.23,
+              "volume_usd": 60337867.91,
+              "price": 3198.53,
+              "trades_count": 19132
+            },
+            "ETH/USDC": {
+              "volume_eth": 9214.78,
+              "volume_usd": 29477472.8,
+              "price": 3198.93,
+              "trades_count": 9573
+            },
+            "ETH/BNB": {
+              "volume_eth": 11888.15,
+              "volume_usd": 38005862.73,
+              "price": 3196.95,
+              "trades_count": 49577
+            }
+          },
+          "market_share": 8.35,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 211979.67,
+          "total_volume_usd": 678334945.86,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 137651.16,
+              "volume_usd": 440591021.37,
+              "price": 3200.78,
+              "trades_count": 8331
+            },
+            "ETH/USD": {
+              "volume_eth": 35192.76,
+              "volume_usd": 112703122.98,
+              "price": 3202.45,
+              "trades_count": 10768
+            },
+            "ETH/BTC": {
+              "volume_eth": 21584.54,
+              "volume_usd": 69209177.94,
+              "price": 3206.42,
+              "trades_count": 39175
+            },
+            "ETH/USDC": {
+              "volume_eth": 10821.67,
+              "volume_usd": 34624476.59,
+              "price": 3199.55,
+              "trades_count": 3741
+            },
+            "ETH/BNB": {
+              "volume_eth": 9786.08,
+              "volume_usd": 31365423.19,
+              "price": 3205.11,
+              "trades_count": 3614
+            }
+          },
+          "market_share": 7.85,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 180095.22,
+          "total_volume_usd": 576304708.84,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 95525.81,
+              "volume_usd": 305376346.22,
+              "price": 3196.79,
+              "trades_count": 7736
+            },
+            "ETH/USD": {
+              "volume_eth": 33910.9,
+              "volume_usd": 108527882.92,
+              "price": 3200.38,
+              "trades_count": 27632
+            },
+            "ETH/BTC": {
+              "volume_eth": 21422.95,
+              "volume_usd": 68656066.49,
+              "price": 3204.79,
+              "trades_count": 16514
+            },
+            "ETH/USDC": {
+              "volume_eth": 10318.04,
+              "volume_usd": 33049161.5,
+              "price": 3203.05,
+              "trades_count": 12603
+            },
+            "ETH/BNB": {
+              "volume_eth": 10378.59,
+              "volume_usd": 33148344.36,
+              "price": 3193.92,
+              "trades_count": 49271
+            }
+          },
+          "market_share": 6.67,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 177128.73,
+          "total_volume_usd": 566811927.05,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 118281.74,
+              "volume_usd": 378367897.58,
+              "price": 3198.87,
+              "trades_count": 44903
+            },
+            "ETH/USD": {
+              "volume_eth": 40584.64,
+              "volume_usd": 129951566.65,
+              "price": 3201.99,
+              "trades_count": 18485
+            },
+            "ETH/BTC": {
+              "volume_eth": 15298.24,
+              "volume_usd": 49013484.28,
+              "price": 3203.86,
+              "trades_count": 26070
+            },
+            "ETH/USDC": {
+              "volume_eth": 10174.86,
+              "volume_usd": 32582919.06,
+              "price": 3202.29,
+              "trades_count": 15577
+            },
+            "ETH/BNB": {
+              "volume_eth": 7792.15,
+              "volume_usd": 24976618.48,
+              "price": 3205.36,
+              "trades_count": 23915
+            }
+          },
+          "market_share": 6.56,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.8,
+        "Binance_impact": 1.5,
+        "Coinbase_impact": 1.3,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-11": {
+      "date": "2025-09-11",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 494317.56,
+          "total_volume_usd": 1581816197.14,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 331629.21,
+              "volume_usd": 1060057151.57,
+              "price": 3196.51,
+              "trades_count": 2550
+            },
+            "ETH/USD": {
+              "volume_eth": 105192.09,
+              "volume_usd": 336546330.19,
+              "price": 3199.35,
+              "trades_count": 19258
+            },
+            "ETH/BTC": {
+              "volume_eth": 56636.0,
+              "volume_usd": 181742895.55,
+              "price": 3208.96,
+              "trades_count": 19292
+            },
+            "ETH/USDC": {
+              "volume_eth": 23244.26,
+              "volume_usd": 74383019.8,
+              "price": 3200.06,
+              "trades_count": 45532
+            },
+            "ETH/BNB": {
+              "volume_eth": 29472.69,
+              "volume_usd": 94326279.63,
+              "price": 3200.46,
+              "trades_count": 2808
+            }
+          },
+          "market_share": 32.95,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 204228.45,
+          "total_volume_usd": 653531054.72,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 145593.68,
+              "volume_usd": 465300749.9,
+              "price": 3195.89,
+              "trades_count": 18397
+            },
+            "ETH/USD": {
+              "volume_eth": 33301.61,
+              "volume_usd": 106585732.34,
+              "price": 3200.62,
+              "trades_count": 23654
+            },
+            "ETH/BTC": {
+              "volume_eth": 22289.86,
+              "volume_usd": 71247817.6,
+              "price": 3196.42,
+              "trades_count": 40728
+            },
+            "ETH/USDC": {
+              "volume_eth": 12189.32,
+              "volume_usd": 38975831.94,
+              "price": 3197.54,
+              "trades_count": 38787
+            },
+            "ETH/BNB": {
+              "volume_eth": 8945.53,
+              "volume_usd": 28573520.83,
+              "price": 3194.17,
+              "trades_count": 29577
+            }
+          },
+          "market_share": 13.62,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 147709.59,
+          "total_volume_usd": 472670703.45,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 103712.53,
+              "volume_usd": 331931126.96,
+              "price": 3200.49,
+              "trades_count": 48148
+            },
+            "ETH/USD": {
+              "volume_eth": 34744.41,
+              "volume_usd": 111234807.69,
+              "price": 3201.52,
+              "trades_count": 13912
+            },
+            "ETH/BTC": {
+              "volume_eth": 13968.73,
+              "volume_usd": 44584596.21,
+              "price": 3191.74,
+              "trades_count": 44531
+            },
+            "ETH/USDC": {
+              "volume_eth": 8628.52,
+              "volume_usd": 27618057.26,
+              "price": 3200.79,
+              "trades_count": 44475
+            },
+            "ETH/BNB": {
+              "volume_eth": 8413.58,
+              "volume_usd": 26947133.9,
+              "price": 3202.81,
+              "trades_count": 20681
+            }
+          },
+          "market_share": 9.85,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 150427.35,
+          "total_volume_usd": 481367520.77,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 96281.67,
+              "volume_usd": 307887136.97,
+              "price": 3197.78,
+              "trades_count": 46692
+            },
+            "ETH/USD": {
+              "volume_eth": 27626.35,
+              "volume_usd": 88338409.54,
+              "price": 3197.61,
+              "trades_count": 28554
+            },
+            "ETH/BTC": {
+              "volume_eth": 16035.13,
+              "volume_usd": 51275210.9,
+              "price": 3197.68,
+              "trades_count": 12405
+            },
+            "ETH/USDC": {
+              "volume_eth": 7868.9,
+              "volume_usd": 25170454.26,
+              "price": 3198.73,
+              "trades_count": 36909
+            },
+            "ETH/BNB": {
+              "volume_eth": 8525.4,
+              "volume_usd": 27259863.03,
+              "price": 3197.49,
+              "trades_count": 14774
+            }
+          },
+          "market_share": 10.03,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 118317.32,
+          "total_volume_usd": 378615409.92,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 73261.65,
+              "volume_usd": 234582353.99,
+              "price": 3201.98,
+              "trades_count": 31473
+            },
+            "ETH/USD": {
+              "volume_eth": 23112.45,
+              "volume_usd": 73985803.81,
+              "price": 3201.12,
+              "trades_count": 34500
+            },
+            "ETH/BTC": {
+              "volume_eth": 11704.83,
+              "volume_usd": 37545614.53,
+              "price": 3207.7,
+              "trades_count": 49231
+            },
+            "ETH/USDC": {
+              "volume_eth": 5134.24,
+              "volume_usd": 16415928.68,
+              "price": 3197.34,
+              "trades_count": 34780
+            },
+            "ETH/BNB": {
+              "volume_eth": 6303.6,
+              "volume_usd": 20181144.93,
+              "price": 3201.53,
+              "trades_count": 7120
+            }
+          },
+          "market_share": 7.89,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 132227.46,
+          "total_volume_usd": 423127875.32,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 87306.24,
+              "volume_usd": 279573078.97,
+              "price": 3202.21,
+              "trades_count": 15722
+            },
+            "ETH/USD": {
+              "volume_eth": 29688.37,
+              "volume_usd": 94935794.84,
+              "price": 3197.74,
+              "trades_count": 4028
+            },
+            "ETH/BTC": {
+              "volume_eth": 11873.19,
+              "volume_usd": 37988550.19,
+              "price": 3199.52,
+              "trades_count": 5772
+            },
+            "ETH/USDC": {
+              "volume_eth": 6493.47,
+              "volume_usd": 20795147.68,
+              "price": 3202.47,
+              "trades_count": 38727
+            },
+            "ETH/BNB": {
+              "volume_eth": 5803.29,
+              "volume_usd": 18585120.0,
+              "price": 3202.51,
+              "trades_count": 33399
+            }
+          },
+          "market_share": 8.82,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 87471.25,
+          "total_volume_usd": 279908006.86,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 45084.18,
+              "volume_usd": 144377652.23,
+              "price": 3202.4,
+              "trades_count": 7985
+            },
+            "ETH/USD": {
+              "volume_eth": 19442.55,
+              "volume_usd": 62181184.21,
+              "price": 3198.2,
+              "trades_count": 46607
+            },
+            "ETH/BTC": {
+              "volume_eth": 8809.96,
+              "volume_usd": 28115780.33,
+              "price": 3191.36,
+              "trades_count": 17331
+            },
+            "ETH/USDC": {
+              "volume_eth": 5103.9,
+              "volume_usd": 16320096.04,
+              "price": 3197.58,
+              "trades_count": 9738
+            },
+            "ETH/BNB": {
+              "volume_eth": 4900.87,
+              "volume_usd": 15693291.09,
+              "price": 3202.14,
+              "trades_count": 37629
+            }
+          },
+          "market_share": 5.83,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 91889.96,
+          "total_volume_usd": 294047858.9,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 65058.96,
+              "volume_usd": 208514641.11,
+              "price": 3205.01,
+              "trades_count": 41150
+            },
+            "ETH/USD": {
+              "volume_eth": 20693.67,
+              "volume_usd": 66271649.86,
+              "price": 3202.51,
+              "trades_count": 28966
+            },
+            "ETH/BTC": {
+              "volume_eth": 10404.04,
+              "volume_usd": 33302474.93,
+              "price": 3200.92,
+              "trades_count": 11430
+            },
+            "ETH/USDC": {
+              "volume_eth": 5042.29,
+              "volume_usd": 16134502.89,
+              "price": 3199.84,
+              "trades_count": 17986
+            },
+            "ETH/BNB": {
+              "volume_eth": 5057.21,
+              "volume_usd": 16205081.56,
+              "price": 3204.35,
+              "trades_count": 19173
+            }
+          },
+          "market_share": 6.13,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-12": {
+      "date": "2025-09-12",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 566865.66,
+          "total_volume_usd": 1813970096.89,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 343017.18,
+              "volume_usd": 1098211496.0,
+              "price": 3201.62,
+              "trades_count": 18996
+            },
+            "ETH/USD": {
+              "volume_eth": 110646.4,
+              "volume_usd": 354219692.96,
+              "price": 3201.37,
+              "trades_count": 16367
+            },
+            "ETH/BTC": {
+              "volume_eth": 51510.29,
+              "volume_usd": 164654624.11,
+              "price": 3196.54,
+              "trades_count": 36399
+            },
+            "ETH/USDC": {
+              "volume_eth": 23588.16,
+              "volume_usd": 75429401.03,
+              "price": 3197.77,
+              "trades_count": 26102
+            },
+            "ETH/BNB": {
+              "volume_eth": 30542.15,
+              "volume_usd": 97815585.45,
+              "price": 3202.64,
+              "trades_count": 5209
+            }
+          },
+          "market_share": 37.79,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 220402.87,
+          "total_volume_usd": 705289172.41,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 123295.91,
+              "volume_usd": 394493119.9,
+              "price": 3199.56,
+              "trades_count": 5080
+            },
+            "ETH/USD": {
+              "volume_eth": 38911.41,
+              "volume_usd": 124496625.12,
+              "price": 3199.49,
+              "trades_count": 39278
+            },
+            "ETH/BTC": {
+              "volume_eth": 25972.82,
+              "volume_usd": 82873427.22,
+              "price": 3190.78,
+              "trades_count": 38728
+            },
+            "ETH/USDC": {
+              "volume_eth": 10492.86,
+              "volume_usd": 33543958.13,
+              "price": 3196.84,
+              "trades_count": 24052
+            },
+            "ETH/BNB": {
+              "volume_eth": 10132.42,
+              "volume_usd": 32409464.13,
+              "price": 3198.59,
+              "trades_count": 28460
+            }
+          },
+          "market_share": 14.69,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 182476.69,
+          "total_volume_usd": 583925416.9,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 119761.68,
+              "volume_usd": 383697042.9,
+              "price": 3203.84,
+              "trades_count": 15453
+            },
+            "ETH/USD": {
+              "volume_eth": 36323.51,
+              "volume_usd": 116182448.97,
+              "price": 3198.55,
+              "trades_count": 32827
+            },
+            "ETH/BTC": {
+              "volume_eth": 14809.99,
+              "volume_usd": 47345369.7,
+              "price": 3196.85,
+              "trades_count": 45508
+            },
+            "ETH/USDC": {
+              "volume_eth": 10211.92,
+              "volume_usd": 32692780.12,
+              "price": 3201.43,
+              "trades_count": 31630
+            },
+            "ETH/BNB": {
+              "volume_eth": 10654.97,
+              "volume_usd": 34161453.74,
+              "price": 3206.15,
+              "trades_count": 36004
+            }
+          },
+          "market_share": 12.17,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 121617.99,
+          "total_volume_usd": 389177558.77,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 69877.42,
+              "volume_usd": 223665344.35,
+              "price": 3200.82,
+              "trades_count": 2776
+            },
+            "ETH/USD": {
+              "volume_eth": 20275.64,
+              "volume_usd": 64872783.37,
+              "price": 3199.54,
+              "trades_count": 31257
+            },
+            "ETH/BTC": {
+              "volume_eth": 10613.5,
+              "volume_usd": 33914323.9,
+              "price": 3195.4,
+              "trades_count": 22453
+            },
+            "ETH/USDC": {
+              "volume_eth": 5379.55,
+              "volume_usd": 17208609.45,
+              "price": 3198.89,
+              "trades_count": 25846
+            },
+            "ETH/BNB": {
+              "volume_eth": 5541.54,
+              "volume_usd": 17764931.64,
+              "price": 3205.78,
+              "trades_count": 28627
+            }
+          },
+          "market_share": 8.11,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 114054.52,
+          "total_volume_usd": 364974453.64,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 56988.19,
+              "volume_usd": 182011636.23,
+              "price": 3193.85,
+              "trades_count": 36351
+            },
+            "ETH/USD": {
+              "volume_eth": 18723.97,
+              "volume_usd": 59970860.97,
+              "price": 3202.89,
+              "trades_count": 15694
+            },
+            "ETH/BTC": {
+              "volume_eth": 12090.44,
+              "volume_usd": 38754680.12,
+              "price": 3205.4,
+              "trades_count": 43713
+            },
+            "ETH/USDC": {
+              "volume_eth": 4654.01,
+              "volume_usd": 14878873.39,
+              "price": 3197.0,
+              "trades_count": 17205
+            },
+            "ETH/BNB": {
+              "volume_eth": 5016.94,
+              "volume_usd": 16023409.59,
+              "price": 3193.86,
+              "trades_count": 10986
+            }
+          },
+          "market_share": 7.6,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 109960.13,
+          "total_volume_usd": 351872402.46,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 65278.34,
+              "volume_usd": 208568487.74,
+              "price": 3195.06,
+              "trades_count": 15284
+            },
+            "ETH/USD": {
+              "volume_eth": 21684.44,
+              "volume_usd": 69356365.8,
+              "price": 3198.44,
+              "trades_count": 25175
+            },
+            "ETH/BTC": {
+              "volume_eth": 9534.81,
+              "volume_usd": 30531040.59,
+              "price": 3202.06,
+              "trades_count": 48078
+            },
+            "ETH/USDC": {
+              "volume_eth": 4650.29,
+              "volume_usd": 14890418.22,
+              "price": 3202.04,
+              "trades_count": 21384
+            },
+            "ETH/BNB": {
+              "volume_eth": 4636.14,
+              "volume_usd": 14807487.99,
+              "price": 3193.93,
+              "trades_count": 21444
+            }
+          },
+          "market_share": 7.33,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 91910.08,
+          "total_volume_usd": 294112248.18,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 64146.46,
+              "volume_usd": 205166283.88,
+              "price": 3198.4,
+              "trades_count": 47859
+            },
+            "ETH/USD": {
+              "volume_eth": 16163.89,
+              "volume_usd": 51733984.46,
+              "price": 3200.59,
+              "trades_count": 42106
+            },
+            "ETH/BTC": {
+              "volume_eth": 8245.62,
+              "volume_usd": 26417197.73,
+              "price": 3203.79,
+              "trades_count": 20764
+            },
+            "ETH/USDC": {
+              "volume_eth": 5239.41,
+              "volume_usd": 16769490.08,
+              "price": 3200.64,
+              "trades_count": 8933
+            },
+            "ETH/BNB": {
+              "volume_eth": 5140.03,
+              "volume_usd": 16452431.32,
+              "price": 3200.84,
+              "trades_count": 3691
+            }
+          },
+          "market_share": 6.13,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 86974.63,
+          "total_volume_usd": 278318830.57,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 50689.75,
+              "volume_usd": 162123221.58,
+              "price": 3198.34,
+              "trades_count": 34158
+            },
+            "ETH/USD": {
+              "volume_eth": 18421.53,
+              "volume_usd": 58891434.16,
+              "price": 3196.88,
+              "trades_count": 28528
+            },
+            "ETH/BTC": {
+              "volume_eth": 9818.85,
+              "volume_usd": 31345949.07,
+              "price": 3192.43,
+              "trades_count": 24736
+            },
+            "ETH/USDC": {
+              "volume_eth": 4584.58,
+              "volume_usd": 14680304.0,
+              "price": 3202.1,
+              "trades_count": 47354
+            },
+            "ETH/BNB": {
+              "volume_eth": 3745.11,
+              "volume_usd": 11968834.41,
+              "price": 3195.85,
+              "trades_count": 35193
+            }
+          },
+          "market_share": 5.8,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-13": {
+      "date": "2025-09-13",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 418818.48,
+          "total_volume_usd": 1340219132.38,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 228180.59,
+              "volume_usd": 731078047.35,
+              "price": 3203.94,
+              "trades_count": 36269
+            },
+            "ETH/USD": {
+              "volume_eth": 92965.69,
+              "volume_usd": 297469305.17,
+              "price": 3199.78,
+              "trades_count": 48908
+            },
+            "ETH/BTC": {
+              "volume_eth": 43431.05,
+              "volume_usd": 138831187.41,
+              "price": 3196.59,
+              "trades_count": 17088
+            },
+            "ETH/USDC": {
+              "volume_eth": 23711.25,
+              "volume_usd": 75813272.67,
+              "price": 3197.35,
+              "trades_count": 30543
+            },
+            "ETH/BNB": {
+              "volume_eth": 18795.43,
+              "volume_usd": 60136883.74,
+              "price": 3199.55,
+              "trades_count": 40998
+            }
+          },
+          "market_share": 27.92,
+          "volatility": 15.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 163857.52,
+          "total_volume_usd": 524344077.39,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 91880.68,
+              "volume_usd": 294011479.25,
+              "price": 3199.93,
+              "trades_count": 22300
+            },
+            "ETH/USD": {
+              "volume_eth": 28600.87,
+              "volume_usd": 91470089.37,
+              "price": 3198.16,
+              "trades_count": 17931
+            },
+            "ETH/BTC": {
+              "volume_eth": 15339.29,
+              "volume_usd": 49197722.12,
+              "price": 3207.3,
+              "trades_count": 46952
+            },
+            "ETH/USDC": {
+              "volume_eth": 9438.55,
+              "volume_usd": 30206714.73,
+              "price": 3200.36,
+              "trades_count": 34857
+            },
+            "ETH/BNB": {
+              "volume_eth": 9661.24,
+              "volume_usd": 30864738.32,
+              "price": 3194.7,
+              "trades_count": 48190
+            }
+          },
+          "market_share": 10.92,
+          "volatility": 12.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 121755.58,
+          "total_volume_usd": 389617855.15,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 74665.67,
+              "volume_usd": 238681968.26,
+              "price": 3196.68,
+              "trades_count": 32201
+            },
+            "ETH/USD": {
+              "volume_eth": 25772.28,
+              "volume_usd": 82469767.07,
+              "price": 3199.94,
+              "trades_count": 2130
+            },
+            "ETH/BTC": {
+              "volume_eth": 10193.64,
+              "volume_usd": 32565149.74,
+              "price": 3194.65,
+              "trades_count": 46336
+            },
+            "ETH/USDC": {
+              "volume_eth": 5462.7,
+              "volume_usd": 17486367.18,
+              "price": 3201.05,
+              "trades_count": 25184
+            },
+            "ETH/BNB": {
+              "volume_eth": 6022.67,
+              "volume_usd": 19274912.71,
+              "price": 3200.4,
+              "trades_count": 28885
+            }
+          },
+          "market_share": 8.12,
+          "volatility": 18.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 125858.52,
+          "total_volume_usd": 402747268.76,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 77037.15,
+              "volume_usd": 246372751.99,
+              "price": 3198.1,
+              "trades_count": 30736
+            },
+            "ETH/USD": {
+              "volume_eth": 22865.13,
+              "volume_usd": 73132052.28,
+              "price": 3198.41,
+              "trades_count": 8907
+            },
+            "ETH/BTC": {
+              "volume_eth": 13699.87,
+              "volume_usd": 43791075.46,
+              "price": 3196.46,
+              "trades_count": 49685
+            },
+            "ETH/USDC": {
+              "volume_eth": 6383.2,
+              "volume_usd": 20436956.82,
+              "price": 3201.68,
+              "trades_count": 13133
+            },
+            "ETH/BNB": {
+              "volume_eth": 5516.48,
+              "volume_usd": 17669590.93,
+              "price": 3203.05,
+              "trades_count": 19120
+            }
+          },
+          "market_share": 8.39,
+          "volatility": 20.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 87773.03,
+          "total_volume_usd": 280873689.66,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 62703.79,
+              "volume_usd": 200671917.09,
+              "price": 3200.32,
+              "trades_count": 19546
+            },
+            "ETH/USD": {
+              "volume_eth": 20928.68,
+              "volume_usd": 67016314.84,
+              "price": 3202.13,
+              "trades_count": 20414
+            },
+            "ETH/BTC": {
+              "volume_eth": 7820.52,
+              "volume_usd": 24977523.48,
+              "price": 3193.85,
+              "trades_count": 1927
+            },
+            "ETH/USDC": {
+              "volume_eth": 4753.82,
+              "volume_usd": 15200861.87,
+              "price": 3197.61,
+              "trades_count": 3982
+            },
+            "ETH/BNB": {
+              "volume_eth": 5221.26,
+              "volume_usd": 16711589.92,
+              "price": 3200.68,
+              "trades_count": 46705
+            }
+          },
+          "market_share": 5.85,
+          "volatility": 10.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 95937.13,
+          "total_volume_usd": 306998812.31,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 60736.71,
+              "volume_usd": 194554012.48,
+              "price": 3203.24,
+              "trades_count": 7723
+            },
+            "ETH/USD": {
+              "volume_eth": 22048.04,
+              "volume_usd": 70564174.75,
+              "price": 3200.47,
+              "trades_count": 31762
+            },
+            "ETH/BTC": {
+              "volume_eth": 9512.03,
+              "volume_usd": 30409400.7,
+              "price": 3196.94,
+              "trades_count": 4367
+            },
+            "ETH/USDC": {
+              "volume_eth": 4321.93,
+              "volume_usd": 13840169.19,
+              "price": 3202.32,
+              "trades_count": 8476
+            },
+            "ETH/BNB": {
+              "volume_eth": 5414.91,
+              "volume_usd": 17320840.97,
+              "price": 3198.73,
+              "trades_count": 5855
+            }
+          },
+          "market_share": 6.4,
+          "volatility": 16.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 64358.65,
+          "total_volume_usd": 205947690.24,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 41495.13,
+              "volume_usd": 132599430.82,
+              "price": 3195.54,
+              "trades_count": 37886
+            },
+            "ETH/USD": {
+              "volume_eth": 15184.14,
+              "volume_usd": 48548937.65,
+              "price": 3197.35,
+              "trades_count": 17265
+            },
+            "ETH/BTC": {
+              "volume_eth": 5453.63,
+              "volume_usd": 17479298.03,
+              "price": 3205.08,
+              "trades_count": 40735
+            },
+            "ETH/USDC": {
+              "volume_eth": 3341.66,
+              "volume_usd": 10695859.12,
+              "price": 3200.76,
+              "trades_count": 35247
+            },
+            "ETH/BNB": {
+              "volume_eth": 3063.96,
+              "volume_usd": 9820688.13,
+              "price": 3205.23,
+              "trades_count": 20487
+            }
+          },
+          "market_share": 4.29,
+          "volatility": 14.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 67991.91,
+          "total_volume_usd": 217574111.96,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 48791.5,
+              "volume_usd": 156011268.98,
+              "price": 3197.51,
+              "trades_count": 41699
+            },
+            "ETH/USD": {
+              "volume_eth": 11206.32,
+              "volume_usd": 35893221.52,
+              "price": 3202.94,
+              "trades_count": 7503
+            },
+            "ETH/BTC": {
+              "volume_eth": 8016.49,
+              "volume_usd": 25607796.51,
+              "price": 3194.39,
+              "trades_count": 14829
+            },
+            "ETH/USDC": {
+              "volume_eth": 3079.55,
+              "volume_usd": 9846312.96,
+              "price": 3197.32,
+              "trades_count": 16719
+            },
+            "ETH/BNB": {
+              "volume_eth": 2956.03,
+              "volume_usd": 9443232.67,
+              "price": 3194.56,
+              "trades_count": 1175
+            }
+          },
+          "market_share": 4.53,
+          "volatility": 11.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-14": {
+      "date": "2025-09-14",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 357414.06,
+          "total_volume_usd": 1143724999.63,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 230692.58,
+              "volume_usd": 738127395.92,
+              "price": 3199.61,
+              "trades_count": 3139
+            },
+            "ETH/USD": {
+              "volume_eth": 63804.88,
+              "volume_usd": 204260123.11,
+              "price": 3201.32,
+              "trades_count": 47070
+            },
+            "ETH/BTC": {
+              "volume_eth": 40882.55,
+              "volume_usd": 130487548.05,
+              "price": 3191.77,
+              "trades_count": 16297
+            },
+            "ETH/USDC": {
+              "volume_eth": 20900.94,
+              "volume_usd": 66921504.77,
+              "price": 3201.84,
+              "trades_count": 41963
+            },
+            "ETH/BNB": {
+              "volume_eth": 18512.54,
+              "volume_usd": 59312155.6,
+              "price": 3203.89,
+              "trades_count": 13964
+            }
+          },
+          "market_share": 23.83,
+          "volatility": 15.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 154670.25,
+          "total_volume_usd": 494944809.34,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 94456.35,
+              "volume_usd": 302438802.4,
+              "price": 3201.89,
+              "trades_count": 18408
+            },
+            "ETH/USD": {
+              "volume_eth": 34975.66,
+              "volume_usd": 111826176.2,
+              "price": 3197.26,
+              "trades_count": 11873
+            },
+            "ETH/BTC": {
+              "volume_eth": 17277.46,
+              "volume_usd": 55319409.23,
+              "price": 3201.82,
+              "trades_count": 38303
+            },
+            "ETH/USDC": {
+              "volume_eth": 9036.43,
+              "volume_usd": 28913062.64,
+              "price": 3199.61,
+              "trades_count": 31716
+            },
+            "ETH/BNB": {
+              "volume_eth": 8317.17,
+              "volume_usd": 26636207.92,
+              "price": 3202.56,
+              "trades_count": 18841
+            }
+          },
+          "market_share": 10.31,
+          "volatility": 12.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 126021.42,
+          "total_volume_usd": 403268537.45,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 75425.19,
+              "volume_usd": 240955536.98,
+              "price": 3194.63,
+              "trades_count": 3612
+            },
+            "ETH/USD": {
+              "volume_eth": 29130.33,
+              "volume_usd": 93260792.54,
+              "price": 3201.5,
+              "trades_count": 40564
+            },
+            "ETH/BTC": {
+              "volume_eth": 11343.78,
+              "volume_usd": 36211093.65,
+              "price": 3192.15,
+              "trades_count": 45190
+            },
+            "ETH/USDC": {
+              "volume_eth": 7147.83,
+              "volume_usd": 22876497.72,
+              "price": 3200.48,
+              "trades_count": 2359
+            },
+            "ETH/BNB": {
+              "volume_eth": 7560.21,
+              "volume_usd": 24209335.43,
+              "price": 3202.21,
+              "trades_count": 18662
+            }
+          },
+          "market_share": 8.4,
+          "volatility": 18.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 108202.37,
+          "total_volume_usd": 346247594.73,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 71753.99,
+              "volume_usd": 229314441.78,
+              "price": 3195.84,
+              "trades_count": 35010
+            },
+            "ETH/USD": {
+              "volume_eth": 22951.97,
+              "volume_usd": 73507420.67,
+              "price": 3202.66,
+              "trades_count": 12894
+            },
+            "ETH/BTC": {
+              "volume_eth": 12971.06,
+              "volume_usd": 41491439.0,
+              "price": 3198.77,
+              "trades_count": 33225
+            },
+            "ETH/USDC": {
+              "volume_eth": 6425.18,
+              "volume_usd": 20559331.48,
+              "price": 3199.81,
+              "trades_count": 27761
+            },
+            "ETH/BNB": {
+              "volume_eth": 5049.39,
+              "volume_usd": 16169044.48,
+              "price": 3202.18,
+              "trades_count": 11539
+            }
+          },
+          "market_share": 7.21,
+          "volatility": 20.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 81140.7,
+          "total_volume_usd": 259650244.95,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 52455.98,
+              "volume_usd": 167716928.72,
+              "price": 3197.29,
+              "trades_count": 27244
+            },
+            "ETH/USD": {
+              "volume_eth": 18263.58,
+              "volume_usd": 58449304.45,
+              "price": 3200.32,
+              "trades_count": 30807
+            },
+            "ETH/BTC": {
+              "volume_eth": 6777.07,
+              "volume_usd": 21654391.69,
+              "price": 3195.25,
+              "trades_count": 8597
+            },
+            "ETH/USDC": {
+              "volume_eth": 4820.06,
+              "volume_usd": 15421227.79,
+              "price": 3199.39,
+              "trades_count": 34724
+            },
+            "ETH/BNB": {
+              "volume_eth": 4584.33,
+              "volume_usd": 14640588.63,
+              "price": 3193.61,
+              "trades_count": 36559
+            }
+          },
+          "market_share": 5.41,
+          "volatility": 10.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 82977.92,
+          "total_volume_usd": 265529357.29,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 40908.86,
+              "volume_usd": 130918013.21,
+              "price": 3200.24,
+              "trades_count": 41804
+            },
+            "ETH/USD": {
+              "volume_eth": 18297.91,
+              "volume_usd": 58568012.53,
+              "price": 3200.8,
+              "trades_count": 4382
+            },
+            "ETH/BTC": {
+              "volume_eth": 7313.87,
+              "volume_usd": 23411287.84,
+              "price": 3200.95,
+              "trades_count": 19876
+            },
+            "ETH/USDC": {
+              "volume_eth": 4046.2,
+              "volume_usd": 12952961.81,
+              "price": 3201.27,
+              "trades_count": 8957
+            },
+            "ETH/BNB": {
+              "volume_eth": 3367.03,
+              "volume_usd": 10780091.68,
+              "price": 3201.66,
+              "trades_count": 16682
+            }
+          },
+          "market_share": 5.53,
+          "volatility": 16.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 66700.57,
+          "total_volume_usd": 213441820.91,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 36990.8,
+              "volume_usd": 118140305.6,
+              "price": 3193.78,
+              "trades_count": 27738
+            },
+            "ETH/USD": {
+              "volume_eth": 11169.46,
+              "volume_usd": 35777459.45,
+              "price": 3203.15,
+              "trades_count": 8435
+            },
+            "ETH/BTC": {
+              "volume_eth": 6567.2,
+              "volume_usd": 20966803.05,
+              "price": 3192.66,
+              "trades_count": 11090
+            },
+            "ETH/USDC": {
+              "volume_eth": 3332.86,
+              "volume_usd": 10669776.56,
+              "price": 3201.39,
+              "trades_count": 34349
+            },
+            "ETH/BNB": {
+              "volume_eth": 3609.05,
+              "volume_usd": 11545055.7,
+              "price": 3198.92,
+              "trades_count": 32621
+            }
+          },
+          "market_share": 4.45,
+          "volatility": 14.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 69656.19,
+          "total_volume_usd": 222899809.95,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 37509.54,
+              "volume_usd": 120055139.7,
+              "price": 3200.66,
+              "trades_count": 26138
+            },
+            "ETH/USD": {
+              "volume_eth": 12207.17,
+              "volume_usd": 39070694.79,
+              "price": 3200.64,
+              "trades_count": 49909
+            },
+            "ETH/BTC": {
+              "volume_eth": 8022.52,
+              "volume_usd": 25728122.91,
+              "price": 3206.99,
+              "trades_count": 19104
+            },
+            "ETH/USDC": {
+              "volume_eth": 3862.68,
+              "volume_usd": 12369336.68,
+              "price": 3202.27,
+              "trades_count": 23274
+            },
+            "ETH/BNB": {
+              "volume_eth": 4087.77,
+              "volume_usd": 13081273.05,
+              "price": 3200.1,
+              "trades_count": 1168
+            }
+          },
+          "market_share": 4.64,
+          "volatility": 11.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-15": {
+      "date": "2025-09-15",
+      "global_volume_eth": 1050000.0,
+      "global_volume_usd": 3360000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 343558.0,
+          "total_volume_usd": 1099385593.3,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 189524.94,
+              "volume_usd": 606690708.69,
+              "price": 3201.11,
+              "trades_count": 44249
+            },
+            "ETH/USD": {
+              "volume_eth": 68426.87,
+              "volume_usd": 218812087.07,
+              "price": 3197.75,
+              "trades_count": 36296
+            },
+            "ETH/BTC": {
+              "volume_eth": 34140.61,
+              "volume_usd": 109140129.55,
+              "price": 3196.78,
+              "trades_count": 36614
+            },
+            "ETH/USDC": {
+              "volume_eth": 16334.19,
+              "volume_usd": 52314659.58,
+              "price": 3202.77,
+              "trades_count": 13363
+            },
+            "ETH/BNB": {
+              "volume_eth": 20481.38,
+              "volume_usd": 65471938.56,
+              "price": 3196.66,
+              "trades_count": 26098
+            }
+          },
+          "market_share": 32.72,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 73714.33,
+          "total_volume_usd": 235885856.74,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 49103.38,
+              "volume_usd": 156843976.47,
+              "price": 3194.16,
+              "trades_count": 49804
+            },
+            "ETH/USD": {
+              "volume_eth": 14583.5,
+              "volume_usd": 46705796.98,
+              "price": 3202.65,
+              "trades_count": 25984
+            },
+            "ETH/BTC": {
+              "volume_eth": 7035.53,
+              "volume_usd": 22535800.67,
+              "price": 3203.14,
+              "trades_count": 43730
+            },
+            "ETH/USDC": {
+              "volume_eth": 4394.58,
+              "volume_usd": 14062525.43,
+              "price": 3199.97,
+              "trades_count": 3426
+            },
+            "ETH/BNB": {
+              "volume_eth": 3134.7,
+              "volume_usd": 10049700.36,
+              "price": 3205.96,
+              "trades_count": 22757
+            }
+          },
+          "market_share": 7.02,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 0.5
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 142769.61,
+          "total_volume_usd": 456862739.89,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 98483.29,
+              "volume_usd": 315071268.26,
+              "price": 3199.24,
+              "trades_count": 35468
+            },
+            "ETH/USD": {
+              "volume_eth": 33241.81,
+              "volume_usd": 106270680.11,
+              "price": 3196.9,
+              "trades_count": 10447
+            },
+            "ETH/BTC": {
+              "volume_eth": 13762.87,
+              "volume_usd": 44082077.92,
+              "price": 3202.97,
+              "trades_count": 11116
+            },
+            "ETH/USDC": {
+              "volume_eth": 5924.45,
+              "volume_usd": 18968908.81,
+              "price": 3201.8,
+              "trades_count": 18368
+            },
+            "ETH/BNB": {
+              "volume_eth": 6677.51,
+              "volume_usd": 21384500.73,
+              "price": 3202.47,
+              "trades_count": 43587
+            }
+          },
+          "market_share": 13.6,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 87373.24,
+          "total_volume_usd": 279594379.09,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 48829.04,
+              "volume_usd": 156361899.48,
+              "price": 3202.23,
+              "trades_count": 35971
+            },
+            "ETH/USD": {
+              "volume_eth": 16635.93,
+              "volume_usd": 53215459.9,
+              "price": 3198.83,
+              "trades_count": 48101
+            },
+            "ETH/BTC": {
+              "volume_eth": 10091.4,
+              "volume_usd": 32290129.8,
+              "price": 3199.77,
+              "trades_count": 36456
+            },
+            "ETH/USDC": {
+              "volume_eth": 3557.66,
+              "volume_usd": 11374692.25,
+              "price": 3197.24,
+              "trades_count": 42363
+            },
+            "ETH/BNB": {
+              "volume_eth": 4690.89,
+              "volume_usd": 14998094.15,
+              "price": 3197.28,
+              "trades_count": 15908
+            }
+          },
+          "market_share": 8.32,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 52887.4,
+          "total_volume_usd": 169239695.93,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 30894.34,
+              "volume_usd": 98703107.33,
+              "price": 3194.86,
+              "trades_count": 42533
+            },
+            "ETH/USD": {
+              "volume_eth": 11440.14,
+              "volume_usd": 36579203.32,
+              "price": 3197.44,
+              "trades_count": 11902
+            },
+            "ETH/BTC": {
+              "volume_eth": 5699.15,
+              "volume_usd": 18281421.64,
+              "price": 3207.75,
+              "trades_count": 4014
+            },
+            "ETH/USDC": {
+              "volume_eth": 2458.6,
+              "volume_usd": 7860544.75,
+              "price": 3197.16,
+              "trades_count": 24492
+            },
+            "ETH/BNB": {
+              "volume_eth": 2511.98,
+              "volume_usd": 8026951.55,
+              "price": 3195.46,
+              "trades_count": 35810
+            }
+          },
+          "market_share": 5.04,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 0.6
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 81635.95,
+          "total_volume_usd": 261235043.24,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 52543.52,
+              "volume_usd": 167924076.64,
+              "price": 3195.9,
+              "trades_count": 12473
+            },
+            "ETH/USD": {
+              "volume_eth": 13577.48,
+              "volume_usd": 43480175.4,
+              "price": 3202.37,
+              "trades_count": 41613
+            },
+            "ETH/BTC": {
+              "volume_eth": 8761.61,
+              "volume_usd": 28036758.7,
+              "price": 3199.96,
+              "trades_count": 39217
+            },
+            "ETH/USDC": {
+              "volume_eth": 3499.11,
+              "volume_usd": 11196278.99,
+              "price": 3199.75,
+              "trades_count": 17644
+            },
+            "ETH/BNB": {
+              "volume_eth": 4015.79,
+              "volume_usd": 12859096.07,
+              "price": 3202.14,
+              "trades_count": 31490
+            }
+          },
+          "market_share": 7.77,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 70077.33,
+          "total_volume_usd": 224247469.54,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 45033.56,
+              "volume_usd": 143910238.77,
+              "price": 3195.62,
+              "trades_count": 29949
+            },
+            "ETH/USD": {
+              "volume_eth": 16511.54,
+              "volume_usd": 52888463.11,
+              "price": 3203.12,
+              "trades_count": 20605
+            },
+            "ETH/BTC": {
+              "volume_eth": 7397.19,
+              "volume_usd": 23660262.95,
+              "price": 3198.55,
+              "trades_count": 17390
+            },
+            "ETH/USDC": {
+              "volume_eth": 3443.37,
+              "volume_usd": 11014423.52,
+              "price": 3198.73,
+              "trades_count": 26211
+            },
+            "ETH/BNB": {
+              "volume_eth": 3999.08,
+              "volume_usd": 12776930.39,
+              "price": 3194.97,
+              "trades_count": 25993
+            }
+          },
+          "market_share": 6.67,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 63996.85,
+          "total_volume_usd": 204789915.25,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 39547.16,
+              "volume_usd": 126800326.61,
+              "price": 3206.31,
+              "trades_count": 20348
+            },
+            "ETH/USD": {
+              "volume_eth": 10351.82,
+              "volume_usd": 33147692.65,
+              "price": 3202.11,
+              "trades_count": 26939
+            },
+            "ETH/BTC": {
+              "volume_eth": 5822.38,
+              "volume_usd": 18638995.96,
+              "price": 3201.27,
+              "trades_count": 45944
+            },
+            "ETH/USDC": {
+              "volume_eth": 3556.06,
+              "volume_usd": 11390182.64,
+              "price": 3203.03,
+              "trades_count": 40741
+            },
+            "ETH/BNB": {
+              "volume_eth": 3513.65,
+              "volume_usd": 11258640.78,
+              "price": 3204.26,
+              "trades_count": 19756
+            }
+          },
+          "market_share": 6.09,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 0.7,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 0.5,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 0.6,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-16": {
+      "date": "2025-09-16",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 568429.2,
+          "total_volume_usd": 1818973453.72,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 304239.46,
+              "volume_usd": 974742079.53,
+              "price": 3203.86,
+              "trades_count": 15352
+            },
+            "ETH/USD": {
+              "volume_eth": 119898.45,
+              "volume_usd": 383767800.06,
+              "price": 3200.77,
+              "trades_count": 45417
+            },
+            "ETH/BTC": {
+              "volume_eth": 62654.03,
+              "volume_usd": 200814635.98,
+              "price": 3205.14,
+              "trades_count": 45620
+            },
+            "ETH/USDC": {
+              "volume_eth": 32267.87,
+              "volume_usd": 103283682.45,
+              "price": 3200.82,
+              "trades_count": 42121
+            },
+            "ETH/BNB": {
+              "volume_eth": 30085.15,
+              "volume_usd": 96198888.33,
+              "price": 3197.55,
+              "trades_count": 29889
+            }
+          },
+          "market_share": 37.9,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 199801.68,
+          "total_volume_usd": 639365391.0,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 113400.78,
+              "volume_usd": 362347485.64,
+              "price": 3195.28,
+              "trades_count": 20340
+            },
+            "ETH/USD": {
+              "volume_eth": 37190.59,
+              "volume_usd": 118989782.75,
+              "price": 3199.46,
+              "trades_count": 14159
+            },
+            "ETH/BTC": {
+              "volume_eth": 17040.36,
+              "volume_usd": 54542060.54,
+              "price": 3200.76,
+              "trades_count": 24976
+            },
+            "ETH/USDC": {
+              "volume_eth": 10113.37,
+              "volume_usd": 32389551.53,
+              "price": 3202.65,
+              "trades_count": 11783
+            },
+            "ETH/BNB": {
+              "volume_eth": 9018.93,
+              "volume_usd": 28898054.15,
+              "price": 3204.16,
+              "trades_count": 32578
+            }
+          },
+          "market_share": 13.32,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 210286.49,
+          "total_volume_usd": 672916762.03,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 115832.94,
+              "volume_usd": 371214569.92,
+              "price": 3204.74,
+              "trades_count": 8547
+            },
+            "ETH/USD": {
+              "volume_eth": 41524.54,
+              "volume_usd": 132765658.08,
+              "price": 3197.28,
+              "trades_count": 15785
+            },
+            "ETH/BTC": {
+              "volume_eth": 24057.96,
+              "volume_usd": 77089030.54,
+              "price": 3204.3,
+              "trades_count": 27044
+            },
+            "ETH/USDC": {
+              "volume_eth": 12479.53,
+              "volume_usd": 39958838.13,
+              "price": 3201.95,
+              "trades_count": 24971
+            },
+            "ETH/BNB": {
+              "volume_eth": 8791.25,
+              "volume_usd": 28120133.54,
+              "price": 3198.65,
+              "trades_count": 18331
+            }
+          },
+          "market_share": 14.02,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 152194.34,
+          "total_volume_usd": 487021883.19,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 89665.09,
+              "volume_usd": 287126640.78,
+              "price": 3202.21,
+              "trades_count": 45062
+            },
+            "ETH/USD": {
+              "volume_eth": 27543.05,
+              "volume_usd": 88116796.44,
+              "price": 3199.24,
+              "trades_count": 42847
+            },
+            "ETH/BTC": {
+              "volume_eth": 17899.83,
+              "volume_usd": 57144857.43,
+              "price": 3192.48,
+              "trades_count": 16323
+            },
+            "ETH/USDC": {
+              "volume_eth": 7522.9,
+              "volume_usd": 24079022.14,
+              "price": 3200.77,
+              "trades_count": 37792
+            },
+            "ETH/BNB": {
+              "volume_eth": 7086.19,
+              "volume_usd": 22685784.88,
+              "price": 3201.41,
+              "trades_count": 43444
+            }
+          },
+          "market_share": 10.15,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 109517.21,
+          "total_volume_usd": 350455068.76,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 74222.58,
+              "volume_usd": 237901199.46,
+              "price": 3205.24,
+              "trades_count": 20804
+            },
+            "ETH/USD": {
+              "volume_eth": 23210.98,
+              "volume_usd": 74218208.48,
+              "price": 3197.55,
+              "trades_count": 3971
+            },
+            "ETH/BTC": {
+              "volume_eth": 12906.65,
+              "volume_usd": 41252811.55,
+              "price": 3196.24,
+              "trades_count": 33284
+            },
+            "ETH/USDC": {
+              "volume_eth": 4635.03,
+              "volume_usd": 14824236.03,
+              "price": 3198.3,
+              "trades_count": 36228
+            },
+            "ETH/BNB": {
+              "volume_eth": 4677.84,
+              "volume_usd": 14966310.18,
+              "price": 3199.41,
+              "trades_count": 44940
+            }
+          },
+          "market_share": 7.3,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 137256.22,
+          "total_volume_usd": 439219908.82,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 88826.21,
+              "volume_usd": 284289566.59,
+              "price": 3200.51,
+              "trades_count": 39491
+            },
+            "ETH/USD": {
+              "volume_eth": 30111.48,
+              "volume_usd": 96290153.64,
+              "price": 3197.79,
+              "trades_count": 28189
+            },
+            "ETH/BTC": {
+              "volume_eth": 14576.18,
+              "volume_usd": 46737170.39,
+              "price": 3206.41,
+              "trades_count": 41347
+            },
+            "ETH/USDC": {
+              "volume_eth": 6610.58,
+              "volume_usd": 21172951.63,
+              "price": 3202.89,
+              "trades_count": 3144
+            },
+            "ETH/BNB": {
+              "volume_eth": 7385.16,
+              "volume_usd": 23605770.06,
+              "price": 3196.38,
+              "trades_count": 30143
+            }
+          },
+          "market_share": 9.15,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 101353.99,
+          "total_volume_usd": 324332768.9,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 69458.71,
+              "volume_usd": 221911653.88,
+              "price": 3194.87,
+              "trades_count": 45936
+            },
+            "ETH/USD": {
+              "volume_eth": 19195.11,
+              "volume_usd": 61473692.01,
+              "price": 3202.57,
+              "trades_count": 43259
+            },
+            "ETH/BTC": {
+              "volume_eth": 9562.44,
+              "volume_usd": 30581107.27,
+              "price": 3198.04,
+              "trades_count": 13439
+            },
+            "ETH/USDC": {
+              "volume_eth": 6016.79,
+              "volume_usd": 19271025.36,
+              "price": 3202.87,
+              "trades_count": 30800
+            },
+            "ETH/BNB": {
+              "volume_eth": 4239.99,
+              "volume_usd": 13552340.11,
+              "price": 3196.31,
+              "trades_count": 42909
+            }
+          },
+          "market_share": 6.76,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 91923.49,
+          "total_volume_usd": 294155168.0,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 44594.46,
+              "volume_usd": 142865962.94,
+              "price": 3203.67,
+              "trades_count": 16962
+            },
+            "ETH/USD": {
+              "volume_eth": 21979.43,
+              "volume_usd": 70374537.94,
+              "price": 3201.84,
+              "trades_count": 14448
+            },
+            "ETH/BTC": {
+              "volume_eth": 7606.15,
+              "volume_usd": 24378417.78,
+              "price": 3205.09,
+              "trades_count": 14576
+            },
+            "ETH/USDC": {
+              "volume_eth": 4754.99,
+              "volume_usd": 15225485.81,
+              "price": 3202.0,
+              "trades_count": 16269
+            },
+            "ETH/BNB": {
+              "volume_eth": 4280.99,
+              "volume_usd": 13679843.69,
+              "price": 3195.49,
+              "trades_count": 40058
+            }
+          },
+          "market_share": 6.13,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-17": {
+      "date": "2025-09-17",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 446696.6,
+          "total_volume_usd": 1429429117.95,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 306441.67,
+              "volume_usd": 979219652.67,
+              "price": 3195.45,
+              "trades_count": 9519
+            },
+            "ETH/USD": {
+              "volume_eth": 90776.45,
+              "volume_usd": 290658062.55,
+              "price": 3201.91,
+              "trades_count": 8204
+            },
+            "ETH/BTC": {
+              "volume_eth": 47547.42,
+              "volume_usd": 151718810.93,
+              "price": 3190.89,
+              "trades_count": 1973
+            },
+            "ETH/USDC": {
+              "volume_eth": 21068.38,
+              "volume_usd": 67457695.04,
+              "price": 3201.85,
+              "trades_count": 39591
+            },
+            "ETH/BNB": {
+              "volume_eth": 20760.42,
+              "volume_usd": 66346768.18,
+              "price": 3195.83,
+              "trades_count": 4434
+            }
+          },
+          "market_share": 29.78,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 204844.96,
+          "total_volume_usd": 655503876.35,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 119021.18,
+              "volume_usd": 380279172.99,
+              "price": 3195.05,
+              "trades_count": 5165
+            },
+            "ETH/USD": {
+              "volume_eth": 40579.72,
+              "volume_usd": 129927310.2,
+              "price": 3201.78,
+              "trades_count": 34635
+            },
+            "ETH/BTC": {
+              "volume_eth": 21251.98,
+              "volume_usd": 67986741.54,
+              "price": 3199.08,
+              "trades_count": 15519
+            },
+            "ETH/USDC": {
+              "volume_eth": 12067.07,
+              "volume_usd": 38579361.85,
+              "price": 3197.08,
+              "trades_count": 44181
+            },
+            "ETH/BNB": {
+              "volume_eth": 10330.13,
+              "volume_usd": 33050873.05,
+              "price": 3199.46,
+              "trades_count": 3041
+            }
+          },
+          "market_share": 13.66,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 151541.49,
+          "total_volume_usd": 484932756.5,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 90160.46,
+              "volume_usd": 288399948.54,
+              "price": 3198.74,
+              "trades_count": 45964
+            },
+            "ETH/USD": {
+              "volume_eth": 25555.49,
+              "volume_usd": 81812318.58,
+              "price": 3201.36,
+              "trades_count": 30069
+            },
+            "ETH/BTC": {
+              "volume_eth": 12568.79,
+              "volume_usd": 40118978.73,
+              "price": 3191.95,
+              "trades_count": 40865
+            },
+            "ETH/USDC": {
+              "volume_eth": 6511.23,
+              "volume_usd": 20820371.57,
+              "price": 3197.61,
+              "trades_count": 41915
+            },
+            "ETH/BNB": {
+              "volume_eth": 7980.41,
+              "volume_usd": 25542242.65,
+              "price": 3200.62,
+              "trades_count": 22311
+            }
+          },
+          "market_share": 10.1,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 142854.26,
+          "total_volume_usd": 457133644.57,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 89051.64,
+              "volume_usd": 284731461.18,
+              "price": 3197.37,
+              "trades_count": 34131
+            },
+            "ETH/USD": {
+              "volume_eth": 29775.71,
+              "volume_usd": 95205877.23,
+              "price": 3197.43,
+              "trades_count": 46991
+            },
+            "ETH/BTC": {
+              "volume_eth": 12082.12,
+              "volume_usd": 38698682.25,
+              "price": 3202.97,
+              "trades_count": 37132
+            },
+            "ETH/USDC": {
+              "volume_eth": 7773.67,
+              "volume_usd": 24861571.32,
+              "price": 3198.18,
+              "trades_count": 30593
+            },
+            "ETH/BNB": {
+              "volume_eth": 8251.52,
+              "volume_usd": 26395768.53,
+              "price": 3198.9,
+              "trades_count": 30720
+            }
+          },
+          "market_share": 9.52,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 117569.52,
+          "total_volume_usd": 376222478.15,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 77020.62,
+              "volume_usd": 246281177.87,
+              "price": 3197.6,
+              "trades_count": 21481
+            },
+            "ETH/USD": {
+              "volume_eth": 25066.84,
+              "volume_usd": 80193713.18,
+              "price": 3199.2,
+              "trades_count": 11003
+            },
+            "ETH/BTC": {
+              "volume_eth": 12635.53,
+              "volume_usd": 40427456.07,
+              "price": 3199.51,
+              "trades_count": 6978
+            },
+            "ETH/USDC": {
+              "volume_eth": 6658.6,
+              "volume_usd": 21290190.23,
+              "price": 3197.4,
+              "trades_count": 7328
+            },
+            "ETH/BNB": {
+              "volume_eth": 6453.6,
+              "volume_usd": 20641001.13,
+              "price": 3198.37,
+              "trades_count": 9527
+            }
+          },
+          "market_share": 7.84,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 122164.64,
+          "total_volume_usd": 390926835.99,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 75833.9,
+              "volume_usd": 242728247.01,
+              "price": 3200.79,
+              "trades_count": 22603
+            },
+            "ETH/USD": {
+              "volume_eth": 26094.5,
+              "volume_usd": 83487491.63,
+              "price": 3199.43,
+              "trades_count": 44603
+            },
+            "ETH/BTC": {
+              "volume_eth": 14372.08,
+              "volume_usd": 45969398.64,
+              "price": 3198.52,
+              "trades_count": 48255
+            },
+            "ETH/USDC": {
+              "volume_eth": 5012.28,
+              "volume_usd": 16032493.95,
+              "price": 3198.64,
+              "trades_count": 21476
+            },
+            "ETH/BNB": {
+              "volume_eth": 5745.76,
+              "volume_usd": 18392162.63,
+              "price": 3201.0,
+              "trades_count": 14942
+            }
+          },
+          "market_share": 8.14,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 81299.2,
+          "total_volume_usd": 260157441.38,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 48432.0,
+              "volume_usd": 155197696.13,
+              "price": 3204.45,
+              "trades_count": 23945
+            },
+            "ETH/USD": {
+              "volume_eth": 18506.13,
+              "volume_usd": 59203919.5,
+              "price": 3199.15,
+              "trades_count": 19256
+            },
+            "ETH/BTC": {
+              "volume_eth": 8370.89,
+              "volume_usd": 26836227.8,
+              "price": 3205.9,
+              "trades_count": 37763
+            },
+            "ETH/USDC": {
+              "volume_eth": 4836.57,
+              "volume_usd": 15486865.26,
+              "price": 3202.04,
+              "trades_count": 41211
+            },
+            "ETH/BNB": {
+              "volume_eth": 4349.47,
+              "volume_usd": 13921460.82,
+              "price": 3200.73,
+              "trades_count": 40911
+            }
+          },
+          "market_share": 5.42,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 98495.87,
+          "total_volume_usd": 315186780.68,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 66885.65,
+              "volume_usd": 213834976.54,
+              "price": 3197.02,
+              "trades_count": 12823
+            },
+            "ETH/USD": {
+              "volume_eth": 17912.62,
+              "volume_usd": 57350464.86,
+              "price": 3201.68,
+              "trades_count": 23270
+            },
+            "ETH/BTC": {
+              "volume_eth": 9262.64,
+              "volume_usd": 29583800.42,
+              "price": 3193.88,
+              "trades_count": 10388
+            },
+            "ETH/USDC": {
+              "volume_eth": 5055.44,
+              "volume_usd": 16174199.58,
+              "price": 3199.37,
+              "trades_count": 10297
+            },
+            "ETH/BNB": {
+              "volume_eth": 5399.48,
+              "volume_usd": 17310952.68,
+              "price": 3206.04,
+              "trades_count": 7013
+            }
+          },
+          "market_share": 6.57,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-18": {
+      "date": "2025-09-18",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 563762.6,
+          "total_volume_usd": 1804040328.05,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 299714.18,
+              "volume_usd": 958777821.49,
+              "price": 3198.97,
+              "trades_count": 23340
+            },
+            "ETH/USD": {
+              "volume_eth": 97301.33,
+              "volume_usd": 311246968.23,
+              "price": 3198.79,
+              "trades_count": 22258
+            },
+            "ETH/BTC": {
+              "volume_eth": 62619.04,
+              "volume_usd": 200462204.47,
+              "price": 3201.3,
+              "trades_count": 6567
+            },
+            "ETH/USDC": {
+              "volume_eth": 32510.41,
+              "volume_usd": 103961649.28,
+              "price": 3197.8,
+              "trades_count": 41490
+            },
+            "ETH/BNB": {
+              "volume_eth": 23111.59,
+              "volume_usd": 73833303.95,
+              "price": 3194.64,
+              "trades_count": 30039
+            }
+          },
+          "market_share": 37.58,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 233744.69,
+          "total_volume_usd": 747983006.12,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 139442.45,
+              "volume_usd": 446112408.2,
+              "price": 3199.26,
+              "trades_count": 18902
+            },
+            "ETH/USD": {
+              "volume_eth": 41430.2,
+              "volume_usd": 132579908.46,
+              "price": 3200.08,
+              "trades_count": 23621
+            },
+            "ETH/BTC": {
+              "volume_eth": 22719.18,
+              "volume_usd": 72606814.5,
+              "price": 3195.84,
+              "trades_count": 45465
+            },
+            "ETH/USDC": {
+              "volume_eth": 12122.63,
+              "volume_usd": 38794496.72,
+              "price": 3200.17,
+              "trades_count": 21212
+            },
+            "ETH/BNB": {
+              "volume_eth": 9562.11,
+              "volume_usd": 30585929.32,
+              "price": 3198.66,
+              "trades_count": 40277
+            }
+          },
+          "market_share": 15.58,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 151149.87,
+          "total_volume_usd": 483679586.92,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 79967.58,
+              "volume_usd": 256352098.98,
+              "price": 3205.7,
+              "trades_count": 9993
+            },
+            "ETH/USD": {
+              "volume_eth": 33424.21,
+              "volume_usd": 106912415.62,
+              "price": 3198.65,
+              "trades_count": 8863
+            },
+            "ETH/BTC": {
+              "volume_eth": 12138.72,
+              "volume_usd": 38901488.85,
+              "price": 3204.74,
+              "trades_count": 12514
+            },
+            "ETH/USDC": {
+              "volume_eth": 6436.52,
+              "volume_usd": 20598215.4,
+              "price": 3200.21,
+              "trades_count": 16080
+            },
+            "ETH/BNB": {
+              "volume_eth": 7558.29,
+              "volume_usd": 24218767.89,
+              "price": 3204.27,
+              "trades_count": 24210
+            }
+          },
+          "market_share": 10.08,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 124324.53,
+          "total_volume_usd": 397838495.35,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 85389.0,
+              "volume_usd": 272744552.56,
+              "price": 3194.14,
+              "trades_count": 2228
+            },
+            "ETH/USD": {
+              "volume_eth": 24464.62,
+              "volume_usd": 78220698.82,
+              "price": 3197.3,
+              "trades_count": 21516
+            },
+            "ETH/BTC": {
+              "volume_eth": 12809.2,
+              "volume_usd": 41007497.63,
+              "price": 3201.41,
+              "trades_count": 47497
+            },
+            "ETH/USDC": {
+              "volume_eth": 6564.69,
+              "volume_usd": 20998156.47,
+              "price": 3198.65,
+              "trades_count": 27544
+            },
+            "ETH/BNB": {
+              "volume_eth": 5024.84,
+              "volume_usd": 16068220.1,
+              "price": 3197.76,
+              "trades_count": 41509
+            }
+          },
+          "market_share": 8.29,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 119042.33,
+          "total_volume_usd": 380935442.07,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 76842.58,
+              "volume_usd": 245760389.96,
+              "price": 3198.23,
+              "trades_count": 29620
+            },
+            "ETH/USD": {
+              "volume_eth": 27089.12,
+              "volume_usd": 86640691.24,
+              "price": 3198.36,
+              "trades_count": 39592
+            },
+            "ETH/BTC": {
+              "volume_eth": 11430.21,
+              "volume_usd": 36484186.39,
+              "price": 3191.91,
+              "trades_count": 21334
+            },
+            "ETH/USDC": {
+              "volume_eth": 6537.34,
+              "volume_usd": 20907838.37,
+              "price": 3198.22,
+              "trades_count": 12018
+            },
+            "ETH/BNB": {
+              "volume_eth": 4943.54,
+              "volume_usd": 15827760.02,
+              "price": 3201.71,
+              "trades_count": 35773
+            }
+          },
+          "market_share": 7.94,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 120382.16,
+          "total_volume_usd": 385222909.42,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 83957.1,
+              "volume_usd": 268500853.2,
+              "price": 3198.07,
+              "trades_count": 48669
+            },
+            "ETH/USD": {
+              "volume_eth": 28489.39,
+              "volume_usd": 91192551.33,
+              "price": 3200.93,
+              "trades_count": 10679
+            },
+            "ETH/BTC": {
+              "volume_eth": 10768.27,
+              "volume_usd": 34385381.72,
+              "price": 3193.21,
+              "trades_count": 13928
+            },
+            "ETH/USDC": {
+              "volume_eth": 5233.01,
+              "volume_usd": 16734006.51,
+              "price": 3197.78,
+              "trades_count": 43959
+            },
+            "ETH/BNB": {
+              "volume_eth": 4996.71,
+              "volume_usd": 16018336.22,
+              "price": 3205.78,
+              "trades_count": 42153
+            }
+          },
+          "market_share": 8.03,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 89851.75,
+          "total_volume_usd": 287525596.9,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 59398.03,
+              "volume_usd": 190271266.43,
+              "price": 3203.33,
+              "trades_count": 30419
+            },
+            "ETH/USD": {
+              "volume_eth": 19272.36,
+              "volume_usd": 61718683.31,
+              "price": 3202.45,
+              "trades_count": 43139
+            },
+            "ETH/BTC": {
+              "volume_eth": 9471.45,
+              "volume_usd": 30331273.39,
+              "price": 3202.39,
+              "trades_count": 42105
+            },
+            "ETH/USDC": {
+              "volume_eth": 4162.18,
+              "volume_usd": 13317379.77,
+              "price": 3199.61,
+              "trades_count": 31731
+            },
+            "ETH/BNB": {
+              "volume_eth": 4388.73,
+              "volume_usd": 14032869.91,
+              "price": 3197.48,
+              "trades_count": 19001
+            }
+          },
+          "market_share": 5.99,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 91810.11,
+          "total_volume_usd": 293792355.79,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 51823.7,
+              "volume_usd": 165553377.31,
+              "price": 3194.55,
+              "trades_count": 31260
+            },
+            "ETH/USD": {
+              "volume_eth": 18008.84,
+              "volume_usd": 57577212.69,
+              "price": 3197.16,
+              "trades_count": 19813
+            },
+            "ETH/BTC": {
+              "volume_eth": 7626.6,
+              "volume_usd": 24458445.1,
+              "price": 3206.99,
+              "trades_count": 6917
+            },
+            "ETH/USDC": {
+              "volume_eth": 4801.68,
+              "volume_usd": 15365606.7,
+              "price": 3200.05,
+              "trades_count": 31324
+            },
+            "ETH/BNB": {
+              "volume_eth": 4738.01,
+              "volume_usd": 15189168.65,
+              "price": 3205.81,
+              "trades_count": 49425
+            }
+          },
+          "market_share": 6.12,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-19": {
+      "date": "2025-09-19",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 587350.59,
+          "total_volume_usd": 1879521889.84,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 345324.61,
+              "volume_usd": 1106408183.25,
+              "price": 3203.97,
+              "trades_count": 43718
+            },
+            "ETH/USD": {
+              "volume_eth": 102821.1,
+              "volume_usd": 329096617.6,
+              "price": 3200.67,
+              "trades_count": 33857
+            },
+            "ETH/BTC": {
+              "volume_eth": 50532.38,
+              "volume_usd": 161278539.38,
+              "price": 3191.59,
+              "trades_count": 7783
+            },
+            "ETH/USDC": {
+              "volume_eth": 33020.46,
+              "volume_usd": 105736771.31,
+              "price": 3202.16,
+              "trades_count": 47813
+            },
+            "ETH/BNB": {
+              "volume_eth": 24484.64,
+              "volume_usd": 78396641.31,
+              "price": 3201.87,
+              "trades_count": 3565
+            }
+          },
+          "market_share": 39.16,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 211378.16,
+          "total_volume_usd": 676410115.44,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 123669.33,
+              "volume_usd": 395645952.05,
+              "price": 3199.22,
+              "trades_count": 35258
+            },
+            "ETH/USD": {
+              "volume_eth": 44132.47,
+              "volume_usd": 141185460.37,
+              "price": 3199.13,
+              "trades_count": 19539
+            },
+            "ETH/BTC": {
+              "volume_eth": 20185.91,
+              "volume_usd": 64701282.59,
+              "price": 3205.27,
+              "trades_count": 45492
+            },
+            "ETH/USDC": {
+              "volume_eth": 10982.73,
+              "volume_usd": 35165055.12,
+              "price": 3201.85,
+              "trades_count": 43421
+            },
+            "ETH/BNB": {
+              "volume_eth": 9869.88,
+              "volume_usd": 31562092.77,
+              "price": 3197.82,
+              "trades_count": 37566
+            }
+          },
+          "market_share": 14.09,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 191558.98,
+          "total_volume_usd": 612988740.95,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 105011.73,
+              "volume_usd": 336338262.26,
+              "price": 3202.86,
+              "trades_count": 44028
+            },
+            "ETH/USD": {
+              "volume_eth": 45428.75,
+              "volume_usd": 145401857.33,
+              "price": 3200.66,
+              "trades_count": 10854
+            },
+            "ETH/BTC": {
+              "volume_eth": 17879.06,
+              "volume_usd": 57241388.91,
+              "price": 3201.59,
+              "trades_count": 10268
+            },
+            "ETH/USDC": {
+              "volume_eth": 11174.58,
+              "volume_usd": 35745083.03,
+              "price": 3198.79,
+              "trades_count": 43995
+            },
+            "ETH/BNB": {
+              "volume_eth": 10338.36,
+              "volume_usd": 33068459.39,
+              "price": 3198.62,
+              "trades_count": 39996
+            }
+          },
+          "market_share": 12.77,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 162530.04,
+          "total_volume_usd": 520096130.76,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 81319.07,
+              "volume_usd": 260282361.09,
+              "price": 3200.75,
+              "trades_count": 43171
+            },
+            "ETH/USD": {
+              "volume_eth": 36298.31,
+              "volume_usd": 116227362.32,
+              "price": 3202.0,
+              "trades_count": 44916
+            },
+            "ETH/BTC": {
+              "volume_eth": 17571.65,
+              "volume_usd": 56380118.71,
+              "price": 3208.58,
+              "trades_count": 45919
+            },
+            "ETH/USDC": {
+              "volume_eth": 9467.21,
+              "volume_usd": 30270425.83,
+              "price": 3197.4,
+              "trades_count": 44939
+            },
+            "ETH/BNB": {
+              "volume_eth": 7877.53,
+              "volume_usd": 25194153.29,
+              "price": 3198.23,
+              "trades_count": 24763
+            }
+          },
+          "market_share": 10.84,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 115412.79,
+          "total_volume_usd": 369320914.18,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 81744.64,
+              "volume_usd": 261417251.29,
+              "price": 3197.97,
+              "trades_count": 32868
+            },
+            "ETH/USD": {
+              "volume_eth": 20238.83,
+              "volume_usd": 64829031.38,
+              "price": 3203.2,
+              "trades_count": 11154
+            },
+            "ETH/BTC": {
+              "volume_eth": 9589.26,
+              "volume_usd": 30749034.31,
+              "price": 3206.61,
+              "trades_count": 7628
+            },
+            "ETH/USDC": {
+              "volume_eth": 5788.39,
+              "volume_usd": 18524318.48,
+              "price": 3200.25,
+              "trades_count": 49407
+            },
+            "ETH/BNB": {
+              "volume_eth": 6656.28,
+              "volume_usd": 21260698.6,
+              "price": 3194.08,
+              "trades_count": 23070
+            }
+          },
+          "market_share": 7.69,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 134453.48,
+          "total_volume_usd": 430251143.89,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 84480.83,
+              "volume_usd": 270443805.75,
+              "price": 3201.24,
+              "trades_count": 11109
+            },
+            "ETH/USD": {
+              "volume_eth": 23257.73,
+              "volume_usd": 74474067.45,
+              "price": 3202.12,
+              "trades_count": 41942
+            },
+            "ETH/BTC": {
+              "volume_eth": 15107.43,
+              "volume_usd": 48246756.36,
+              "price": 3193.58,
+              "trades_count": 29683
+            },
+            "ETH/USDC": {
+              "volume_eth": 5495.63,
+              "volume_usd": 17581247.23,
+              "price": 3199.13,
+              "trades_count": 48158
+            },
+            "ETH/BNB": {
+              "volume_eth": 6016.87,
+              "volume_usd": 19249700.98,
+              "price": 3199.29,
+              "trades_count": 19673
+            }
+          },
+          "market_share": 8.96,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 96360.26,
+          "total_volume_usd": 308352823.55,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 64379.45,
+              "volume_usd": 205795051.52,
+              "price": 3196.6,
+              "trades_count": 16674
+            },
+            "ETH/USD": {
+              "volume_eth": 17803.27,
+              "volume_usd": 57005640.64,
+              "price": 3201.98,
+              "trades_count": 31737
+            },
+            "ETH/BTC": {
+              "volume_eth": 11193.11,
+              "volume_usd": 35752189.19,
+              "price": 3194.13,
+              "trades_count": 45453
+            },
+            "ETH/USDC": {
+              "volume_eth": 5679.72,
+              "volume_usd": 18192727.69,
+              "price": 3203.1,
+              "trades_count": 31256
+            },
+            "ETH/BNB": {
+              "volume_eth": 5337.28,
+              "volume_usd": 17098284.58,
+              "price": 3203.56,
+              "trades_count": 33958
+            }
+          },
+          "market_share": 6.42,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 90543.7,
+          "total_volume_usd": 289739852.2,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 64458.46,
+              "volume_usd": 206528520.01,
+              "price": 3204.06,
+              "trades_count": 40627
+            },
+            "ETH/USD": {
+              "volume_eth": 15489.48,
+              "volume_usd": 49541559.18,
+              "price": 3198.4,
+              "trades_count": 43020
+            },
+            "ETH/BTC": {
+              "volume_eth": 8984.07,
+              "volume_usd": 28726823.63,
+              "price": 3197.53,
+              "trades_count": 7723
+            },
+            "ETH/USDC": {
+              "volume_eth": 4910.01,
+              "volume_usd": 15712518.3,
+              "price": 3200.1,
+              "trades_count": 9170
+            },
+            "ETH/BNB": {
+              "volume_eth": 4137.96,
+              "volume_usd": 13255412.62,
+              "price": 3203.37,
+              "trades_count": 18877
+            }
+          },
+          "market_share": 6.04,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-20": {
+      "date": "2025-09-20",
+      "global_volume_eth": 1800000.0,
+      "global_volume_usd": 5760000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 434294.93,
+          "total_volume_usd": 1389743785.14,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 261968.73,
+              "volume_usd": 839409989.13,
+              "price": 3204.24,
+              "trades_count": 7010
+            },
+            "ETH/USD": {
+              "volume_eth": 102368.99,
+              "volume_usd": 327398651.65,
+              "price": 3198.22,
+              "trades_count": 30565
+            },
+            "ETH/BTC": {
+              "volume_eth": 50111.2,
+              "volume_usd": 160770024.17,
+              "price": 3208.27,
+              "trades_count": 28190
+            },
+            "ETH/USDC": {
+              "volume_eth": 17834.38,
+              "volume_usd": 57070249.06,
+              "price": 3200.01,
+              "trades_count": 16451
+            },
+            "ETH/BNB": {
+              "volume_eth": 20726.0,
+              "volume_usd": 66212193.61,
+              "price": 3194.64,
+              "trades_count": 15715
+            }
+          },
+          "market_share": 24.13,
+          "volatility": 15.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 167598.59,
+          "total_volume_usd": 536315478.61,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 117888.55,
+              "volume_usd": 377755159.48,
+              "price": 3204.34,
+              "trades_count": 43595
+            },
+            "ETH/USD": {
+              "volume_eth": 31311.31,
+              "volume_usd": 100125260.17,
+              "price": 3197.73,
+              "trades_count": 3510
+            },
+            "ETH/BTC": {
+              "volume_eth": 15331.11,
+              "volume_usd": 49156620.47,
+              "price": 3206.33,
+              "trades_count": 46617
+            },
+            "ETH/USDC": {
+              "volume_eth": 9489.8,
+              "volume_usd": 30383088.15,
+              "price": 3201.66,
+              "trades_count": 31743
+            },
+            "ETH/BNB": {
+              "volume_eth": 8207.64,
+              "volume_usd": 26212480.19,
+              "price": 3193.67,
+              "trades_count": 6192
+            }
+          },
+          "market_share": 9.31,
+          "volatility": 12.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 175025.79,
+          "total_volume_usd": 560082519.2,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 93071.21,
+              "volume_usd": 297410346.52,
+              "price": 3195.51,
+              "trades_count": 48660
+            },
+            "ETH/USD": {
+              "volume_eth": 36529.7,
+              "volume_usd": 116877108.78,
+              "price": 3199.51,
+              "trades_count": 19881
+            },
+            "ETH/BTC": {
+              "volume_eth": 15665.79,
+              "volume_usd": 50016785.36,
+              "price": 3192.74,
+              "trades_count": 16626
+            },
+            "ETH/USDC": {
+              "volume_eth": 8470.64,
+              "volume_usd": 27121972.61,
+              "price": 3201.88,
+              "trades_count": 30957
+            },
+            "ETH/BNB": {
+              "volume_eth": 7220.89,
+              "volume_usd": 23137963.68,
+              "price": 3204.31,
+              "trades_count": 33756
+            }
+          },
+          "market_share": 9.72,
+          "volatility": 18.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.4
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 170138.34,
+          "total_volume_usd": 544442694.67,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 82337.51,
+              "volume_usd": 263496244.02,
+              "price": 3200.2,
+              "trades_count": 16855
+            },
+            "ETH/USD": {
+              "volume_eth": 37002.29,
+              "volume_usd": 118357898.1,
+              "price": 3198.66,
+              "trades_count": 1102
+            },
+            "ETH/BTC": {
+              "volume_eth": 17795.17,
+              "volume_usd": 56855918.28,
+              "price": 3195.02,
+              "trades_count": 28300
+            },
+            "ETH/USDC": {
+              "volume_eth": 7442.92,
+              "volume_usd": 23825354.47,
+              "price": 3201.08,
+              "trades_count": 35307
+            },
+            "ETH/BNB": {
+              "volume_eth": 10122.06,
+              "volume_usd": 32334565.67,
+              "price": 3194.47,
+              "trades_count": 35475
+            }
+          },
+          "market_share": 9.45,
+          "volatility": 20.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.3
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 101688.69,
+          "total_volume_usd": 325403815.4,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 68003.19,
+              "volume_usd": 217616844.3,
+              "price": 3200.1,
+              "trades_count": 2332
+            },
+            "ETH/USD": {
+              "volume_eth": 19446.57,
+              "volume_usd": 62225304.28,
+              "price": 3199.81,
+              "trades_count": 42659
+            },
+            "ETH/BTC": {
+              "volume_eth": 9708.75,
+              "volume_usd": 31044394.1,
+              "price": 3197.57,
+              "trades_count": 49976
+            },
+            "ETH/USDC": {
+              "volume_eth": 4100.58,
+              "volume_usd": 13129430.13,
+              "price": 3201.85,
+              "trades_count": 23596
+            },
+            "ETH/BNB": {
+              "volume_eth": 4557.94,
+              "volume_usd": 14594584.27,
+              "price": 3202.01,
+              "trades_count": 7793
+            }
+          },
+          "market_share": 5.65,
+          "volatility": 10.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 109557.55,
+          "total_volume_usd": 350584154.63,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 71918.49,
+              "volume_usd": 229984995.93,
+              "price": 3197.86,
+              "trades_count": 3905
+            },
+            "ETH/USD": {
+              "volume_eth": 20616.97,
+              "volume_usd": 65952998.34,
+              "price": 3198.97,
+              "trades_count": 43126
+            },
+            "ETH/BTC": {
+              "volume_eth": 9531.9,
+              "volume_usd": 30553157.88,
+              "price": 3205.36,
+              "trades_count": 31449
+            },
+            "ETH/USDC": {
+              "volume_eth": 6531.42,
+              "volume_usd": 20899662.07,
+              "price": 3199.86,
+              "trades_count": 12945
+            },
+            "ETH/BNB": {
+              "volume_eth": 6160.42,
+              "volume_usd": 19678879.79,
+              "price": 3194.41,
+              "trades_count": 30994
+            }
+          },
+          "market_share": 6.09,
+          "volatility": 16.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 65798.87,
+          "total_volume_usd": 210556393.19,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 34766.93,
+              "volume_usd": 111383722.55,
+              "price": 3203.73,
+              "trades_count": 3746
+            },
+            "ETH/USD": {
+              "volume_eth": 12189.09,
+              "volume_usd": 38990264.31,
+              "price": 3198.78,
+              "trades_count": 27098
+            },
+            "ETH/BTC": {
+              "volume_eth": 7867.24,
+              "volume_usd": 25181655.63,
+              "price": 3200.83,
+              "trades_count": 17601
+            },
+            "ETH/USDC": {
+              "volume_eth": 2680.15,
+              "volume_usd": 8578990.25,
+              "price": 3200.94,
+              "trades_count": 19750
+            },
+            "ETH/BNB": {
+              "volume_eth": 3101.72,
+              "volume_usd": 9936669.62,
+              "price": 3203.59,
+              "trades_count": 43974
+            }
+          },
+          "market_share": 3.66,
+          "volatility": 14.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 72804.57,
+          "total_volume_usd": 232974628.43,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 37121.16,
+              "volume_usd": 118724995.36,
+              "price": 3198.31,
+              "trades_count": 27215
+            },
+            "ETH/USD": {
+              "volume_eth": 15978.03,
+              "volume_usd": 51170042.85,
+              "price": 3202.53,
+              "trades_count": 26339
+            },
+            "ETH/BTC": {
+              "volume_eth": 6811.7,
+              "volume_usd": 21756488.06,
+              "price": 3193.99,
+              "trades_count": 46355
+            },
+            "ETH/USDC": {
+              "volume_eth": 3636.62,
+              "volume_usd": 11647067.25,
+              "price": 3202.72,
+              "trades_count": 35031
+            },
+            "ETH/BNB": {
+              "volume_eth": 3300.55,
+              "volume_usd": 10544134.79,
+              "price": 3194.66,
+              "trades_count": 28820
+            }
+          },
+          "market_share": 4.04,
+          "volatility": 11.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.2,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.4,
+        "Bybit_impact": 1.3,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-21": {
+      "date": "2025-09-21",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 321076.7,
+          "total_volume_usd": 1027445447.74,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 200540.91,
+              "volume_usd": 642558336.21,
+              "price": 3204.13,
+              "trades_count": 36748
+            },
+            "ETH/USD": {
+              "volume_eth": 58918.0,
+              "volume_usd": 188387738.77,
+              "price": 3197.46,
+              "trades_count": 22490
+            },
+            "ETH/BTC": {
+              "volume_eth": 34174.37,
+              "volume_usd": 109231006.31,
+              "price": 3196.28,
+              "trades_count": 40493
+            },
+            "ETH/USDC": {
+              "volume_eth": 17451.56,
+              "volume_usd": 55807775.28,
+              "price": 3197.87,
+              "trades_count": 30091
+            },
+            "ETH/BNB": {
+              "volume_eth": 15100.54,
+              "volume_usd": 48233268.12,
+              "price": 3194.14,
+              "trades_count": 24105
+            }
+          },
+          "market_share": 21.41,
+          "volatility": 15.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 161841.39,
+          "total_volume_usd": 517892435.29,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 94577.8,
+              "volume_usd": 302817785.14,
+              "price": 3201.79,
+              "trades_count": 4759
+            },
+            "ETH/USD": {
+              "volume_eth": 26866.2,
+              "volume_usd": 85995494.19,
+              "price": 3200.88,
+              "trades_count": 24809
+            },
+            "ETH/BTC": {
+              "volume_eth": 16268.85,
+              "volume_usd": 52138388.18,
+              "price": 3204.8,
+              "trades_count": 11484
+            },
+            "ETH/USDC": {
+              "volume_eth": 9557.67,
+              "volume_usd": 30562694.97,
+              "price": 3197.71,
+              "trades_count": 40817
+            },
+            "ETH/BNB": {
+              "volume_eth": 8668.51,
+              "volume_usd": 27732379.2,
+              "price": 3199.21,
+              "trades_count": 9272
+            }
+          },
+          "market_share": 10.79,
+          "volatility": 12.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 106369.71,
+          "total_volume_usd": 340383057.12,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 70931.97,
+              "volume_usd": 226860929.42,
+              "price": 3198.29,
+              "trades_count": 26090
+            },
+            "ETH/USD": {
+              "volume_eth": 25098.72,
+              "volume_usd": 80240776.81,
+              "price": 3197.01,
+              "trades_count": 11055
+            },
+            "ETH/BTC": {
+              "volume_eth": 11398.84,
+              "volume_usd": 36574521.84,
+              "price": 3208.62,
+              "trades_count": 25380
+            },
+            "ETH/USDC": {
+              "volume_eth": 5199.22,
+              "volume_usd": 16623431.39,
+              "price": 3197.29,
+              "trades_count": 10023
+            },
+            "ETH/BNB": {
+              "volume_eth": 5381.16,
+              "volume_usd": 17212682.45,
+              "price": 3198.69,
+              "trades_count": 43569
+            }
+          },
+          "market_share": 7.09,
+          "volatility": 18.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 95704.97,
+          "total_volume_usd": 306255904.59,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 68000.76,
+              "volume_usd": 217189769.58,
+              "price": 3193.93,
+              "trades_count": 13192
+            },
+            "ETH/USD": {
+              "volume_eth": 19133.67,
+              "volume_usd": 61213918.47,
+              "price": 3199.28,
+              "trades_count": 37809
+            },
+            "ETH/BTC": {
+              "volume_eth": 8107.21,
+              "volume_usd": 25985872.92,
+              "price": 3205.28,
+              "trades_count": 47139
+            },
+            "ETH/USDC": {
+              "volume_eth": 4682.41,
+              "volume_usd": 14998586.48,
+              "price": 3203.18,
+              "trades_count": 19715
+            },
+            "ETH/BNB": {
+              "volume_eth": 5156.55,
+              "volume_usd": 16533860.96,
+              "price": 3206.38,
+              "trades_count": 14118
+            }
+          },
+          "market_share": 6.38,
+          "volatility": 20.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 77660.31,
+          "total_volume_usd": 248512987.8,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 53172.33,
+              "volume_usd": 170118812.4,
+              "price": 3199.39,
+              "trades_count": 47751
+            },
+            "ETH/USD": {
+              "volume_eth": 15191.05,
+              "volume_usd": 48571274.94,
+              "price": 3197.36,
+              "trades_count": 45690
+            },
+            "ETH/BTC": {
+              "volume_eth": 9218.47,
+              "volume_usd": 29585221.46,
+              "price": 3209.34,
+              "trades_count": 44767
+            },
+            "ETH/USDC": {
+              "volume_eth": 3646.04,
+              "volume_usd": 11657161.49,
+              "price": 3197.22,
+              "trades_count": 36531
+            },
+            "ETH/BNB": {
+              "volume_eth": 3557.4,
+              "volume_usd": 11374586.55,
+              "price": 3197.44,
+              "trades_count": 11322
+            }
+          },
+          "market_share": 5.18,
+          "volatility": 10.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 89693.43,
+          "total_volume_usd": 287018971.89,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 63014.82,
+              "volume_usd": 201758504.86,
+              "price": 3201.76,
+              "trades_count": 24690
+            },
+            "ETH/USD": {
+              "volume_eth": 18001.51,
+              "volume_usd": 57561216.87,
+              "price": 3197.58,
+              "trades_count": 14171
+            },
+            "ETH/BTC": {
+              "volume_eth": 10017.2,
+              "volume_usd": 32004399.18,
+              "price": 3194.95,
+              "trades_count": 33376
+            },
+            "ETH/USDC": {
+              "volume_eth": 3634.89,
+              "volume_usd": 11632895.88,
+              "price": 3200.35,
+              "trades_count": 25176
+            },
+            "ETH/BNB": {
+              "volume_eth": 4426.2,
+              "volume_usd": 14191210.97,
+              "price": 3206.18,
+              "trades_count": 9504
+            }
+          },
+          "market_share": 5.98,
+          "volatility": 16.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 64974.77,
+          "total_volume_usd": 207919261.17,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 32532.33,
+              "volume_usd": 104024037.6,
+              "price": 3197.56,
+              "trades_count": 47984
+            },
+            "ETH/USD": {
+              "volume_eth": 14132.63,
+              "volume_usd": 45226753.82,
+              "price": 3200.16,
+              "trades_count": 27832
+            },
+            "ETH/BTC": {
+              "volume_eth": 7337.83,
+              "volume_usd": 23421012.95,
+              "price": 3191.82,
+              "trades_count": 21776
+            },
+            "ETH/USDC": {
+              "volume_eth": 3433.71,
+              "volume_usd": 10986762.4,
+              "price": 3199.68,
+              "trades_count": 45571
+            },
+            "ETH/BNB": {
+              "volume_eth": 3271.3,
+              "volume_usd": 10452590.08,
+              "price": 3195.24,
+              "trades_count": 37130
+            }
+          },
+          "market_share": 4.33,
+          "volatility": 14.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 64937.54,
+          "total_volume_usd": 207800140.36,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 34005.92,
+              "volume_usd": 109021892.73,
+              "price": 3205.97,
+              "trades_count": 29352
+            },
+            "ETH/USD": {
+              "volume_eth": 13002.39,
+              "volume_usd": 41638276.52,
+              "price": 3202.36,
+              "trades_count": 9137
+            },
+            "ETH/BTC": {
+              "volume_eth": 6540.77,
+              "volume_usd": 20905880.46,
+              "price": 3196.24,
+              "trades_count": 11614
+            },
+            "ETH/USDC": {
+              "volume_eth": 3016.56,
+              "volume_usd": 9657025.96,
+              "price": 3201.34,
+              "trades_count": 23676
+            },
+            "ETH/BNB": {
+              "volume_eth": 3828.05,
+              "volume_usd": 12250674.16,
+              "price": 3200.24,
+              "trades_count": 19615
+            }
+          },
+          "market_share": 4.33,
+          "volatility": 11.0,
+          "weekend_factor": 0.7,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    },
+    "2025-09-22": {
+      "date": "2025-09-22",
+      "global_volume_eth": 1500000.0,
+      "global_volume_usd": 4800000000.0,
+      "exchanges": {
+        "Binance": {
+          "exchange_name": "Binance",
+          "total_volume_eth": 579484.56,
+          "total_volume_usd": 1854350587.9,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 313005.85,
+              "volume_usd": 1002159809.52,
+              "price": 3201.73,
+              "trades_count": 37099
+            },
+            "ETH/USD": {
+              "volume_eth": 105440.74,
+              "volume_usd": 337494736.53,
+              "price": 3200.8,
+              "trades_count": 41267
+            },
+            "ETH/BTC": {
+              "volume_eth": 58724.46,
+              "volume_usd": 187921160.2,
+              "price": 3200.05,
+              "trades_count": 12051
+            },
+            "ETH/USDC": {
+              "volume_eth": 30038.26,
+              "volume_usd": 96137934.16,
+              "price": 3200.52,
+              "trades_count": 12219
+            },
+            "ETH/BNB": {
+              "volume_eth": 30813.89,
+              "volume_usd": 98691478.83,
+              "price": 3202.82,
+              "trades_count": 40658
+            }
+          },
+          "market_share": 38.63,
+          "volatility": 15.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Coinbase": {
+          "exchange_name": "Coinbase",
+          "total_volume_eth": 216231.46,
+          "total_volume_usd": 691940664.57,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 151738.94,
+              "volume_usd": 484673491.31,
+              "price": 3194.13,
+              "trades_count": 2859
+            },
+            "ETH/USD": {
+              "volume_eth": 36002.07,
+              "volume_usd": 115309969.16,
+              "price": 3202.87,
+              "trades_count": 38799
+            },
+            "ETH/BTC": {
+              "volume_eth": 19587.59,
+              "volume_usd": 62571540.85,
+              "price": 3194.45,
+              "trades_count": 38495
+            },
+            "ETH/USDC": {
+              "volume_eth": 10450.84,
+              "volume_usd": 33451989.78,
+              "price": 3200.89,
+              "trades_count": 33639
+            },
+            "ETH/BNB": {
+              "volume_eth": 12493.84,
+              "volume_usd": 39987577.25,
+              "price": 3200.58,
+              "trades_count": 43068
+            }
+          },
+          "market_share": 14.42,
+          "volatility": 12.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "OKX": {
+          "exchange_name": "OKX",
+          "total_volume_eth": 209590.93,
+          "total_volume_usd": 670690979.24,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 124896.65,
+              "volume_usd": 400156383.95,
+              "price": 3203.9,
+              "trades_count": 45891
+            },
+            "ETH/USD": {
+              "volume_eth": 40343.61,
+              "volume_usd": 129087569.37,
+              "price": 3199.7,
+              "trades_count": 46128
+            },
+            "ETH/BTC": {
+              "volume_eth": 17269.56,
+              "volume_usd": 55242578.22,
+              "price": 3198.84,
+              "trades_count": 32735
+            },
+            "ETH/USDC": {
+              "volume_eth": 10330.49,
+              "volume_usd": 33047016.79,
+              "price": 3198.98,
+              "trades_count": 10415
+            },
+            "ETH/BNB": {
+              "volume_eth": 9693.93,
+              "volume_usd": 31047659.38,
+              "price": 3202.8,
+              "trades_count": 49116
+            }
+          },
+          "market_share": 13.97,
+          "volatility": 18.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bybit": {
+          "exchange_name": "Bybit",
+          "total_volume_eth": 179281.4,
+          "total_volume_usd": 573700486.94,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 100915.52,
+              "volume_usd": 322798826.21,
+              "price": 3198.7,
+              "trades_count": 25283
+            },
+            "ETH/USD": {
+              "volume_eth": 36071.13,
+              "volume_usd": 115336711.7,
+              "price": 3197.48,
+              "trades_count": 16842
+            },
+            "ETH/BTC": {
+              "volume_eth": 17687.71,
+              "volume_usd": 56521692.97,
+              "price": 3195.54,
+              "trades_count": 17247
+            },
+            "ETH/USDC": {
+              "volume_eth": 7676.39,
+              "volume_usd": 24542372.57,
+              "price": 3197.12,
+              "trades_count": 26175
+            },
+            "ETH/BNB": {
+              "volume_eth": 10269.83,
+              "volume_usd": 32852682.42,
+              "price": 3198.95,
+              "trades_count": 11466
+            }
+          },
+          "market_share": 11.95,
+          "volatility": 20.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Kraken": {
+          "exchange_name": "Kraken",
+          "total_volume_eth": 127523.47,
+          "total_volume_usd": 408075098.61,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 89789.32,
+              "volume_usd": 287579970.92,
+              "price": 3202.83,
+              "trades_count": 13440
+            },
+            "ETH/USD": {
+              "volume_eth": 28189.03,
+              "volume_usd": 90204569.3,
+              "price": 3199.99,
+              "trades_count": 34733
+            },
+            "ETH/BTC": {
+              "volume_eth": 12583.07,
+              "volume_usd": 40357415.68,
+              "price": 3207.28,
+              "trades_count": 33595
+            },
+            "ETH/USDC": {
+              "volume_eth": 5160.05,
+              "volume_usd": 16526860.86,
+              "price": 3202.85,
+              "trades_count": 34124
+            },
+            "ETH/BNB": {
+              "volume_eth": 6267.09,
+              "volume_usd": 20033894.3,
+              "price": 3196.68,
+              "trades_count": 39230
+            }
+          },
+          "market_share": 8.5,
+          "volatility": 10.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Huobi": {
+          "exchange_name": "Huobi",
+          "total_volume_eth": 114351.17,
+          "total_volume_usd": 365923748.52,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 56275.61,
+              "volume_usd": 180078265.68,
+              "price": 3199.93,
+              "trades_count": 43877
+            },
+            "ETH/USD": {
+              "volume_eth": 24448.47,
+              "volume_usd": 78201576.59,
+              "price": 3198.63,
+              "trades_count": 1535
+            },
+            "ETH/BTC": {
+              "volume_eth": 13023.1,
+              "volume_usd": 41656648.32,
+              "price": 3198.67,
+              "trades_count": 18332
+            },
+            "ETH/USDC": {
+              "volume_eth": 6237.87,
+              "volume_usd": 19971733.29,
+              "price": 3201.69,
+              "trades_count": 24982
+            },
+            "ETH/BNB": {
+              "volume_eth": 4677.52,
+              "volume_usd": 14941182.09,
+              "price": 3194.25,
+              "trades_count": 37819
+            }
+          },
+          "market_share": 7.62,
+          "volatility": 16.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "KuCoin": {
+          "exchange_name": "KuCoin",
+          "total_volume_eth": 82305.31,
+          "total_volume_usd": 263377003.54,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 50434.52,
+              "volume_usd": 161115137.3,
+              "price": 3194.54,
+              "trades_count": 34046
+            },
+            "ETH/USD": {
+              "volume_eth": 16134.17,
+              "volume_usd": 51634507.73,
+              "price": 3200.32,
+              "trades_count": 41844
+            },
+            "ETH/BTC": {
+              "volume_eth": 8824.44,
+              "volume_usd": 28173629.91,
+              "price": 3192.68,
+              "trades_count": 7336
+            },
+            "ETH/USDC": {
+              "volume_eth": 3940.62,
+              "volume_usd": 12617421.03,
+              "price": 3201.89,
+              "trades_count": 23222
+            },
+            "ETH/BNB": {
+              "volume_eth": 4210.46,
+              "volume_usd": 13466238.7,
+              "price": 3198.28,
+              "trades_count": 10454
+            }
+          },
+          "market_share": 5.49,
+          "volatility": 14.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        },
+        "Bitfinex": {
+          "exchange_name": "Bitfinex",
+          "total_volume_eth": 84041.35,
+          "total_volume_usd": 268932307.38,
+          "pairs": {
+            "ETH/USDT": {
+              "volume_eth": 50608.81,
+              "volume_usd": 161948236.33,
+              "price": 3200.0,
+              "trades_count": 3969
+            },
+            "ETH/USD": {
+              "volume_eth": 13708.25,
+              "volume_usd": 43885126.0,
+              "price": 3201.37,
+              "trades_count": 32047
+            },
+            "ETH/BTC": {
+              "volume_eth": 8469.12,
+              "volume_usd": 27044113.58,
+              "price": 3193.26,
+              "trades_count": 34784
+            },
+            "ETH/USDC": {
+              "volume_eth": 3596.6,
+              "volume_usd": 11519054.11,
+              "price": 3202.76,
+              "trades_count": 21875
+            },
+            "ETH/BNB": {
+              "volume_eth": 3634.79,
+              "volume_usd": 11654159.36,
+              "price": 3206.28,
+              "trades_count": 49452
+            }
+          },
+          "market_share": 5.6,
+          "volatility": 11.0,
+          "weekend_factor": 1.0,
+          "event_impact": 1.0
+        }
+      },
+      "market_events": {
+        "global_multiplier": 1.0,
+        "Binance_impact": 1.0,
+        "Coinbase_impact": 1.0,
+        "OKX_impact": 1.0,
+        "Bybit_impact": 1.0,
+        "Kraken_impact": 1.0,
+        "Huobi_impact": 1.0,
+        "Bitfinex_impact": 1.0
+      },
+      "total_exchanges": 8
+    }
+  },
+  "analysis_results": {
+    "total_15day_volume": 23550000.0,
+    "avg_daily_volume": 1570000.0,
+    "volatility": 21.18253394689922,
+    "exchange_totals": {
+      "Binance": 7945946.970000001,
+      "Coinbase": 3186474.5900000003,
+      "OKX": 2594496.12,
+      "Bybit": 2163502.7,
+      "Kraken": 1690877.57,
+      "Huobi": 1779550.8499999996,
+      "KuCoin": 1322449.69,
+      "Bitfinex": 1341216.4200000004
+    },
+    "daily_volumes": [
+      1500000.0,
+      1500000.0,
+      2700000.0,
+      1500000.0,
+      1500000.0,
+      1500000.0,
+      1500000.0,
+      1050000.0,
+      1500000.0,
+      1500000.0,
+      1500000.0,
+      1500000.0,
+      1800000.0,
+      1500000.0,
+      1500000.0
+    ]
+  },
+  "generated_at": "2025-09-22T10:12:26.969742"
+}
