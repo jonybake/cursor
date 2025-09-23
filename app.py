@@ -14,6 +14,12 @@ import requests
 import warnings
 warnings.filterwarnings('ignore')
 
+# 导入K线预测模块
+try:
+    from eth_kline_calculator import ETHKlineCalculator
+except ImportError:
+    ETHKlineCalculator = None
+
 app = Flask(__name__)
 
 class ETHAnalyzer:
@@ -25,6 +31,9 @@ class ETHAnalyzer:
             'OKX': {'color': '#000000', 'api_url': 'https://www.okx.com/api/v5/market/history-candles'}
         }
         self.headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+        
+        # 初始化K线计算器
+        self.kline_calculator = ETHKlineCalculator() if ETHKlineCalculator else None
     
     def generate_mock_data(self, days=15):
         """生成模拟数据"""
@@ -107,6 +116,42 @@ class ETHAnalyzer:
             }
         
         return exchange_stats
+    
+    def generate_kline_predictions(self, days=5):
+        """生成K线预测数据"""
+        if not self.kline_calculator:
+            return []
+        
+        # 生成历史数据用于预测
+        historical_data = self.generate_mock_data(20)
+        
+        # 转换为K线计算器需要的格式
+        volume_data = []
+        for _, row in historical_data.iterrows():
+            date = row['timestamp'].strftime('%Y-%m-%d')
+            exchange_volumes = {}
+            for exchange in row['exchange']:
+                if exchange not in exchange_volumes:
+                    exchange_volumes[exchange] = {'volume': 0}
+                exchange_volumes[exchange]['volume'] += row['volume'] / 4  # 平均分配到各交易所
+            
+            volume_data.append({
+                'date': date,
+                'total_volume': row['volume'],
+                'exchanges': exchange_volumes
+            })
+        
+        # 生成历史K线数据
+        kline_data = self.kline_calculator.calculate_kline_from_volume(volume_data)
+        
+        # 生成预测
+        predictions = self.kline_calculator.predict_future_kline(days)
+        
+        return {
+            'historical_kline': kline_data,
+            'predictions': predictions,
+            'prediction_analysis': self.kline_calculator.analyze_prediction_patterns(predictions) if predictions else {}
+        }
 
 # 全局分析器实例
 analyzer = ETHAnalyzer()
@@ -222,6 +267,130 @@ def get_price_trend():
         })
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
+
+@app.route('/api/kline-predictions')
+def get_kline_predictions():
+    """获取K线预测数据API"""
+    try:
+        days = request.args.get('days', 5, type=int)
+        if days < 1 or days > 10:
+            days = 5
+        
+        prediction_data = analyzer.generate_kline_predictions(days)
+        
+        return jsonify({
+            'success': True,
+            'data': prediction_data,
+            'prediction_days': days,
+            'last_updated': datetime.now().isoformat()
+        })
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+@app.route('/api/prediction-analysis')
+def get_prediction_analysis():
+    """获取预测分析API"""
+    try:
+        prediction_data = analyzer.generate_kline_predictions(5)
+        
+        if not prediction_data.get('predictions'):
+            return jsonify({'success': False, 'error': 'No prediction data available'})
+        
+        predictions = prediction_data['predictions']
+        analysis = prediction_data['prediction_analysis']
+        
+        # 计算预测摘要
+        latest_price = predictions[0]['close']
+        target_price = predictions[-1]['close']
+        total_change = (target_price - latest_price) / latest_price
+        
+        # 生成投资建议
+        investment_advice = generate_investment_advice(analysis, total_change)
+        
+        return jsonify({
+            'success': True,
+            'analysis': {
+                'current_price': latest_price,
+                'target_price': target_price,
+                'total_change_percent': round(total_change * 100, 2),
+                'trend_direction': analysis.get('trend_direction', 'neutral'),
+                'confidence_score': round(np.mean([p['confidence'] for p in predictions]), 3),
+                'volatility_forecast': analysis.get('avg_daily_volatility', 0),
+                'bullish_probability': analysis.get('bullish_ratio', 0.5),
+                'investment_advice': investment_advice,
+                'price_targets': analysis.get('price_targets', {}),
+                'risk_assessment': assess_prediction_risk(analysis)
+            },
+            'daily_predictions': predictions
+        })
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+def generate_investment_advice(analysis, total_change):
+    """根据预测分析生成投资建议"""
+    trend = analysis.get('trend_direction', 'neutral')
+    bullish_ratio = analysis.get('bullish_ratio', 0.5)
+    volatility = analysis.get('avg_daily_volatility', 0)
+    
+    if trend == 'bullish' and bullish_ratio > 0.6 and total_change > 0.05:
+        return {
+            'action': 'BUY',
+            'confidence': 'HIGH',
+            'message': '强烈建议买入，预测显示强劲上涨趋势',
+            'position_size': '80-100%'
+        }
+    elif trend == 'bullish' and bullish_ratio > 0.5 and total_change > 0.02:
+        return {
+            'action': 'BUY',
+            'confidence': 'MEDIUM',
+            'message': '建议买入，预测显示温和上涨',
+            'position_size': '50-70%'
+        }
+    elif trend == 'bearish' and bullish_ratio < 0.4 and total_change < -0.05:
+        return {
+            'action': 'SELL',
+            'confidence': 'HIGH',
+            'message': '建议卖出，预测显示下跌趋势',
+            'position_size': '0-20%'
+        }
+    elif trend == 'bearish' and bullish_ratio < 0.5 and total_change < -0.02:
+        return {
+            'action': 'HOLD',
+            'confidence': 'MEDIUM',
+            'message': '建议持有观望，预测显示轻微下跌',
+            'position_size': '20-40%'
+        }
+    else:
+        return {
+            'action': 'HOLD',
+            'confidence': 'LOW',
+            'message': '建议持有观望，市场趋势不明朗',
+            'position_size': '30-50%'
+        }
+
+def assess_prediction_risk(analysis):
+    """评估预测风险"""
+    volatility = analysis.get('avg_daily_volatility', 0)
+    bullish_ratio = analysis.get('bullish_ratio', 0.5)
+    
+    if volatility > 5 and abs(bullish_ratio - 0.5) < 0.2:
+        return {
+            'level': 'HIGH',
+            'description': '高风险：高波动性且趋势不明确',
+            'recommendation': '建议小仓位操作或观望'
+        }
+    elif volatility > 3 or abs(bullish_ratio - 0.5) < 0.3:
+        return {
+            'level': 'MEDIUM',
+            'description': '中等风险：有一定波动性',
+            'recommendation': '建议适度仓位，设置止损'
+        }
+    else:
+        return {
+            'level': 'LOW',
+            'description': '低风险：波动性较小且趋势明确',
+            'recommendation': '可以适当增加仓位'
+        }
 
 def get_recommendation(kelly_index):
     """根据凯利指数获取投资建议"""

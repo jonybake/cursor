@@ -14,6 +14,10 @@ class ETHAnalysisApp {
             this.renderVolumeChart();
             this.renderKellyChart();
             this.renderKellyTable();
+            this.renderPredictionOverview();
+            this.renderPredictionChart();
+            this.renderPredictionTable();
+            this.renderInvestmentAdvice();
             this.renderDataTable();
             this.hideLoading();
         } catch (error) {
@@ -23,18 +27,22 @@ class ETHAnalysisApp {
     }
 
     async loadAllData() {
-        const [exchangeData, kellyData, volumeStats, priceTrend] = await Promise.all([
+        const [exchangeData, kellyData, volumeStats, priceTrend, predictionData, predictionAnalysis] = await Promise.all([
             this.fetchData('/api/exchange-data'),
             this.fetchData('/api/kelly-index'),
             this.fetchData('/api/volume-stats'),
-            this.fetchData('/api/price-trend')
+            this.fetchData('/api/price-trend'),
+            this.fetchData('/api/kline-predictions'),
+            this.fetchData('/api/prediction-analysis')
         ]);
 
         this.data = {
             exchange: exchangeData.data,
             kelly: kellyData.data,
             volumeStats: volumeStats.data,
-            priceTrend: priceTrend.data
+            priceTrend: priceTrend.data,
+            predictions: predictionData.data,
+            predictionAnalysis: predictionAnalysis
         };
     }
 
@@ -389,6 +397,233 @@ class ETHAnalysisApp {
         } finally {
             refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i>';
         }
+    }
+
+    // 预测功能渲染方法
+    renderPredictionOverview() {
+        const container = document.getElementById('prediction-overview');
+        if (!container || !this.data.predictionAnalysis || !this.data.predictionAnalysis.success) {
+            return;
+        }
+
+        const analysis = this.data.predictionAnalysis.analysis;
+        
+        container.innerHTML = `
+            <div class="col-md-3">
+                <div class="prediction-card">
+                    <h5><i class="fas fa-dollar-sign"></i> 当前价格</h5>
+                    <div class="value">$${analysis.current_price.toFixed(2)}</div>
+                    <div class="label">ETH/USD</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="prediction-card">
+                    <h5><i class="fas fa-target"></i> 目标价格</h5>
+                    <div class="value">$${analysis.target_price.toFixed(2)}</div>
+                    <div class="label">5天后预测</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="prediction-card">
+                    <h5><i class="fas fa-chart-line"></i> 预期涨跌</h5>
+                    <div class="value ${analysis.total_change_percent >= 0 ? 'text-success' : 'text-danger'}">
+                        ${analysis.total_change_percent >= 0 ? '+' : ''}${analysis.total_change_percent.toFixed(2)}%
+                    </div>
+                    <div class="label">5天总变化</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="prediction-card">
+                    <h5><i class="fas fa-shield-alt"></i> 置信度</h5>
+                    <div class="value">${(analysis.confidence_score * 100).toFixed(1)}%</div>
+                    <div class="label">预测可靠性</div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: ${analysis.confidence_score * 100}%"></div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    renderPredictionChart() {
+        const ctx = document.getElementById('predictionChart');
+        if (!ctx || !this.data.predictionAnalysis || !this.data.predictionAnalysis.success) {
+            return;
+        }
+
+        const analysis = this.data.predictionAnalysis;
+        const predictions = analysis.daily_predictions;
+        
+        // 准备图表数据
+        const labels = predictions.map(p => p.date);
+        const prices = predictions.map(p => p.close);
+        const volumes = predictions.map(p => p.volume);
+        
+        // 创建双轴图表
+        this.charts.prediction = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: '预测价格 (USD)',
+                    data: prices,
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    yAxisID: 'y'
+                }, {
+                    label: '预测交易量 (十亿)',
+                    data: volumes,
+                    borderColor: '#764ba2',
+                    backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: '日期'
+                        }
+                    },
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: '价格 (USD)'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: '交易量 (十亿)'
+                        },
+                        grid: {
+                            drawOnChartArea: false,
+                        },
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'ETH价格和交易量预测'
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        callbacks: {
+                            afterLabel: function(context) {
+                                const index = context.dataIndex;
+                                const pred = predictions[index];
+                                return [
+                                    `开盘: $${pred.open.toFixed(2)}`,
+                                    `最高: $${pred.high.toFixed(2)}`,
+                                    `最低: $${pred.low.toFixed(2)}`,
+                                    `置信度: ${(pred.confidence * 100).toFixed(1)}%`
+                                ];
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    renderPredictionTable() {
+        const tbody = document.getElementById('prediction-table');
+        if (!tbody || !this.data.predictionAnalysis || !this.data.predictionAnalysis.success) {
+            return;
+        }
+
+        const predictions = this.data.predictionAnalysis.daily_predictions;
+        
+        tbody.innerHTML = predictions.map(pred => `
+            <tr>
+                <td>${pred.date}</td>
+                <td>$${pred.close.toFixed(2)}</td>
+                <td class="${pred.change_percent >= 0 ? 'text-success' : 'text-danger'}">
+                    ${pred.change_percent >= 0 ? '+' : ''}${pred.change_percent.toFixed(2)}%
+                </td>
+                <td>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar" style="width: ${pred.confidence * 100}%">
+                            ${(pred.confidence * 100).toFixed(1)}%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        `).join('');
+    }
+
+    renderInvestmentAdvice() {
+        const container = document.getElementById('investment-advice');
+        if (!container || !this.data.predictionAnalysis || !this.data.predictionAnalysis.success) {
+            return;
+        }
+
+        const advice = this.data.predictionAnalysis.analysis.investment_advice;
+        const risk = this.data.predictionAnalysis.analysis.risk_assessment;
+        const targets = this.data.predictionAnalysis.analysis.price_targets;
+        
+        container.innerHTML = `
+            <div class="investment-advice-card">
+                <h6><i class="fas fa-lightbulb"></i> 投资建议</h6>
+                <div class="advice-action ${advice.action.toLowerCase()}">
+                    ${advice.action} - ${advice.confidence}
+                </div>
+                <p class="mb-2">${advice.message}</p>
+                <small class="text-muted">建议仓位: ${advice.position_size}</small>
+                
+                <hr>
+                
+                <h6><i class="fas fa-exclamation-triangle"></i> 风险评估</h6>
+                <div class="risk-indicator ${risk.level.toLowerCase()}">
+                    ${risk.level} 风险
+                </div>
+                <p class="mb-2">${risk.description}</p>
+                <small class="text-muted">${risk.recommendation}</small>
+                
+                <hr>
+                
+                <h6><i class="fas fa-bullseye"></i> 价格目标</h6>
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <small class="text-muted">保守</small><br>
+                        <strong>$${targets.conservative.toFixed(2)}</strong>
+                    </div>
+                    <div class="col-4 text-center">
+                        <small class="text-muted">适中</small><br>
+                        <strong>$${targets.moderate.toFixed(2)}</strong>
+                    </div>
+                    <div class="col-4 text-center">
+                        <small class="text-muted">乐观</small><br>
+                        <strong>$${targets.optimistic.toFixed(2)}</strong>
+                    </div>
+                </div>
+            </div>
+        `;
     }
 
     showNotification(message, type = 'info') {
