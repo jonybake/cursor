@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rate-limiter-framework
+
+# 限流器配置
+rate-limiter:
+  enabled: true
+  default-type: token-bucket
+  capacity: 100
+  window-size: 60000
+  refill-rate: 10
+  refill-period: 1000
+  max-keys: 10000
+  expire-minutes: 60
+  timeout: 5000
+  retry-interval: 100
+  distributed: false
+  redis-key-prefix: "rate_limiter:"
+  monitoring: true
+
+# 日志配置
+logging:
+  level:
+    com.example.ratelimiter: DEBUG
+    org.springframework.aop: DEBUG
