@@ -1,0 +1,46 @@
+# 限流框架配置示例
+rate-limiter:
+  # 限流类型：local(本地) 或 redis(分布式)
+  type: local
+  # 默认限流算法：token-bucket 或 sliding-window
+  algorithm: token-bucket
+  # 默认配置
+  default-config:
+    # 每秒允许的请求数（令牌桶算法）
+    permits-per-second: 10
+    # 突发请求数（令牌桶算法）
+    burst-capacity: 20
+    # 时间窗口大小（秒）（滑动窗口算法）
+    window-size: 60
+    # 时间窗口内允许的请求数（滑动窗口算法）
+    window-permits: 100
+  # Redis配置
+  redis:
+    # Redis key前缀
+    key-prefix: "rate_limiter:"
+    # 脚本缓存
+    script-cache: true
+
+# Spring Boot配置
+spring:
+  application:
+    name: rate-limiter-demo
+  
+  # Redis配置（当使用Redis限流时）
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 2000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+
+# 日志配置
+logging:
+  level:
+    com.example.ratelimiter: DEBUG
+    org.springframework.data.redis: DEBUG
