@@ -1,0 +1,1220 @@
+{
+  "volume_data": [
+    {
+      "date": "2025-09-08",
+      "total_volume": 6.27,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 2.6,
+          "percentage": 41.5,
+          "volatility": 0.558,
+          "liquidity_score": 0.92
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 1.27,
+          "percentage": 20.27,
+          "volatility": 0.546,
+          "liquidity_score": 0.872
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 0.74,
+          "percentage": 11.81,
+          "volatility": 0.598,
+          "liquidity_score": 0.824
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.46,
+          "percentage": 7.34,
+          "volatility": 0.615,
+          "liquidity_score": 0.775
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 0.75,
+          "percentage": 11.97,
+          "volatility": 0.59,
+          "liquidity_score": 0.853
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.43,
+          "percentage": 6.86,
+          "volatility": 0.693,
+          "liquidity_score": 0.727
+        }
+      },
+      "price": {
+        "open": 3431.65,
+        "high": 3539.05,
+        "low": 3396.1,
+        "close": 3425.52,
+        "change": -6.13,
+        "change_percent": -0.18
+      },
+      "market_factors": {
+        "general": 0.8660929330585782,
+        "weekend": 1.0,
+        "news": 1.0098456030682397,
+        "technical": 0.95,
+        "liquidity": 0.9706574316596717,
+        "volatility": 1.0,
+        "institutional": 0.9981387857731254
+      },
+      "market_depth": {
+        "depth_score": 0.379,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.829,
+        "liquidity_std": 0.069,
+        "price_impact": 2.634
+      },
+      "market_cap_rank": 2,
+      "dominance": 19.15
+    },
+    {
+      "date": "2025-09-09",
+      "total_volume": 15.34,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 6.42,
+          "percentage": 41.84,
+          "volatility": 0.81,
+          "liquidity_score": 0.99
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 3.18,
+          "percentage": 20.72,
+          "volatility": 0.805,
+          "liquidity_score": 0.938
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 1.74,
+          "percentage": 11.34,
+          "volatility": 0.824,
+          "liquidity_score": 0.885
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 1.16,
+          "percentage": 7.56,
+          "volatility": 0.917,
+          "liquidity_score": 0.833
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 1.88,
+          "percentage": 12.25,
+          "volatility": 0.87,
+          "liquidity_score": 0.917
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.96,
+          "percentage": 6.26,
+          "volatility": 0.906,
+          "liquidity_score": 0.781
+        }
+      },
+      "price": {
+        "open": 3599.06,
+        "high": 3661.19,
+        "low": 3464.82,
+        "close": 3600.07,
+        "change": 1.01,
+        "change_percent": 0.03
+      },
+      "market_factors": {
+        "general": 1.367056795160126,
+        "weekend": 1.0,
+        "news": 1.0071215022496673,
+        "technical": 0.95,
+        "liquidity": 1.0170609608963694,
+        "volatility": 1.0650794180129641,
+        "institutional": 1.0242494626056853
+      },
+      "market_depth": {
+        "depth_score": 0.93,
+        "depth_level": "medium"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.891,
+        "liquidity_std": 0.075,
+        "price_impact": 1.075
+      },
+      "market_cap_rank": 2,
+      "dominance": 19.32
+    },
+    {
+      "date": "2025-09-10",
+      "total_volume": 9.38,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 4.16,
+          "percentage": 44.34,
+          "volatility": 0.68,
+          "liquidity_score": 1.034
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 1.72,
+          "percentage": 18.33,
+          "volatility": 0.562,
+          "liquidity_score": 0.979
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 1.01,
+          "percentage": 10.76,
+          "volatility": 0.622,
+          "liquidity_score": 0.925
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.69,
+          "percentage": 7.35,
+          "volatility": 0.709,
+          "liquidity_score": 0.871
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 1.19,
+          "percentage": 12.68,
+          "volatility": 0.712,
+          "liquidity_score": 0.958
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.6,
+          "percentage": 6.39,
+          "volatility": 0.732,
+          "liquidity_score": 0.816
+        }
+      },
+      "price": {
+        "open": 3684.83,
+        "high": 3688.99,
+        "low": 3567.75,
+        "close": 3672.45,
+        "change": -12.38,
+        "change_percent": -0.34
+      },
+      "market_factors": {
+        "general": 1.0109626025262057,
+        "weekend": 1.0,
+        "news": 1.0748572094804705,
+        "technical": 0.95,
+        "liquidity": 1.085899250628731,
+        "volatility": 1.1209367469682618,
+        "institutional": 1.002186263201433
+      },
+      "market_depth": {
+        "depth_score": 0.568,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.93,
+        "liquidity_std": 0.078,
+        "price_impact": 1.759
+      },
+      "market_cap_rank": 2,
+      "dominance": 19.19
+    },
+    {
+      "date": "2025-09-11",
+      "total_volume": 19.3,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 7.66,
+          "percentage": 39.68,
+          "volatility": 0.826,
+          "liquidity_score": 1.167
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 4.19,
+          "percentage": 21.7,
+          "volatility": 0.905,
+          "liquidity_score": 1.106
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 2.53,
+          "percentage": 13.11,
+          "volatility": 1.024,
+          "liquidity_score": 1.044
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 1.48,
+          "percentage": 7.67,
+          "volatility": 1.001,
+          "liquidity_score": 0.983
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 2.3,
+          "percentage": 11.91,
+          "volatility": 0.909,
+          "liquidity_score": 1.081
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 1.15,
+          "percentage": 5.96,
+          "volatility": 0.931,
+          "liquidity_score": 0.921
+        }
+      },
+      "price": {
+        "open": 3772.36,
+        "high": 3856.92,
+        "low": 3611.59,
+        "close": 3725.96,
+        "change": -46.4,
+        "change_percent": -1.23
+      },
+      "market_factors": {
+        "general": 1.3551058768352051,
+        "weekend": 1.0,
+        "news": 0.9163025956864899,
+        "technical": 1.08,
+        "liquidity": 1.1328782319762074,
+        "volatility": 1.159805862895084,
+        "institutional": 1.084325761293101
+      },
+      "market_depth": {
+        "depth_score": 1.17,
+        "depth_level": "medium"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 1.05,
+        "liquidity_std": 0.088,
+        "price_impact": 0.855
+      },
+      "market_cap_rank": 2,
+      "dominance": 19.51
+    },
+    {
+      "date": "2025-09-12",
+      "total_volume": 10.12,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 3.86,
+          "percentage": 38.15,
+          "volatility": 0.626,
+          "liquidity_score": 1.037
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 2.33,
+          "percentage": 23.03,
+          "volatility": 0.756,
+          "liquidity_score": 0.983
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 1.32,
+          "percentage": 13.05,
+          "volatility": 0.802,
+          "liquidity_score": 0.928
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.72,
+          "percentage": 7.12,
+          "volatility": 0.727,
+          "liquidity_score": 0.873
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 1.24,
+          "percentage": 12.26,
+          "volatility": 0.735,
+          "liquidity_score": 0.961
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.64,
+          "percentage": 6.33,
+          "volatility": 0.779,
+          "liquidity_score": 0.819
+        }
+      },
+      "price": {
+        "open": 3799.13,
+        "high": 3879.33,
+        "low": 3727.09,
+        "close": 3852.86,
+        "change": 53.73,
+        "change_percent": 1.41
+      },
+      "market_factors": {
+        "general": 1.0161997349443257,
+        "weekend": 1.0,
+        "news": 1.3328129937154967,
+        "technical": 1.08,
+        "liquidity": 1.0596149901936902,
+        "volatility": 1.1766027071228924,
+        "institutional": 1.0303610830570324
+      },
+      "market_depth": {
+        "depth_score": 0.613,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.933,
+        "liquidity_std": 0.078,
+        "price_impact": 1.631
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.56
+    },
+    {
+      "date": "2025-09-13",
+      "total_volume": 4.15,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 1.61,
+          "percentage": 38.83,
+          "volatility": 0.506,
+          "liquidity_score": 1.154
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 0.88,
+          "percentage": 21.22,
+          "volatility": 0.555,
+          "liquidity_score": 1.093
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 0.59,
+          "percentage": 14.23,
+          "volatility": 0.693,
+          "liquidity_score": 1.033
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.3,
+          "percentage": 7.23,
+          "volatility": 0.595,
+          "liquidity_score": 0.972
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 0.51,
+          "percentage": 12.3,
+          "volatility": 0.592,
+          "liquidity_score": 1.069
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.25,
+          "percentage": 6.03,
+          "volatility": 0.598,
+          "liquidity_score": 0.911
+        }
+      },
+      "price": {
+        "open": 3642.73,
+        "high": 3701.16,
+        "low": 3554.17,
+        "close": 3643.73,
+        "change": 1.0,
+        "change_percent": 0.03
+      },
+      "market_factors": {
+        "general": 0.6717562600015744,
+        "weekend": 0.75,
+        "news": 0.9656434395855912,
+        "technical": 1.08,
+        "liquidity": 1.1743045124499312,
+        "volatility": 1.1697279473571858,
+        "institutional": 1.0344887311952782
+      },
+      "market_depth": {
+        "depth_score": 0.251,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 1.039,
+        "liquidity_std": 0.087,
+        "price_impact": 3.979
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.33
+    },
+    {
+      "date": "2025-09-14",
+      "total_volume": 6.58,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 2.69,
+          "percentage": 40.87,
+          "volatility": 0.631,
+          "liquidity_score": 1.223
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 1.32,
+          "percentage": 20.06,
+          "volatility": 0.621,
+          "liquidity_score": 1.159
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 0.81,
+          "percentage": 12.31,
+          "volatility": 0.711,
+          "liquidity_score": 1.095
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.5,
+          "percentage": 7.6,
+          "volatility": 0.727,
+          "liquidity_score": 1.03
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 0.83,
+          "percentage": 12.61,
+          "volatility": 0.711,
+          "liquidity_score": 1.133
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.44,
+          "percentage": 6.69,
+          "volatility": 0.775,
+          "liquidity_score": 0.966
+        }
+      },
+      "price": {
+        "open": 3950.08,
+        "high": 3983.69,
+        "low": 3915.51,
+        "close": 3973.82,
+        "change": 23.74,
+        "change_percent": 0.6
+      },
+      "market_factors": {
+        "general": 0.8496794698249178,
+        "weekend": 0.65,
+        "news": 1.0698407026158683,
+        "technical": 1.08,
+        "liquidity": 1.2089682528745747,
+        "volatility": 1.1413194770826727,
+        "institutional": 1.065092638750753
+      },
+      "market_depth": {
+        "depth_score": 0.399,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 1.101,
+        "liquidity_std": 0.092,
+        "price_impact": 2.507
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.93
+    },
+    {
+      "date": "2025-09-15",
+      "total_volume": 13.1,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 5.28,
+          "percentage": 40.31,
+          "volatility": 0.737,
+          "liquidity_score": 1.076
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 3.13,
+          "percentage": 23.9,
+          "volatility": 0.877,
+          "liquidity_score": 1.019
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 1.43,
+          "percentage": 10.92,
+          "volatility": 0.752,
+          "liquidity_score": 0.962
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.82,
+          "percentage": 6.26,
+          "volatility": 0.713,
+          "liquidity_score": 0.906
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 1.57,
+          "percentage": 11.99,
+          "volatility": 0.803,
+          "liquidity_score": 0.996
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.87,
+          "percentage": 6.64,
+          "volatility": 0.905,
+          "liquidity_score": 0.849
+        }
+      },
+      "price": {
+        "open": 4020.43,
+        "high": 4103.27,
+        "low": 3947.62,
+        "close": 4045.87,
+        "change": 25.44,
+        "change_percent": 0.63
+      },
+      "market_factors": {
+        "general": 1.1360900901013575,
+        "weekend": 1.0,
+        "news": 0.9626745385360079,
+        "technical": 1.08,
+        "liquidity": 1.0919356333622625,
+        "volatility": 1.0969148891900524,
+        "institutional": 1.0368829947358567
+      },
+      "market_depth": {
+        "depth_score": 0.794,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.968,
+        "liquidity_std": 0.081,
+        "price_impact": 1.26
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.6
+    },
+    {
+      "date": "2025-09-16",
+      "total_volume": 12.85,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 5.47,
+          "percentage": 42.57,
+          "volatility": 0.741,
+          "liquidity_score": 1.175
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 2.45,
+          "percentage": 19.07,
+          "volatility": 0.666,
+          "liquidity_score": 1.113
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 1.57,
+          "percentage": 12.22,
+          "volatility": 0.796,
+          "liquidity_score": 1.051
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 1.0,
+          "percentage": 7.78,
+          "volatility": 0.85,
+          "liquidity_score": 0.989
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 1.56,
+          "percentage": 12.14,
+          "volatility": 0.776,
+          "liquidity_score": 1.088
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.8,
+          "percentage": 6.23,
+          "volatility": 0.805,
+          "liquidity_score": 0.928
+        }
+      },
+      "price": {
+        "open": 4084.84,
+        "high": 4099.67,
+        "low": 4012.13,
+        "close": 4030.8,
+        "change": -54.04,
+        "change_percent": -1.32
+      },
+      "market_factors": {
+        "general": 1.0726698349253705,
+        "weekend": 1.0,
+        "news": 0.9082027950018944,
+        "technical": 1.08,
+        "liquidity": 1.1387697470769027,
+        "volatility": 1.0445772118191963,
+        "institutional": 1.0860515215293762
+      },
+      "market_depth": {
+        "depth_score": 0.779,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 1.057,
+        "liquidity_std": 0.089,
+        "price_impact": 1.284
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.97
+    },
+    {
+      "date": "2025-09-17",
+      "total_volume": 16.52,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 6.27,
+          "percentage": 37.96,
+          "volatility": 0.721,
+          "liquidity_score": 1.123
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 3.81,
+          "percentage": 23.07,
+          "volatility": 0.879,
+          "liquidity_score": 1.064
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 2.02,
+          "percentage": 12.23,
+          "volatility": 0.87,
+          "liquidity_score": 1.005
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 1.21,
+          "percentage": 7.33,
+          "volatility": 0.875,
+          "liquidity_score": 0.945
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 2.1,
+          "percentage": 12.71,
+          "volatility": 0.884,
+          "liquidity_score": 1.04
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 1.11,
+          "percentage": 6.72,
+          "volatility": 0.952,
+          "liquidity_score": 0.886
+        }
+      },
+      "price": {
+        "open": 4238.85,
+        "high": 4284.95,
+        "low": 4129.74,
+        "close": 4243.27,
+        "change": 4.42,
+        "change_percent": 0.1
+      },
+      "market_factors": {
+        "general": 1.321387551053348,
+        "weekend": 1.0,
+        "news": 0.9529313343065495,
+        "technical": 1.08,
+        "liquidity": 1.0572444916865609,
+        "volatility": 0.9936219335057721,
+        "institutional": 1.1178046218170308
+      },
+      "market_depth": {
+        "depth_score": 1.001,
+        "depth_level": "medium"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 1.011,
+        "liquidity_std": 0.085,
+        "price_impact": 0.999
+      },
+      "market_cap_rank": 2,
+      "dominance": 19.75
+    },
+    {
+      "date": "2025-09-18",
+      "total_volume": 15.83,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 6.75,
+          "percentage": 42.63,
+          "volatility": 0.835,
+          "liquidity_score": 1.032
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 3.15,
+          "percentage": 19.89,
+          "volatility": 0.78,
+          "liquidity_score": 0.977
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 2.04,
+          "percentage": 12.88,
+          "volatility": 0.946,
+          "liquidity_score": 0.923
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 1.06,
+          "percentage": 6.69,
+          "volatility": 0.818,
+          "liquidity_score": 0.869
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 1.89,
+          "percentage": 11.94,
+          "volatility": 0.858,
+          "liquidity_score": 0.956
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.95,
+          "percentage": 6.0,
+          "volatility": 0.874,
+          "liquidity_score": 0.814
+        }
+      },
+      "price": {
+        "open": 4241.76,
+        "high": 4310.04,
+        "low": 4095.5,
+        "close": 4226.93,
+        "change": -14.83,
+        "change_percent": -0.35
+      },
+      "market_factors": {
+        "general": 1.3378001346675918,
+        "weekend": 1.0,
+        "news": 0.9964771294933162,
+        "technical": 1.08,
+        "liquidity": 0.9776174672087738,
+        "volatility": 0.9531462923704774,
+        "institutional": 1.110685837930052
+      },
+      "market_depth": {
+        "depth_score": 0.96,
+        "depth_level": "medium"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.928,
+        "liquidity_std": 0.078,
+        "price_impact": 1.042
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.95
+    },
+    {
+      "date": "2025-09-19",
+      "total_volume": 4.62,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 1.94,
+          "percentage": 42.0,
+          "volatility": 0.455,
+          "liquidity_score": 0.991
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 0.9,
+          "percentage": 19.48,
+          "volatility": 0.424,
+          "liquidity_score": 0.939
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 0.61,
+          "percentage": 13.21,
+          "volatility": 0.536,
+          "liquidity_score": 0.887
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.3,
+          "percentage": 6.49,
+          "volatility": 0.448,
+          "liquidity_score": 0.834
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 0.51,
+          "percentage": 11.04,
+          "volatility": 0.437,
+          "liquidity_score": 0.918
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.36,
+          "percentage": 7.79,
+          "volatility": 0.625,
+          "liquidity_score": 0.782
+        }
+      },
+      "price": {
+        "open": 4078.81,
+        "high": 4102.67,
+        "low": 4047.83,
+        "close": 4070.78,
+        "change": -8.03,
+        "change_percent": -0.2
+      },
+      "market_factors": {
+        "general": 0.7337833959020879,
+        "weekend": 1.0,
+        "news": 1.0490769682124212,
+        "technical": 1.02,
+        "liquidity": 1.0307123862000795,
+        "volatility": 0.9305930222499059,
+        "institutional": 1.0120195442064688
+      },
+      "market_depth": {
+        "depth_score": 0.28,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.892,
+        "liquidity_std": 0.075,
+        "price_impact": 3.572
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.99
+    },
+    {
+      "date": "2025-09-20",
+      "total_volume": 4.65,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 1.84,
+          "percentage": 39.57,
+          "volatility": 0.502,
+          "liquidity_score": 0.978
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 1.02,
+          "percentage": 21.94,
+          "volatility": 0.556,
+          "liquidity_score": 0.926
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 0.54,
+          "percentage": 11.61,
+          "volatility": 0.552,
+          "liquidity_score": 0.875
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.35,
+          "percentage": 7.53,
+          "volatility": 0.601,
+          "liquidity_score": 0.823
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 0.6,
+          "percentage": 12.9,
+          "volatility": 0.6,
+          "liquidity_score": 0.906
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.31,
+          "percentage": 6.67,
+          "volatility": 0.629,
+          "liquidity_score": 0.772
+        }
+      },
+      "price": {
+        "open": 4200.2,
+        "high": 4304.79,
+        "low": 4162.71,
+        "close": 4250.79,
+        "change": 50.59,
+        "change_percent": 1.2
+      },
+      "market_factors": {
+        "general": 0.912921502299071,
+        "weekend": 0.75,
+        "news": 1.0128518428273476,
+        "technical": 1.02,
+        "liquidity": 1.0010949767290611,
+        "volatility": 0.930575308674624,
+        "institutional": 1.028087535149056
+      },
+      "market_depth": {
+        "depth_score": 0.282,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.88,
+        "liquidity_std": 0.074,
+        "price_impact": 3.549
+      },
+      "market_cap_rank": 2,
+      "dominance": 19.05
+    },
+    {
+      "date": "2025-09-21",
+      "total_volume": 3.73,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 1.57,
+          "percentage": 42.1,
+          "volatility": 0.51,
+          "liquidity_score": 0.862
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 0.85,
+          "percentage": 22.79,
+          "volatility": 0.553,
+          "liquidity_score": 0.817
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 0.37,
+          "percentage": 9.92,
+          "volatility": 0.456,
+          "liquidity_score": 0.772
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.25,
+          "percentage": 6.7,
+          "volatility": 0.512,
+          "liquidity_score": 0.726
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 0.44,
+          "percentage": 11.8,
+          "volatility": 0.521,
+          "liquidity_score": 0.799
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.25,
+          "percentage": 6.7,
+          "volatility": 0.596,
+          "liquidity_score": 0.681
+        }
+      },
+      "price": {
+        "open": 4250.26,
+        "high": 4282.33,
+        "low": 4192.03,
+        "close": 4256.2,
+        "change": 5.93,
+        "change_percent": 0.14
+      },
+      "market_factors": {
+        "general": 0.8704889895763875,
+        "weekend": 0.65,
+        "news": 0.9591296526460217,
+        "technical": 1.02,
+        "liquidity": 0.8308955295230911,
+        "volatility": 0.9541484683086436,
+        "institutional": 1.0923803340908842
+      },
+      "market_depth": {
+        "depth_score": 0.226,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.776,
+        "liquidity_std": 0.065,
+        "price_impact": 4.424
+      },
+      "market_cap_rank": 2,
+      "dominance": 18.57
+    },
+    {
+      "date": "2025-09-22",
+      "total_volume": 6.61,
+      "exchanges": {
+        "binance": {
+          "name": "Binance",
+          "volume": 2.92,
+          "percentage": 44.15,
+          "volatility": 0.572,
+          "liquidity_score": 0.964
+        },
+        "coinbase": {
+          "name": "Coinbase Pro",
+          "volume": 1.35,
+          "percentage": 20.41,
+          "volatility": 0.529,
+          "liquidity_score": 0.913
+        },
+        "kraken": {
+          "name": "Kraken",
+          "volume": 0.73,
+          "percentage": 11.04,
+          "volatility": 0.534,
+          "liquidity_score": 0.862
+        },
+        "huobi": {
+          "name": "Huobi",
+          "volume": 0.5,
+          "percentage": 7.56,
+          "volatility": 0.611,
+          "liquidity_score": 0.812
+        },
+        "okx": {
+          "name": "OKX",
+          "volume": 0.74,
+          "percentage": 11.19,
+          "volatility": 0.532,
+          "liquidity_score": 0.893
+        },
+        "kucoin": {
+          "name": "KuCoin",
+          "volume": 0.37,
+          "percentage": 5.59,
+          "volatility": 0.546,
+          "liquidity_score": 0.761
+        }
+      },
+      "price": {
+        "open": 4517.51,
+        "high": 4541.33,
+        "low": 4446.32,
+        "close": 4492.92,
+        "change": -24.59,
+        "change_percent": -0.54
+      },
+      "market_factors": {
+        "general": 0.9050019888842575,
+        "weekend": 1.0,
+        "news": 1.2274182754606393,
+        "technical": 1.02,
+        "liquidity": 1.0172669233635778,
+        "volatility": 0.9986433376524853,
+        "institutional": 0.9972805797107015
+      },
+      "market_depth": {
+        "depth_score": 0.401,
+        "depth_level": "low"
+      },
+      "liquidity_metrics": {
+        "avg_liquidity_score": 0.868,
+        "liquidity_std": 0.073,
+        "price_impact": 2.495
+      },
+      "market_cap_rank": 2,
+      "dominance": 19.61
+    }
+  ],
+  "trend_analysis": {
+    "avg_daily_volume": 9.94,
+    "volume_volatility": 0.523,
+    "price_trend_percent": 16.53,
+    "volume_trend_percent": -41.33,
+    "price_volatility": 3.86,
+    "exchange_rankings": [
+      {
+        "rank": 1,
+        "exchange": "binance",
+        "name": "Binance",
+        "total_volume": 61.04,
+        "avg_daily_volume": 4.07,
+        "market_share": 40.96,
+        "stability_score": 0.487
+      },
+      {
+        "rank": 2,
+        "exchange": "coinbase",
+        "name": "Coinbase Pro",
+        "total_volume": 31.55,
+        "avg_daily_volume": 2.1,
+        "market_share": 21.17,
+        "stability_score": 0.454
+      },
+      {
+        "rank": 3,
+        "exchange": "okx",
+        "name": "OKX",
+        "total_volume": 18.11,
+        "avg_daily_volume": 1.21,
+        "market_share": 12.15,
+        "stability_score": 0.473
+      },
+      {
+        "rank": 4,
+        "exchange": "kraken",
+        "name": "Kraken",
+        "total_volume": 18.05,
+        "avg_daily_volume": 1.2,
+        "market_share": 12.11,
+        "stability_score": 0.451
+      },
+      {
+        "rank": 5,
+        "exchange": "huobi",
+        "name": "Huobi",
+        "total_volume": 10.8,
+        "avg_daily_volume": 0.72,
+        "market_share": 7.25,
+        "stability_score": 0.463
+      },
+      {
+        "rank": 6,
+        "exchange": "kucoin",
+        "name": "KuCoin",
+        "total_volume": 9.49,
+        "avg_daily_volume": 0.63,
+        "market_share": 6.37,
+        "stability_score": 0.499
+      }
+    ],
+    "market_characteristics": {
+      "volume_skewness": 0.319,
+      "volume_kurtosis": -1.497,
+      "price_volatility": 7.67,
+      "market_activity": 40.0,
+      "avg_liquidity": 0.944,
+      "liquidity_volatility": 9.83,
+      "volume_distribution": "right_skewed"
+    },
+    "analysis_period": "2025-09-08 至 2025-09-22"
+  },
+  "generated_at": "2025-09-22T23:40:58.015864",
+  "data_accuracy": "enhanced",
+  "analysis_period": "2025-09-08 至 2025-09-22"
+}

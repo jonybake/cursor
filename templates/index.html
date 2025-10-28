@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETH交易量分析与K线可视化</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stats-card h3 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stats-card p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .btn-refresh {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-refresh:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #7f8c8d;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .exchange-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .exchange-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .exchange-volume {
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        .technical-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .indicator-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        
+        .indicator-value {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .indicator-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .trend-up {
+            color: #28a745;
+        }
+        
+        .trend-down {
+            color: #dc3545;
+        }
+        
+        .trend-neutral {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> ETH交易量分析与K线可视化</h1>
+            <p>基于各大交易所数据的智能分析系统</p>
+            <button class="btn btn-refresh" onclick="refreshData()">
+                <i class="fas fa-sync-alt"></i> 刷新数据
+            </button>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>正在加载数据...</p>
+        </div>
+        
+        <div id="content" style="display: none;">
+            <!-- 概览统计 -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="current-price">$0</h3>
+                        <p>当前价格</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="price-change">+0%</h3>
+                        <p>24小时涨跌</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="daily-volume">0B</h3>
+                        <p>日交易量</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <h3 id="trend-direction">中性</h3>
+                        <p>趋势方向</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 图表区域 -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-candlestick"></i> ETH价格K线图</h3>
+                        <canvas id="klineChart" height="400"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-chart-bar"></i> 交易量分析</h3>
+                        <canvas id="volumeChart" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-building"></i> 交易所交易量分布</h3>
+                        <div id="exchangeChart" style="height: 400px;"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-cogs"></i> 技术指标</h3>
+                        <div class="technical-indicators" id="technicalIndicators">
+                            <!-- 技术指标将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 交易所排名 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="chart-container">
+                        <h3 class="chart-title"><i class="fas fa-trophy"></i> 交易所排名</h3>
+                        <div id="exchangeRankings">
+                            <!-- 交易所排名将在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let klineChart, volumeChart, exchangeChart;
+        let currentData = null;
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+        });
+        
+        // 加载数据
+        async function loadData() {
+            try {
+                const response = await fetch('/api/summary');
+                const summary = await response.json();
+                
+                if (summary.error) {
+                    throw new Error(summary.error);
+                }
+                
+                updateSummary(summary);
+                await loadCharts();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('loading').innerHTML = 
+                    '<div class="alert alert-danger">数据加载失败: ' + error.message + '</div>';
+            }
+        }
+        
+        // 更新概览统计
+        function updateSummary(summary) {
+            document.getElementById('current-price').textContent = 
+                '$' + summary.latest_price.close.toLocaleString();
+            
+            const changeElement = document.getElementById('price-change');
+            const change = summary.latest_price.change_percent;
+            changeElement.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+            changeElement.className = change >= 0 ? 'trend-up' : 'trend-down';
+            
+            document.getElementById('daily-volume').textContent = 
+                summary.latest_price.volume.toFixed(1) + 'B';
+            
+            const trendElement = document.getElementById('trend-direction');
+            const trend = summary.trend.direction;
+            trendElement.textContent = getTrendText(trend);
+            trendElement.className = getTrendClass(trend);
+        }
+        
+        // 获取趋势文本
+        function getTrendText(trend) {
+            const trendMap = {
+                'uptrend': '上涨',
+                'downtrend': '下跌',
+                'sideways': '震荡'
+            };
+            return trendMap[trend] || '中性';
+        }
+        
+        // 获取趋势样式
+        function getTrendClass(trend) {
+            const classMap = {
+                'uptrend': 'trend-up',
+                'downtrend': 'trend-down',
+                'sideways': 'trend-neutral'
+            };
+            return classMap[trend] || 'trend-neutral';
+        }
+        
+        // 加载图表
+        async function loadCharts() {
+            await loadKlineChart();
+            await loadVolumeChart();
+            await loadExchangeChart();
+            await loadTechnicalIndicators();
+            await loadExchangeRankings();
+        }
+        
+        // 加载K线图
+        async function loadKlineChart() {
+            const response = await fetch('/api/kline');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const ctx = document.getElementById('klineChart').getContext('2d');
+            
+            if (klineChart) {
+                klineChart.destroy();
+            }
+            
+            klineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.kline_data.map(d => d.date),
+                    datasets: [{
+                        label: 'ETH价格',
+                        data: data.kline_data.map(d => d.close),
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: {
+                                display: true,
+                                text: '价格 (USD)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '日期'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 加载交易量图
+        async function loadVolumeChart() {
+            const response = await fetch('/api/volume');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const ctx = document.getElementById('volumeChart').getContext('2d');
+            
+            if (volumeChart) {
+                volumeChart.destroy();
+            }
+            
+            volumeChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.volume_data.map(d => d.date),
+                    datasets: [{
+                        label: '交易量 (十亿美元)',
+                        data: data.volume_data.map(d => d.total_volume),
+                        backgroundColor: 'rgba(102, 126, 234, 0.6)',
+                        borderColor: '#667eea',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '交易量 (十亿美元)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 加载交易所分布图
+        async function loadExchangeChart() {
+            const response = await fetch('/api/exchanges');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            // 计算各交易所总交易量
+            const exchangeTotals = {};
+            data.forEach(day => {
+                day.exchanges.forEach(exchange => {
+                    if (!exchangeTotals[exchange.id]) {
+                        exchangeTotals[exchange.id] = {
+                            name: exchange.name,
+                            totalVolume: 0
+                        };
+                    }
+                    exchangeTotals[exchange.id].totalVolume += exchange.volume;
+                });
+            });
+            
+            const exchangeData = Object.values(exchangeTotals).sort((a, b) => b.totalVolume - a.totalVolume);
+            
+            const chart = echarts.init(document.getElementById('exchangeChart'));
+            const option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+                series: [{
+                    name: '交易所交易量',
+                    type: 'pie',
+                    radius: '60%',
+                    data: exchangeData.map(ex => ({
+                        value: ex.totalVolume,
+                        name: ex.name
+                    })),
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
+            
+            chart.setOption(option);
+        }
+        
+        // 加载技术指标
+        async function loadTechnicalIndicators() {
+            const response = await fetch('/api/technical');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const latest = data[data.length - 1];
+            const indicatorsContainer = document.getElementById('technicalIndicators');
+            
+            const indicators = [
+                { label: 'RSI', value: latest.rsi, unit: '' },
+                { label: 'MACD', value: latest.macd, unit: '' },
+                { label: '5日均线', value: latest.sma_5, unit: '$' },
+                { label: '10日均线', value: latest.sma_10, unit: '$' }
+            ];
+            
+            indicatorsContainer.innerHTML = indicators.map(indicator => `
+                <div class="indicator-card">
+                    <div class="indicator-value">
+                        ${indicator.value ? indicator.unit + indicator.value.toFixed(2) : 'N/A'}
+                    </div>
+                    <div class="indicator-label">${indicator.label}</div>
+                </div>
+            `).join('');
+        }
+        
+        // 加载交易所排名
+        async function loadExchangeRankings() {
+            const response = await fetch('/api/volume');
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            const rankings = data.exchange_rankings || [];
+            const rankingsContainer = document.getElementById('exchangeRankings');
+            
+            rankingsContainer.innerHTML = rankings.map(ranking => `
+                <div class="exchange-card">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <strong>#${ranking.rank}</strong>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="exchange-name">${ranking.name}</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="exchange-volume">${ranking.total_volume} 十亿美元</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="exchange-volume">${ranking.market_share}%</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // 刷新数据
+        async function refreshData() {
+            const button = document.querySelector('.btn-refresh');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 刷新中...';
+            button.disabled = true;
+            
+            try {
+                const response = await fetch('/api/refresh');
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    await loadData();
+                } else {
+                    alert('刷新失败: ' + result.message);
+                }
+            } catch (error) {
+                alert('刷新失败: ' + error.message);
+            } finally {
+                button.innerHTML = originalText;
+                button.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
